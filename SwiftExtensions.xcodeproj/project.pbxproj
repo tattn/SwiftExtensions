@@ -8,9 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		244F63E51FE0310E00E3C372 /* SwiftExtensions.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 244F63DB1FE0310E00E3C372 /* SwiftExtensions.framework */; };
-		244F63EA1FE0310E00E3C372 /* ClassNameTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244F63E91FE0310E00E3C372 /* ClassNameTests.swift */; };
+		244F63EA1FE0310E00E3C372 /* NSObjectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244F63E91FE0310E00E3C372 /* NSObjectTests.swift */; };
 		244F63EC1FE0310E00E3C372 /* SwiftExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = 244F63DE1FE0310E00E3C372 /* SwiftExtensions.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		244F63F61FE0315700E3C372 /* ClassName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244F63F51FE0315700E3C372 /* ClassName.swift */; };
+		244F63F61FE0315700E3C372 /* NSObject+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244F63F51FE0315700E3C372 /* NSObject+.swift */; };
 		2452135E1FE0351300561F9D /* UITableView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2452135D1FE0351300561F9D /* UITableView+.swift */; };
 		245213621FE0384A00561F9D /* TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 245213601FE0383500561F9D /* TableViewCell.xib */; };
 		245213641FE0388500561F9D /* UITableViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245213631FE0388500561F9D /* UITableViewTests.swift */; };
@@ -20,6 +20,7 @@
 		2452136C1FE2788200561F9D /* CollectionViewHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2452136B1FE2788200561F9D /* CollectionViewHeaderView.xib */; };
 		2452136E1FE2D40500561F9D /* UIColor+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2452136D1FE2D40500561F9D /* UIColor+.swift */; };
 		245213701FE2D4C100561F9D /* UIColorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2452136F1FE2D4C100561F9D /* UIColorTests.swift */; };
+		245213721FE2DAA000561F9D /* UIApplication+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245213711FE2DAA000561F9D /* UIApplication+.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,9 +38,9 @@
 		244F63DE1FE0310E00E3C372 /* SwiftExtensions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SwiftExtensions.h; sourceTree = "<group>"; };
 		244F63DF1FE0310E00E3C372 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		244F63E41FE0310E00E3C372 /* SwiftExtensionsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftExtensionsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		244F63E91FE0310E00E3C372 /* ClassNameTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassNameTests.swift; sourceTree = "<group>"; };
+		244F63E91FE0310E00E3C372 /* NSObjectTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSObjectTests.swift; sourceTree = "<group>"; };
 		244F63EB1FE0310E00E3C372 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		244F63F51FE0315700E3C372 /* ClassName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassName.swift; sourceTree = "<group>"; };
+		244F63F51FE0315700E3C372 /* NSObject+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSObject+.swift"; sourceTree = "<group>"; };
 		2452135D1FE0351300561F9D /* UITableView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+.swift"; sourceTree = "<group>"; };
 		245213601FE0383500561F9D /* TableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableViewCell.xib; sourceTree = "<group>"; };
 		245213631FE0388500561F9D /* UITableViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewTests.swift; sourceTree = "<group>"; };
@@ -49,6 +50,7 @@
 		2452136B1FE2788200561F9D /* CollectionViewHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionViewHeaderView.xib; sourceTree = "<group>"; };
 		2452136D1FE2D40500561F9D /* UIColor+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+.swift"; sourceTree = "<group>"; };
 		2452136F1FE2D4C100561F9D /* UIColorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorTests.swift; sourceTree = "<group>"; };
+		245213711FE2DAA000561F9D /* UIApplication+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIApplication+.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,10 +95,11 @@
 			children = (
 				244F63DE1FE0310E00E3C372 /* SwiftExtensions.h */,
 				244F63DF1FE0310E00E3C372 /* Info.plist */,
-				244F63F51FE0315700E3C372 /* ClassName.swift */,
+				244F63F51FE0315700E3C372 /* NSObject+.swift */,
 				2452135D1FE0351300561F9D /* UITableView+.swift */,
 				245213651FE03E9700561F9D /* UICollectionView+.swift */,
 				2452136D1FE2D40500561F9D /* UIColor+.swift */,
+				245213711FE2DAA000561F9D /* UIApplication+.swift */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -105,7 +108,7 @@
 			isa = PBXGroup;
 			children = (
 				2452135F1FE0380600561F9D /* Resources */,
-				244F63E91FE0310E00E3C372 /* ClassNameTests.swift */,
+				244F63E91FE0310E00E3C372 /* NSObjectTests.swift */,
 				244F63EB1FE0310E00E3C372 /* Info.plist */,
 				245213631FE0388500561F9D /* UITableViewTests.swift */,
 				245213671FE03F5D00561F9D /* UICollectionViewTests.swift */,
@@ -238,7 +241,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				244F63F61FE0315700E3C372 /* ClassName.swift in Sources */,
+				245213721FE2DAA000561F9D /* UIApplication+.swift in Sources */,
+				244F63F61FE0315700E3C372 /* NSObject+.swift in Sources */,
 				2452136E1FE2D40500561F9D /* UIColor+.swift in Sources */,
 				245213661FE03E9700561F9D /* UICollectionView+.swift in Sources */,
 				2452135E1FE0351300561F9D /* UITableView+.swift in Sources */,
@@ -249,7 +253,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				244F63EA1FE0310E00E3C372 /* ClassNameTests.swift in Sources */,
+				244F63EA1FE0310E00E3C372 /* NSObjectTests.swift in Sources */,
 				245213701FE2D4C100561F9D /* UIColorTests.swift in Sources */,
 				245213641FE0388500561F9D /* UITableViewTests.swift in Sources */,
 				245213681FE03F5D00561F9D /* UICollectionViewTests.swift in Sources */,
