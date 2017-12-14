@@ -1,5 +1,5 @@
 //
-//  ClassName.swift
+//  NSObject+.swift
 //  SwiftExtensions
 //
 //  Created by Tatsuya Tanaka on 20171213.
@@ -8,7 +8,7 @@
 
 import Foundation
 
-extension NSObject {
+extension NSObjectProtocol {
     public static var className: String {
         return String(describing: self)
     }
