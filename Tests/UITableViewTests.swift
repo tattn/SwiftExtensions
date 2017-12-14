@@ -7,6 +7,7 @@
 //
 
 import XCTest
+import SwiftExtensions
 import UIKit
 
 final class TableViewCell: UITableViewCell {

@@ -14,6 +14,10 @@
 		2452135E1FE0351300561F9D /* UITableView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2452135D1FE0351300561F9D /* UITableView+.swift */; };
 		245213621FE0384A00561F9D /* TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 245213601FE0383500561F9D /* TableViewCell.xib */; };
 		245213641FE0388500561F9D /* UITableViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245213631FE0388500561F9D /* UITableViewTests.swift */; };
+		245213661FE03E9700561F9D /* UICollectionView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245213651FE03E9700561F9D /* UICollectionView+.swift */; };
+		245213681FE03F5D00561F9D /* UICollectionViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245213671FE03F5D00561F9D /* UICollectionViewTests.swift */; };
+		2452136A1FE03F9D00561F9D /* CollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 245213691FE03F9D00561F9D /* CollectionViewCell.xib */; };
+		2452136C1FE2788200561F9D /* CollectionViewHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2452136B1FE2788200561F9D /* CollectionViewHeaderView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,6 +41,10 @@
 		2452135D1FE0351300561F9D /* UITableView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+.swift"; sourceTree = "<group>"; };
 		245213601FE0383500561F9D /* TableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableViewCell.xib; sourceTree = "<group>"; };
 		245213631FE0388500561F9D /* UITableViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewTests.swift; sourceTree = "<group>"; };
+		245213651FE03E9700561F9D /* UICollectionView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+.swift"; sourceTree = "<group>"; };
+		245213671FE03F5D00561F9D /* UICollectionViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICollectionViewTests.swift; sourceTree = "<group>"; };
+		245213691FE03F9D00561F9D /* CollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionViewCell.xib; sourceTree = "<group>"; };
+		2452136B1FE2788200561F9D /* CollectionViewHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionViewHeaderView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +91,7 @@
 				244F63DF1FE0310E00E3C372 /* Info.plist */,
 				244F63F51FE0315700E3C372 /* ClassName.swift */,
 				2452135D1FE0351300561F9D /* UITableView+.swift */,
+				245213651FE03E9700561F9D /* UICollectionView+.swift */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -94,6 +103,7 @@
 				244F63E91FE0310E00E3C372 /* ClassNameTests.swift */,
 				244F63EB1FE0310E00E3C372 /* Info.plist */,
 				245213631FE0388500561F9D /* UITableViewTests.swift */,
+				245213671FE03F5D00561F9D /* UICollectionViewTests.swift */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -102,6 +112,8 @@
 			isa = PBXGroup;
 			children = (
 				245213601FE0383500561F9D /* TableViewCell.xib */,
+				245213691FE03F9D00561F9D /* CollectionViewCell.xib */,
+				2452136B1FE2788200561F9D /* CollectionViewHeaderView.xib */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -207,6 +219,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2452136A1FE03F9D00561F9D /* CollectionViewCell.xib in Resources */,
+				2452136C1FE2788200561F9D /* CollectionViewHeaderView.xib in Resources */,
 				245213621FE0384A00561F9D /* TableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -219,6 +233,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				244F63F61FE0315700E3C372 /* ClassName.swift in Sources */,
+				245213661FE03E9700561F9D /* UICollectionView+.swift in Sources */,
 				2452135E1FE0351300561F9D /* UITableView+.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -229,6 +244,7 @@
 			files = (
 				244F63EA1FE0310E00E3C372 /* ClassNameTests.swift in Sources */,
 				245213641FE0388500561F9D /* UITableViewTests.swift in Sources */,
+				245213681FE03F5D00561F9D /* UICollectionViewTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
