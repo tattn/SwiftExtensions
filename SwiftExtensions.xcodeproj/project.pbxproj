@@ -18,6 +18,8 @@
 		245213681FE03F5D00561F9D /* UICollectionViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245213671FE03F5D00561F9D /* UICollectionViewTests.swift */; };
 		2452136A1FE03F9D00561F9D /* CollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 245213691FE03F9D00561F9D /* CollectionViewCell.xib */; };
 		2452136C1FE2788200561F9D /* CollectionViewHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2452136B1FE2788200561F9D /* CollectionViewHeaderView.xib */; };
+		2452136E1FE2D40500561F9D /* UIColor+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2452136D1FE2D40500561F9D /* UIColor+.swift */; };
+		245213701FE2D4C100561F9D /* UIColorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2452136F1FE2D4C100561F9D /* UIColorTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +47,8 @@
 		245213671FE03F5D00561F9D /* UICollectionViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICollectionViewTests.swift; sourceTree = "<group>"; };
 		245213691FE03F9D00561F9D /* CollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionViewCell.xib; sourceTree = "<group>"; };
 		2452136B1FE2788200561F9D /* CollectionViewHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionViewHeaderView.xib; sourceTree = "<group>"; };
+		2452136D1FE2D40500561F9D /* UIColor+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+.swift"; sourceTree = "<group>"; };
+		2452136F1FE2D4C100561F9D /* UIColorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +96,7 @@
 				244F63F51FE0315700E3C372 /* ClassName.swift */,
 				2452135D1FE0351300561F9D /* UITableView+.swift */,
 				245213651FE03E9700561F9D /* UICollectionView+.swift */,
+				2452136D1FE2D40500561F9D /* UIColor+.swift */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -104,6 +109,7 @@
 				244F63EB1FE0310E00E3C372 /* Info.plist */,
 				245213631FE0388500561F9D /* UITableViewTests.swift */,
 				245213671FE03F5D00561F9D /* UICollectionViewTests.swift */,
+				2452136F1FE2D4C100561F9D /* UIColorTests.swift */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -233,6 +239,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				244F63F61FE0315700E3C372 /* ClassName.swift in Sources */,
+				2452136E1FE2D40500561F9D /* UIColor+.swift in Sources */,
 				245213661FE03E9700561F9D /* UICollectionView+.swift in Sources */,
 				2452135E1FE0351300561F9D /* UITableView+.swift in Sources */,
 			);
@@ -243,6 +250,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				244F63EA1FE0310E00E3C372 /* ClassNameTests.swift in Sources */,
+				245213701FE2D4C100561F9D /* UIColorTests.swift in Sources */,
 				245213641FE0388500561F9D /* UITableViewTests.swift in Sources */,
 				245213681FE03F5D00561F9D /* UICollectionViewTests.swift in Sources */,
 			);
