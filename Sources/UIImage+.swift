@@ -32,7 +32,7 @@ public extension UIImage {
         }
     }
 
-    func tint(color: UIColor) -> UIImage {
+    func image(withTint color: UIColor) -> UIImage {
         let rect = CGRect(x: 0, y: 0, width: size.width, height: size.height)
         UIGraphicsBeginImageContextWithOptions(rect.size, false, 0)
 
