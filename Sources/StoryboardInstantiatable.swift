@@ -1,5 +1,5 @@
 //
-//  UIViewController+Instantiate.swift
+//  StoryboardInstantiatable.swift
 //  SwiftExtensions
 //
 //  Created by Tatsuya Tanaka on 20171215.

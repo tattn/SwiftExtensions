@@ -1,5 +1,5 @@
 //
-//  UIViewController+InstantiateTests.swift
+//  StoryboardInstantiatableTests.swift
 //  SwiftExtensionsTests
 //
 //  Created by Tatsuya Tanaka on 20171215.

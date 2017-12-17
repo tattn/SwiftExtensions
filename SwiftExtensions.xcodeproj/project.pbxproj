@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2412C0411FE6504B00C3D555 /* NibView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2412C0401FE6504B00C3D555 /* NibView.xib */; };
+		2412C0431FE650AE00C3D555 /* NibInstantiatableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2412C0421FE650AE00C3D555 /* NibInstantiatableTests.swift */; };
+		2412C0481FE6916300C3D555 /* InnerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2412C0461FE6901100C3D555 /* InnerView.xib */; };
 		244F63E51FE0310E00E3C372 /* SwiftExtensions.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 244F63DB1FE0310E00E3C372 /* SwiftExtensions.framework */; };
 		244F63EA1FE0310E00E3C372 /* NSObjectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244F63E91FE0310E00E3C372 /* NSObjectTests.swift */; };
 		244F63EC1FE0310E00E3C372 /* SwiftExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = 244F63DE1FE0310E00E3C372 /* SwiftExtensions.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -21,9 +24,10 @@
 		2452136E1FE2D40500561F9D /* UIColor+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2452136D1FE2D40500561F9D /* UIColor+.swift */; };
 		245213701FE2D4C100561F9D /* UIColorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2452136F1FE2D4C100561F9D /* UIColorTests.swift */; };
 		245213721FE2DAA000561F9D /* UIApplication+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245213711FE2DAA000561F9D /* UIApplication+.swift */; };
-		245213761FE2E28900561F9D /* UIViewController+Instantiate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245213751FE2E28900561F9D /* UIViewController+Instantiate.swift */; };
+		245213761FE2E28900561F9D /* StoryboardInstantiatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245213751FE2E28900561F9D /* StoryboardInstantiatable.swift */; };
 		245213781FE2EC5D00561F9D /* InitialViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 245213771FE2EC5D00561F9D /* InitialViewController.storyboard */; };
-		2452137C1FE35E3500561F9D /* UIViewController+InstantiateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2452137B1FE35E3500561F9D /* UIViewController+InstantiateTests.swift */; };
+		2452137C1FE35E3500561F9D /* StoryboardInstantiatableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2452137B1FE35E3500561F9D /* StoryboardInstantiatableTests.swift */; };
+		249F760C1FE4AB0800421BD9 /* NibInstantiatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 249F760B1FE4AB0800421BD9 /* NibInstantiatable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,6 +41,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2412C0401FE6504B00C3D555 /* NibView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NibView.xib; sourceTree = "<group>"; };
+		2412C0421FE650AE00C3D555 /* NibInstantiatableTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NibInstantiatableTests.swift; sourceTree = "<group>"; };
+		2412C0461FE6901100C3D555 /* InnerView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InnerView.xib; sourceTree = "<group>"; };
 		244F63DB1FE0310E00E3C372 /* SwiftExtensions.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftExtensions.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		244F63DE1FE0310E00E3C372 /* SwiftExtensions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SwiftExtensions.h; sourceTree = "<group>"; };
 		244F63DF1FE0310E00E3C372 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -54,9 +61,10 @@
 		2452136D1FE2D40500561F9D /* UIColor+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+.swift"; sourceTree = "<group>"; };
 		2452136F1FE2D4C100561F9D /* UIColorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorTests.swift; sourceTree = "<group>"; };
 		245213711FE2DAA000561F9D /* UIApplication+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIApplication+.swift"; sourceTree = "<group>"; };
-		245213751FE2E28900561F9D /* UIViewController+Instantiate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Instantiate.swift"; sourceTree = "<group>"; };
+		245213751FE2E28900561F9D /* StoryboardInstantiatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardInstantiatable.swift; sourceTree = "<group>"; };
 		245213771FE2EC5D00561F9D /* InitialViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = InitialViewController.storyboard; sourceTree = "<group>"; };
-		2452137B1FE35E3500561F9D /* UIViewController+InstantiateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+InstantiateTests.swift"; sourceTree = "<group>"; };
+		2452137B1FE35E3500561F9D /* StoryboardInstantiatableTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardInstantiatableTests.swift; sourceTree = "<group>"; };
+		249F760B1FE4AB0800421BD9 /* NibInstantiatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NibInstantiatable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,7 +114,8 @@
 				245213651FE03E9700561F9D /* UICollectionView+.swift */,
 				2452136D1FE2D40500561F9D /* UIColor+.swift */,
 				245213711FE2DAA000561F9D /* UIApplication+.swift */,
-				245213751FE2E28900561F9D /* UIViewController+Instantiate.swift */,
+				245213751FE2E28900561F9D /* StoryboardInstantiatable.swift */,
+				249F760B1FE4AB0800421BD9 /* NibInstantiatable.swift */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -120,7 +129,8 @@
 				245213631FE0388500561F9D /* UITableViewTests.swift */,
 				245213671FE03F5D00561F9D /* UICollectionViewTests.swift */,
 				2452136F1FE2D4C100561F9D /* UIColorTests.swift */,
-				2452137B1FE35E3500561F9D /* UIViewController+InstantiateTests.swift */,
+				2452137B1FE35E3500561F9D /* StoryboardInstantiatableTests.swift */,
+				2412C0421FE650AE00C3D555 /* NibInstantiatableTests.swift */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -132,6 +142,8 @@
 				245213691FE03F9D00561F9D /* CollectionViewCell.xib */,
 				2452136B1FE2788200561F9D /* CollectionViewHeaderView.xib */,
 				245213771FE2EC5D00561F9D /* InitialViewController.storyboard */,
+				2412C0401FE6504B00C3D555 /* NibView.xib */,
+				2412C0461FE6901100C3D555 /* InnerView.xib */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -240,7 +252,9 @@
 				2452136A1FE03F9D00561F9D /* CollectionViewCell.xib in Resources */,
 				2452136C1FE2788200561F9D /* CollectionViewHeaderView.xib in Resources */,
 				245213621FE0384A00561F9D /* TableViewCell.xib in Resources */,
+				2412C0411FE6504B00C3D555 /* NibView.xib in Resources */,
 				245213781FE2EC5D00561F9D /* InitialViewController.storyboard in Resources */,
+				2412C0481FE6916300C3D555 /* InnerView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -253,10 +267,11 @@
 			files = (
 				245213721FE2DAA000561F9D /* UIApplication+.swift in Sources */,
 				244F63F61FE0315700E3C372 /* NSObject+.swift in Sources */,
-				245213761FE2E28900561F9D /* UIViewController+Instantiate.swift in Sources */,
+				245213761FE2E28900561F9D /* StoryboardInstantiatable.swift in Sources */,
 				2452136E1FE2D40500561F9D /* UIColor+.swift in Sources */,
 				245213661FE03E9700561F9D /* UICollectionView+.swift in Sources */,
 				2452135E1FE0351300561F9D /* UITableView+.swift in Sources */,
+				249F760C1FE4AB0800421BD9 /* NibInstantiatable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -266,8 +281,9 @@
 			files = (
 				244F63EA1FE0310E00E3C372 /* NSObjectTests.swift in Sources */,
 				245213701FE2D4C100561F9D /* UIColorTests.swift in Sources */,
-				2452137C1FE35E3500561F9D /* UIViewController+InstantiateTests.swift in Sources */,
+				2452137C1FE35E3500561F9D /* StoryboardInstantiatableTests.swift in Sources */,
 				245213641FE0388500561F9D /* UITableViewTests.swift in Sources */,
+				2412C0431FE650AE00C3D555 /* NibInstantiatableTests.swift in Sources */,
 				245213681FE03F5D00561F9D /* UICollectionViewTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
