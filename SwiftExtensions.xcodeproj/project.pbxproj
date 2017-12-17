@@ -25,6 +25,8 @@
 		244FB4CE1FE6D46D006A60EF /* TargetedExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244FB4CD1FE6D46D006A60EF /* TargetedExtensionTests.swift */; };
 		244FB4D01FE6D630006A60EF /* Operator+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244FB4CF1FE6D630006A60EF /* Operator+.swift */; };
 		244FB4D21FE6D6F3006A60EF /* OperatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244FB4D11FE6D6F3006A60EF /* OperatorTests.swift */; };
+		244FB4D41FE6D9F5006A60EF /* Dictionary+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244FB4D31FE6D9F5006A60EF /* Dictionary+.swift */; };
+		244FB4D61FE6DAE8006A60EF /* DictionaryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244FB4D51FE6DAE8006A60EF /* DictionaryTests.swift */; };
 		2452135E1FE0351300561F9D /* UITableView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2452135D1FE0351300561F9D /* UITableView+.swift */; };
 		245213621FE0384A00561F9D /* TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 245213601FE0383500561F9D /* TableViewCell.xib */; };
 		245213641FE0388500561F9D /* UITableViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245213631FE0388500561F9D /* UITableViewTests.swift */; };
@@ -75,6 +77,8 @@
 		244FB4CD1FE6D46D006A60EF /* TargetedExtensionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TargetedExtensionTests.swift; sourceTree = "<group>"; };
 		244FB4CF1FE6D630006A60EF /* Operator+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Operator+.swift"; sourceTree = "<group>"; };
 		244FB4D11FE6D6F3006A60EF /* OperatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OperatorTests.swift; sourceTree = "<group>"; };
+		244FB4D31FE6D9F5006A60EF /* Dictionary+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Dictionary+.swift"; sourceTree = "<group>"; };
+		244FB4D51FE6DAE8006A60EF /* DictionaryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryTests.swift; sourceTree = "<group>"; };
 		2452135D1FE0351300561F9D /* UITableView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+.swift"; sourceTree = "<group>"; };
 		245213601FE0383500561F9D /* TableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableViewCell.xib; sourceTree = "<group>"; };
 		245213631FE0388500561F9D /* UITableViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewTests.swift; sourceTree = "<group>"; };
@@ -147,6 +151,7 @@
 				24FA56551FE6C24A004CC906 /* UIImage+.swift */,
 				244FB4CB1FE6D3C2006A60EF /* TargetedExtension.swift */,
 				244FB4CF1FE6D630006A60EF /* Operator+.swift */,
+				244FB4D31FE6D9F5006A60EF /* Dictionary+.swift */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -167,6 +172,7 @@
 				2412C05A1FE6B6A900C3D555 /* StringTests.swift */,
 				244FB4CD1FE6D46D006A60EF /* TargetedExtensionTests.swift */,
 				244FB4D11FE6D6F3006A60EF /* OperatorTests.swift */,
+				244FB4D51FE6DAE8006A60EF /* DictionaryTests.swift */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -315,6 +321,7 @@
 				245213661FE03E9700561F9D /* UICollectionView+.swift in Sources */,
 				24FA56561FE6C24A004CC906 /* UIImage+.swift in Sources */,
 				2452135E1FE0351300561F9D /* UITableView+.swift in Sources */,
+				244FB4D41FE6D9F5006A60EF /* Dictionary+.swift in Sources */,
 				249F760C1FE4AB0800421BD9 /* NibInstantiatable.swift in Sources */,
 				244FB4CC1FE6D3C2006A60EF /* TargetedExtension.swift in Sources */,
 			);
@@ -329,6 +336,7 @@
 				245213701FE2D4C100561F9D /* UIColorTests.swift in Sources */,
 				2452137C1FE35E3500561F9D /* StoryboardInstantiatableTests.swift in Sources */,
 				244FB4D21FE6D6F3006A60EF /* OperatorTests.swift in Sources */,
+				244FB4D61FE6DAE8006A60EF /* DictionaryTests.swift in Sources */,
 				245213641FE0388500561F9D /* UITableViewTests.swift in Sources */,
 				244FB4CE1FE6D46D006A60EF /* TargetedExtensionTests.swift in Sources */,
 				2412C04E1FE6A4E600C3D555 /* ArrayTests.swift in Sources */,
