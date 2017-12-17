@@ -18,6 +18,8 @@
 		2412C0561FE6B63D00C3D555 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2412C0581FE6B63D00C3D555 /* Localizable.strings */; };
 		2412C05B1FE6B6A900C3D555 /* StringTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2412C05A1FE6B6A900C3D555 /* StringTests.swift */; };
 		24296C121FE6DCC900FB0D0C /* URLTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24296C111FE6DCC900FB0D0C /* URLTests.swift */; };
+		24296C181FE6F30600FB0D0C /* Appliable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24296C171FE6F30600FB0D0C /* Appliable.swift */; };
+		24296C1A1FE6F35900FB0D0C /* AppliableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24296C191FE6F35900FB0D0C /* AppliableTests.swift */; };
 		244F63E51FE0310E00E3C372 /* SwiftExtensions.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 244F63DB1FE0310E00E3C372 /* SwiftExtensions.framework */; };
 		244F63EA1FE0310E00E3C372 /* NSObjectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244F63E91FE0310E00E3C372 /* NSObjectTests.swift */; };
 		244F63EC1FE0310E00E3C372 /* SwiftExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = 244F63DE1FE0310E00E3C372 /* SwiftExtensions.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -69,6 +71,8 @@
 		2412C0591FE6B65300C3D555 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
 		2412C05A1FE6B6A900C3D555 /* StringTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringTests.swift; sourceTree = "<group>"; };
 		24296C111FE6DCC900FB0D0C /* URLTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLTests.swift; sourceTree = "<group>"; };
+		24296C171FE6F30600FB0D0C /* Appliable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Appliable.swift; sourceTree = "<group>"; };
+		24296C191FE6F35900FB0D0C /* AppliableTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppliableTests.swift; sourceTree = "<group>"; };
 		244F63DB1FE0310E00E3C372 /* SwiftExtensions.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftExtensions.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		244F63DE1FE0310E00E3C372 /* SwiftExtensions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SwiftExtensions.h; sourceTree = "<group>"; };
 		244F63DF1FE0310E00E3C372 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -157,6 +161,7 @@
 				244FB4CF1FE6D630006A60EF /* Operator+.swift */,
 				244FB4D31FE6D9F5006A60EF /* Dictionary+.swift */,
 				244FB4D71FE6DC4F006A60EF /* URL+.swift */,
+				24296C171FE6F30600FB0D0C /* Appliable.swift */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -179,6 +184,7 @@
 				244FB4D11FE6D6F3006A60EF /* OperatorTests.swift */,
 				244FB4D51FE6DAE8006A60EF /* DictionaryTests.swift */,
 				24296C111FE6DCC900FB0D0C /* URLTests.swift */,
+				24296C191FE6F35900FB0D0C /* AppliableTests.swift */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -322,6 +328,7 @@
 				245213761FE2E28900561F9D /* StoryboardInstantiatable.swift in Sources */,
 				2452136E1FE2D40500561F9D /* UIColor+.swift in Sources */,
 				244FB4D01FE6D630006A60EF /* Operator+.swift in Sources */,
+				24296C181FE6F30600FB0D0C /* Appliable.swift in Sources */,
 				2412C0501FE6A52400C3D555 /* Array+.swift in Sources */,
 				2412C04A1FE6979500C3D555 /* UIView+.swift in Sources */,
 				245213661FE03E9700561F9D /* UICollectionView+.swift in Sources */,
@@ -350,6 +357,7 @@
 				2412C0431FE650AE00C3D555 /* NibInstantiatableTests.swift in Sources */,
 				2412C05B1FE6B6A900C3D555 /* StringTests.swift in Sources */,
 				24296C121FE6DCC900FB0D0C /* URLTests.swift in Sources */,
+				24296C1A1FE6F35900FB0D0C /* AppliableTests.swift in Sources */,
 				245213681FE03F5D00561F9D /* UICollectionViewTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
