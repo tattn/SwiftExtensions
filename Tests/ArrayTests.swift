@@ -47,3 +47,18 @@ class ArrayTests: XCTestCase {
         XCTAssertEqual(array, ["bar"])
     }
 }
+
+extension ArrayTests {
+    func testUnified() {
+        let array = [1, 2, 3, 3, 2, 1, 4]
+        let unifiedArray = array.unified()
+        XCTAssertEqual(array, [1, 2, 3, 3, 2, 1, 4])
+        XCTAssertEqual(unifiedArray, [1, 2, 3, 4])
+    }
+
+    func testUnify() {
+        var array = [1, 2, 3, 3, 2, 1, 4]
+        array.unify()
+        XCTAssertEqual(array, [1, 2, 3, 4])
+    }
+}

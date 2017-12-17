@@ -21,3 +21,19 @@ extension Array where Element: Equatable {
         return elements.flatMap { remove($0) }
     }
 }
+
+extension Array where Element: Hashable {
+    public mutating func unify() {
+        self = unified()
+    }
+}
+
+extension Collection where Element: Hashable {
+    public func unified() -> [Element] {
+        return reduce(into: []) {
+            if !$0.contains($1) {
+                $0.append($1)
+            }
+        }
+    }
+}
