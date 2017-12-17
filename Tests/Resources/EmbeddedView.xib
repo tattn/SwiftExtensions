@@ -12,7 +12,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view contentMode="scaleToFill" id="1ln-mh-3I7" userLabel="Owner View" customClass="InnerView" customModule="SwiftExtensionsTests">
+        <view contentMode="scaleToFill" id="1ln-mh-3I7" userLabel="Owner View" customClass="EmbeddedView" customModule="SwiftExtensionsTests">
             <rect key="frame" x="0.0" y="0.0" width="375" height="128"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
@@ -28,7 +28,7 @@
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="zJe-o7-LXc"/>
             <connections>
-                <outlet property="label" destination="ggB-8R-6vR" id="F2T-a1-07n"/>
+                <outlet property="label" destination="ggB-8R-6vR" id="d0M-yX-6ft"/>
             </connections>
             <point key="canvasLocation" x="365" y="-168"/>
         </view>

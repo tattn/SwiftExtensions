@@ -30,3 +30,17 @@ extension NibInstantiatable where Self: UIView {
         return nib.instantiate(withOwner: nibOwner, options: nibOptions)[instantiateIndex] as! Self
     }
 }
+
+public protocol EmbeddedNibInstantiatable {
+    associatedtype Embedded: NibInstantiatable
+}
+
+extension EmbeddedNibInstantiatable where Self: UIView, Embedded: UIView {
+    public var embedded: Embedded { return subviews[0] as! Embedded }
+
+    public func configureEmbededView() {
+        let view = Embedded.instantiate()
+        insertSubview(view, at: 0)
+        view.fillSuperview()
+    }
+}

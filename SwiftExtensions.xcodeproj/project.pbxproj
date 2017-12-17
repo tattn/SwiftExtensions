@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		2412C0411FE6504B00C3D555 /* NibView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2412C0401FE6504B00C3D555 /* NibView.xib */; };
 		2412C0431FE650AE00C3D555 /* NibInstantiatableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2412C0421FE650AE00C3D555 /* NibInstantiatableTests.swift */; };
-		2412C0481FE6916300C3D555 /* InnerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2412C0461FE6901100C3D555 /* InnerView.xib */; };
+		2412C0481FE6916300C3D555 /* EmbeddedView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2412C0461FE6901100C3D555 /* EmbeddedView.xib */; };
 		2412C04A1FE6979500C3D555 /* UIView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2412C0491FE6979500C3D555 /* UIView+.swift */; };
 		2412C04C1FE6993F00C3D555 /* UIViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2412C04B1FE6993F00C3D555 /* UIViewTests.swift */; };
 		244F63E51FE0310E00E3C372 /* SwiftExtensions.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 244F63DB1FE0310E00E3C372 /* SwiftExtensions.framework */; };
@@ -45,7 +45,7 @@
 /* Begin PBXFileReference section */
 		2412C0401FE6504B00C3D555 /* NibView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NibView.xib; sourceTree = "<group>"; };
 		2412C0421FE650AE00C3D555 /* NibInstantiatableTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NibInstantiatableTests.swift; sourceTree = "<group>"; };
-		2412C0461FE6901100C3D555 /* InnerView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InnerView.xib; sourceTree = "<group>"; };
+		2412C0461FE6901100C3D555 /* EmbeddedView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EmbeddedView.xib; sourceTree = "<group>"; };
 		2412C0491FE6979500C3D555 /* UIView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+.swift"; sourceTree = "<group>"; };
 		2412C04B1FE6993F00C3D555 /* UIViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewTests.swift; sourceTree = "<group>"; };
 		244F63DB1FE0310E00E3C372 /* SwiftExtensions.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftExtensions.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -149,7 +149,7 @@
 				2452136B1FE2788200561F9D /* CollectionViewHeaderView.xib */,
 				245213771FE2EC5D00561F9D /* InitialViewController.storyboard */,
 				2412C0401FE6504B00C3D555 /* NibView.xib */,
-				2412C0461FE6901100C3D555 /* InnerView.xib */,
+				2412C0461FE6901100C3D555 /* EmbeddedView.xib */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -260,7 +260,7 @@
 				245213621FE0384A00561F9D /* TableViewCell.xib in Resources */,
 				2412C0411FE6504B00C3D555 /* NibView.xib in Resources */,
 				245213781FE2EC5D00561F9D /* InitialViewController.storyboard in Resources */,
-				2412C0481FE6916300C3D555 /* InnerView.xib in Resources */,
+				2412C0481FE6916300C3D555 /* EmbeddedView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

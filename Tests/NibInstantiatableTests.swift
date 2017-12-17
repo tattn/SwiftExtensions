@@ -20,25 +20,24 @@ final class SecondaryNibView: UIView, NibInstantiatable {
     @IBOutlet weak var label: UILabel!
 }
 
-final class InnerView: UIView, NibInstantiatable {
+final class EmbeddedView: UIView, NibInstantiatable {
     @IBOutlet weak var label: UILabel!
 }
 
-final class IBInnerView: UIView {
-    var view: InnerView { return subviews[0] as! InnerView }
+final class IBEmbeddedView: UIView, EmbeddedNibInstantiatable {
+    typealias Embedded = EmbeddedView
 
     override func awakeFromNib() {
         super.awakeFromNib()
-        let view = InnerView.instantiate()
-        insertSubview(view, at: 0)
+        configureEmbededView()
     }
 }
 
-final class SuperviewOfInnerView: UIView, NibInstantiatable {
+final class SuperviewOfEmbeddedView: UIView, NibInstantiatable {
     static var nibName: String { return NibView.className }
     static var instantiateIndex: Int { return 2 }
 
-    @IBOutlet weak var ownerView: IBInnerView!
+    @IBOutlet weak var embeddedView: IBEmbeddedView!
 }
 
 class NibInstantiatableTests: XCTestCase {
@@ -54,7 +53,7 @@ class NibInstantiatableTests: XCTestCase {
     }
 
     func testInstantiateSuperviewOfOwnerView() {
-        let view = SuperviewOfInnerView.instantiate()
-        XCTAssertNotNil(view.ownerView.view.label)
+        let view = SuperviewOfEmbeddedView.instantiate()
+        XCTAssertNotNil(view.embeddedView.embedded.label)
     }
 }
