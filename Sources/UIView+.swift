@@ -8,7 +8,7 @@
 
 import UIKit
 
-extension UIView {
+public extension UIView {
     public func fillSuperview() {
         guard let superview = self.superview else { return }
         translatesAutoresizingMaskIntoConstraints = superview.translatesAutoresizingMaskIntoConstraints
@@ -21,5 +21,16 @@ extension UIView {
             leftAnchor.constraint(equalTo: superview.leftAnchor).isActive = true
             rightAnchor.constraint(equalTo: superview.rightAnchor).isActive = true
         }
+    }
+
+    public var parentViewController: UIViewController? {
+        var parent: UIResponder? = self
+        while parent != nil {
+            parent = parent?.next
+            if let viewController = parent as? UIViewController {
+                return viewController
+            }
+        }
+        return nil
     }
 }
