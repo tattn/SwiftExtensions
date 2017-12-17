@@ -1,0 +1,9 @@
+/* 
+  Localizable.strings
+  SwiftExtensions
+
+  Created by Tatsuya Tanaka on 20171217.
+  Copyright © 2017年 tattn. All rights reserved.
+*/
+
+hello = "こんにちは";

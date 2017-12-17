@@ -14,6 +14,9 @@
 		2412C04C1FE6993F00C3D555 /* UIViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2412C04B1FE6993F00C3D555 /* UIViewTests.swift */; };
 		2412C04E1FE6A4E600C3D555 /* ArrayTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2412C04D1FE6A4E600C3D555 /* ArrayTests.swift */; };
 		2412C0501FE6A52400C3D555 /* Array+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2412C04F1FE6A52400C3D555 /* Array+.swift */; };
+		2412C0521FE6B2B100C3D555 /* String+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2412C0511FE6B2B100C3D555 /* String+.swift */; };
+		2412C0561FE6B63D00C3D555 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2412C0581FE6B63D00C3D555 /* Localizable.strings */; };
+		2412C05B1FE6B6A900C3D555 /* StringTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2412C05A1FE6B6A900C3D555 /* StringTests.swift */; };
 		244F63E51FE0310E00E3C372 /* SwiftExtensions.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 244F63DB1FE0310E00E3C372 /* SwiftExtensions.framework */; };
 		244F63EA1FE0310E00E3C372 /* NSObjectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244F63E91FE0310E00E3C372 /* NSObjectTests.swift */; };
 		244F63EC1FE0310E00E3C372 /* SwiftExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = 244F63DE1FE0310E00E3C372 /* SwiftExtensions.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -52,6 +55,10 @@
 		2412C04B1FE6993F00C3D555 /* UIViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewTests.swift; sourceTree = "<group>"; };
 		2412C04D1FE6A4E600C3D555 /* ArrayTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayTests.swift; sourceTree = "<group>"; };
 		2412C04F1FE6A52400C3D555 /* Array+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+.swift"; sourceTree = "<group>"; };
+		2412C0511FE6B2B100C3D555 /* String+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+.swift"; sourceTree = "<group>"; };
+		2412C0571FE6B63D00C3D555 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		2412C0591FE6B65300C3D555 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
+		2412C05A1FE6B6A900C3D555 /* StringTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringTests.swift; sourceTree = "<group>"; };
 		244F63DB1FE0310E00E3C372 /* SwiftExtensions.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftExtensions.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		244F63DE1FE0310E00E3C372 /* SwiftExtensions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SwiftExtensions.h; sourceTree = "<group>"; };
 		244F63DF1FE0310E00E3C372 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -126,6 +133,7 @@
 				249F760B1FE4AB0800421BD9 /* NibInstantiatable.swift */,
 				2412C0491FE6979500C3D555 /* UIView+.swift */,
 				2412C04F1FE6A52400C3D555 /* Array+.swift */,
+				2412C0511FE6B2B100C3D555 /* String+.swift */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -143,6 +151,7 @@
 				2412C0421FE650AE00C3D555 /* NibInstantiatableTests.swift */,
 				2412C04B1FE6993F00C3D555 /* UIViewTests.swift */,
 				2412C04D1FE6A4E600C3D555 /* ArrayTests.swift */,
+				2412C05A1FE6B6A900C3D555 /* StringTests.swift */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -156,6 +165,7 @@
 				245213771FE2EC5D00561F9D /* InitialViewController.storyboard */,
 				2412C0401FE6504B00C3D555 /* NibView.xib */,
 				2412C0461FE6901100C3D555 /* EmbeddedView.xib */,
+				2412C0581FE6B63D00C3D555 /* Localizable.strings */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -237,6 +247,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				ja,
 			);
 			mainGroup = 244F63D11FE0310E00E3C372;
 			productRefGroup = 244F63DC1FE0310E00E3C372 /* Products */;
@@ -264,6 +275,7 @@
 				2452136A1FE03F9D00561F9D /* CollectionViewCell.xib in Resources */,
 				2452136C1FE2788200561F9D /* CollectionViewHeaderView.xib in Resources */,
 				245213621FE0384A00561F9D /* TableViewCell.xib in Resources */,
+				2412C0561FE6B63D00C3D555 /* Localizable.strings in Resources */,
 				2412C0411FE6504B00C3D555 /* NibView.xib in Resources */,
 				245213781FE2EC5D00561F9D /* InitialViewController.storyboard in Resources */,
 				2412C0481FE6916300C3D555 /* EmbeddedView.xib in Resources */,
@@ -279,6 +291,7 @@
 			files = (
 				245213721FE2DAA000561F9D /* UIApplication+.swift in Sources */,
 				244F63F61FE0315700E3C372 /* NSObject+.swift in Sources */,
+				2412C0521FE6B2B100C3D555 /* String+.swift in Sources */,
 				245213761FE2E28900561F9D /* StoryboardInstantiatable.swift in Sources */,
 				2452136E1FE2D40500561F9D /* UIColor+.swift in Sources */,
 				2412C0501FE6A52400C3D555 /* Array+.swift in Sources */,
@@ -300,6 +313,7 @@
 				245213641FE0388500561F9D /* UITableViewTests.swift in Sources */,
 				2412C04E1FE6A4E600C3D555 /* ArrayTests.swift in Sources */,
 				2412C0431FE650AE00C3D555 /* NibInstantiatableTests.swift in Sources */,
+				2412C05B1FE6B6A900C3D555 /* StringTests.swift in Sources */,
 				245213681FE03F5D00561F9D /* UICollectionViewTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -314,11 +328,24 @@
 		};
 /* End PBXTargetDependency section */
 
+/* Begin PBXVariantGroup section */
+		2412C0581FE6B63D00C3D555 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2412C0571FE6B63D00C3D555 /* en */,
+				2412C0591FE6B65300C3D555 /* ja */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
 /* Begin XCBuildConfiguration section */
 		244F63ED1FE0310E00E3C372 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -379,6 +406,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";

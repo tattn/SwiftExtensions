@@ -62,3 +62,10 @@ extension ArrayTests {
         XCTAssertEqual(array, [1, 2, 3, 4])
     }
 }
+
+extension ArrayTests {
+    func testSafeSubscript() {
+        let array = [0, 1, 2, 3]
+        XCTAssertNil(array[safe: 4])
+    }
+}
