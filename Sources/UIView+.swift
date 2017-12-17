@@ -23,7 +23,7 @@ public extension UIView {
         }
     }
 
-    public var parentViewController: UIViewController? {
+    public var viewController: UIViewController? {
         var parent: UIResponder? = self
         while parent != nil {
             parent = parent?.next
