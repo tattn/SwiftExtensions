@@ -8,7 +8,7 @@
 
 import Foundation
 
-extension NSObjectProtocol {
+public extension NSObjectProtocol {
     public static var className: String {
         return String(describing: self)
     }
@@ -18,7 +18,7 @@ extension NSObjectProtocol {
     }
 }
 
-extension NSObjectProtocol {
+public extension NSObjectProtocol {
     public var describedProperty: String {
         let mirror = Mirror(reflecting: self)
         return mirror.children.map { element -> String in

@@ -8,7 +8,7 @@
 
 import Foundation
 
-extension Array where Element: Equatable {
+public extension Array where Element: Equatable {
     @discardableResult
     public mutating func remove(_ element: Element) -> Index? {
         guard let index = index(of: element) else { return nil }
@@ -22,13 +22,13 @@ extension Array where Element: Equatable {
     }
 }
 
-extension Array where Element: Hashable {
+public extension Array where Element: Hashable {
     public mutating func unify() {
         self = unified()
     }
 }
 
-extension Collection where Element: Hashable {
+public extension Collection where Element: Hashable {
     public func unified() -> [Element] {
         return reduce(into: []) {
             if !$0.contains($1) {
@@ -38,7 +38,7 @@ extension Collection where Element: Hashable {
     }
 }
 
-extension Collection {
+public extension Collection {
     public subscript(safe index: Index) -> Element? {
         return startIndex <= index && index < endIndex ? self[index] : nil
     }

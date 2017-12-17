@@ -19,7 +19,7 @@ public protocol StoryboardInstantiatable {
     static var instantiateType: StoryboardInstantiateType { get }
 }
 
-extension StoryboardInstantiatable where Self: NSObjectProtocol {
+public extension StoryboardInstantiatable where Self: NSObjectProtocol {
     public static var storyboardName: String {
         return className
     }
@@ -28,7 +28,7 @@ extension StoryboardInstantiatable where Self: NSObjectProtocol {
         return Bundle(for: self)
     }
 
-    fileprivate static var storyboard: UIStoryboard {
+    private static var storyboard: UIStoryboard {
         return UIStoryboard(name: storyboardName, bundle: storyboardBundle)
     }
 
@@ -37,7 +37,7 @@ extension StoryboardInstantiatable where Self: NSObjectProtocol {
     }
 }
 
-extension StoryboardInstantiatable where Self: UIViewController {
+public extension StoryboardInstantiatable where Self: UIViewController {
     public static func instantiate() -> Self {
         switch instantiateType {
         case .initial:

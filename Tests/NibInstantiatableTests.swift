@@ -24,6 +24,7 @@ final class EmbeddedView: UIView, NibInstantiatable {
     @IBOutlet weak var label: UILabel!
 }
 
+@IBDesignable
 final class IBEmbeddedView: UIView, EmbeddedNibInstantiatable {
     typealias Embedded = EmbeddedView
 
