@@ -35,6 +35,7 @@
 		245213781FE2EC5D00561F9D /* InitialViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 245213771FE2EC5D00561F9D /* InitialViewController.storyboard */; };
 		2452137C1FE35E3500561F9D /* StoryboardInstantiatableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2452137B1FE35E3500561F9D /* StoryboardInstantiatableTests.swift */; };
 		249F760C1FE4AB0800421BD9 /* NibInstantiatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 249F760B1FE4AB0800421BD9 /* NibInstantiatable.swift */; };
+		24FA56561FE6C24A004CC906 /* UIImage+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24FA56551FE6C24A004CC906 /* UIImage+.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,6 +81,7 @@
 		245213771FE2EC5D00561F9D /* InitialViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = InitialViewController.storyboard; sourceTree = "<group>"; };
 		2452137B1FE35E3500561F9D /* StoryboardInstantiatableTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardInstantiatableTests.swift; sourceTree = "<group>"; };
 		249F760B1FE4AB0800421BD9 /* NibInstantiatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NibInstantiatable.swift; sourceTree = "<group>"; };
+		24FA56551FE6C24A004CC906 /* UIImage+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,6 +136,7 @@
 				2412C0491FE6979500C3D555 /* UIView+.swift */,
 				2412C04F1FE6A52400C3D555 /* Array+.swift */,
 				2412C0511FE6B2B100C3D555 /* String+.swift */,
+				24FA56551FE6C24A004CC906 /* UIImage+.swift */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -297,6 +300,7 @@
 				2412C0501FE6A52400C3D555 /* Array+.swift in Sources */,
 				2412C04A1FE6979500C3D555 /* UIView+.swift in Sources */,
 				245213661FE03E9700561F9D /* UICollectionView+.swift in Sources */,
+				24FA56561FE6C24A004CC906 /* UIImage+.swift in Sources */,
 				2452135E1FE0351300561F9D /* UITableView+.swift in Sources */,
 				249F760C1FE4AB0800421BD9 /* NibInstantiatable.swift in Sources */,
 			);
