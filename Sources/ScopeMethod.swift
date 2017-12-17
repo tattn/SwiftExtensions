@@ -1,5 +1,5 @@
 //
-//  Appliable.swift
+//  ScopeMethod.swift
 //  SwiftExtensions
 //
 //  Created by Tatsuya Tanaka on 20171218.
@@ -12,10 +12,20 @@ public protocol Appliable {}
 
 public extension Appliable {
     @discardableResult
-    func apply(closure: (Self) -> Void) -> Self {
+    public func apply(closure: (Self) -> Void) -> Self {
         closure(self)
         return self
     }
 }
 
+public protocol Runnable {}
+
+public extension Runnable {
+    @discardableResult
+    public func run<T>(closure: (Self) -> T) -> T {
+        return closure(self)
+    }
+}
+
 extension NSObject: Appliable {}
+extension NSObject: Runnable {}
