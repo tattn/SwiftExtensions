@@ -20,6 +20,10 @@
 		24296C121FE6DCC900FB0D0C /* URLTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24296C111FE6DCC900FB0D0C /* URLTests.swift */; };
 		24296C181FE6F30600FB0D0C /* ScopeMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24296C171FE6F30600FB0D0C /* ScopeMethod.swift */; };
 		24296C1A1FE6F35900FB0D0C /* ScopeMethodTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24296C191FE6F35900FB0D0C /* ScopeMethodTests.swift */; };
+		24296C1C1FE7014900FB0D0C /* Safe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24296C1B1FE7014900FB0D0C /* Safe.swift */; };
+		24296C1E1FE7018A00FB0D0C /* SafeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24296C1D1FE7018A00FB0D0C /* SafeTests.swift */; };
+		24296C201FE7035200FB0D0C /* StringTo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24296C1F1FE7035200FB0D0C /* StringTo.swift */; };
+		24296C221FE7037C00FB0D0C /* StringToTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24296C211FE7037C00FB0D0C /* StringToTests.swift */; };
 		244F63E51FE0310E00E3C372 /* SwiftExtensions.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 244F63DB1FE0310E00E3C372 /* SwiftExtensions.framework */; };
 		244F63EA1FE0310E00E3C372 /* NSObjectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244F63E91FE0310E00E3C372 /* NSObjectTests.swift */; };
 		244F63EC1FE0310E00E3C372 /* SwiftExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = 244F63DE1FE0310E00E3C372 /* SwiftExtensions.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -73,6 +77,10 @@
 		24296C111FE6DCC900FB0D0C /* URLTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLTests.swift; sourceTree = "<group>"; };
 		24296C171FE6F30600FB0D0C /* ScopeMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScopeMethod.swift; sourceTree = "<group>"; };
 		24296C191FE6F35900FB0D0C /* ScopeMethodTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScopeMethodTests.swift; sourceTree = "<group>"; };
+		24296C1B1FE7014900FB0D0C /* Safe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Safe.swift; sourceTree = "<group>"; };
+		24296C1D1FE7018A00FB0D0C /* SafeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafeTests.swift; sourceTree = "<group>"; };
+		24296C1F1FE7035200FB0D0C /* StringTo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringTo.swift; sourceTree = "<group>"; };
+		24296C211FE7037C00FB0D0C /* StringToTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringToTests.swift; sourceTree = "<group>"; };
 		244F63DB1FE0310E00E3C372 /* SwiftExtensions.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftExtensions.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		244F63DE1FE0310E00E3C372 /* SwiftExtensions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SwiftExtensions.h; sourceTree = "<group>"; };
 		244F63DF1FE0310E00E3C372 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -162,6 +170,8 @@
 				244FB4D31FE6D9F5006A60EF /* Dictionary+.swift */,
 				244FB4D71FE6DC4F006A60EF /* URL+.swift */,
 				24296C171FE6F30600FB0D0C /* ScopeMethod.swift */,
+				24296C1B1FE7014900FB0D0C /* Safe.swift */,
+				24296C1F1FE7035200FB0D0C /* StringTo.swift */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -185,6 +195,8 @@
 				244FB4D51FE6DAE8006A60EF /* DictionaryTests.swift */,
 				24296C111FE6DCC900FB0D0C /* URLTests.swift */,
 				24296C191FE6F35900FB0D0C /* ScopeMethodTests.swift */,
+				24296C1D1FE7018A00FB0D0C /* SafeTests.swift */,
+				24296C211FE7037C00FB0D0C /* StringToTests.swift */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -329,6 +341,7 @@
 				2452136E1FE2D40500561F9D /* UIColor+.swift in Sources */,
 				244FB4D01FE6D630006A60EF /* Operator+.swift in Sources */,
 				24296C181FE6F30600FB0D0C /* ScopeMethod.swift in Sources */,
+				24296C1C1FE7014900FB0D0C /* Safe.swift in Sources */,
 				2412C0501FE6A52400C3D555 /* Array+.swift in Sources */,
 				2412C04A1FE6979500C3D555 /* UIView+.swift in Sources */,
 				245213661FE03E9700561F9D /* UICollectionView+.swift in Sources */,
@@ -336,6 +349,7 @@
 				244FB4D81FE6DC4F006A60EF /* URL+.swift in Sources */,
 				2452135E1FE0351300561F9D /* UITableView+.swift in Sources */,
 				244FB4D41FE6D9F5006A60EF /* Dictionary+.swift in Sources */,
+				24296C201FE7035200FB0D0C /* StringTo.swift in Sources */,
 				249F760C1FE4AB0800421BD9 /* NibInstantiatable.swift in Sources */,
 				244FB4CC1FE6D3C2006A60EF /* TargetedExtension.swift in Sources */,
 			);
@@ -350,11 +364,13 @@
 				245213701FE2D4C100561F9D /* UIColorTests.swift in Sources */,
 				2452137C1FE35E3500561F9D /* StoryboardInstantiatableTests.swift in Sources */,
 				244FB4D21FE6D6F3006A60EF /* OperatorTests.swift in Sources */,
+				24296C1E1FE7018A00FB0D0C /* SafeTests.swift in Sources */,
 				244FB4D61FE6DAE8006A60EF /* DictionaryTests.swift in Sources */,
 				245213641FE0388500561F9D /* UITableViewTests.swift in Sources */,
 				244FB4CE1FE6D46D006A60EF /* TargetedExtensionTests.swift in Sources */,
 				2412C04E1FE6A4E600C3D555 /* ArrayTests.swift in Sources */,
 				2412C0431FE650AE00C3D555 /* NibInstantiatableTests.swift in Sources */,
+				24296C221FE7037C00FB0D0C /* StringToTests.swift in Sources */,
 				2412C05B1FE6B6A900C3D555 /* StringTests.swift in Sources */,
 				24296C121FE6DCC900FB0D0C /* URLTests.swift in Sources */,
 				24296C1A1FE6F35900FB0D0C /* ScopeMethodTests.swift in Sources */,

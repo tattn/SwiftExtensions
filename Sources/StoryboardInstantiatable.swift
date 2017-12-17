@@ -19,7 +19,7 @@ public protocol StoryboardInstantiatable {
     static var instantiateType: StoryboardInstantiateType { get }
 }
 
-public extension StoryboardInstantiatable where Self: NSObjectProtocol {
+public extension StoryboardInstantiatable where Self: NSObject {
     public static var storyboardName: String {
         return className
     }

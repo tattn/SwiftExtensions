@@ -8,7 +8,12 @@
 
 import Foundation
 
-public extension NSObjectProtocol {
+public protocol ClassNameProtocol {
+    static var className: String { get }
+    var className: String { get }
+}
+
+public extension ClassNameProtocol {
     public static var className: String {
         return String(describing: self)
     }
@@ -17,6 +22,8 @@ public extension NSObjectProtocol {
         return type(of: self).className
     }
 }
+
+extension NSObject: ClassNameProtocol {}
 
 public extension NSObjectProtocol {
     public var describedProperty: String {

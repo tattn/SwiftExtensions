@@ -16,7 +16,7 @@ public protocol NibInstantiatable {
     static var instantiateIndex: Int { get }
 }
 
-public extension NibInstantiatable where Self: NSObjectProtocol {
+public extension NibInstantiatable where Self: NSObject {
     public static var nibName: String { return className }
     public static var nibBundle: Bundle { return Bundle(for: self) }
     public static var nibOwner: Any? { return self }
