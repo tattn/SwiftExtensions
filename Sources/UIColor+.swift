@@ -25,5 +25,10 @@ public extension UIColor {
 
         self.init(hex: Int(rgbHex), alpha: alpha)
     }
+
+    @nonobjc
+    convenience init(red: Int, green: Int, blue: Int, alpha: Double = 1.0) {
+        self.init(red: CGFloat(red) / 255, green: CGFloat(green) / 255, blue: CGFloat(blue) / 255, alpha: CGFloat(alpha))
+    }
 }
 
