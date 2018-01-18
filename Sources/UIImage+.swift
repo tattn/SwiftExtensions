@@ -32,7 +32,7 @@ public extension UIImage {
         }
     }
 
-    func image(withTint color: UIColor) -> UIImage {
+    public func image(withTint color: UIColor) -> UIImage {
         let rect = CGRect(x: 0, y: 0, width: size.width, height: size.height)
         UIGraphicsBeginImageContextWithOptions(rect.size, false, 0)
 
@@ -49,5 +49,66 @@ public extension UIImage {
         UIGraphicsEndImageContext()
 
         return image
+    }
+
+    public func cropping(to rect: CGRect) -> UIImage? {
+        let originalRect = CGRect(
+            x: rect.origin.x * scale,
+            y: rect.origin.y * scale,
+            width: rect.size.width * scale,
+            height: rect.size.height * scale
+        )
+
+        guard let cgImage = cgImage,
+            let imageRef = cgImage.cropping(to: originalRect) else { return nil }
+
+        return UIImage(cgImage: imageRef, scale: scale, orientation: imageOrientation)
+    }
+
+    public func resize(to size: CGSize) -> UIImage? {
+        UIGraphicsBeginImageContext(CGSize(
+            width: size.width * scale,
+            height: size.height * scale
+        ))
+
+        draw(in: CGRect(x: 0, y: 0, width: size.width, height: size.height))
+
+        let image = UIGraphicsGetImageFromCurrentImageContext()
+        guard let cgImage = image?.cgImage else { return nil }
+
+        defer { UIGraphicsEndImageContext() }
+        return UIImage(cgImage: cgImage, scale:  scale, orientation: imageOrientation)
+    }
+
+    public func resizeAspectFit(to size: CGSize) -> UIImage? {
+        let widthRatio = size.width / self.size.width
+        let heightRatio = size.height / self.size.height
+        let ratio = widthRatio < heightRatio ? widthRatio : heightRatio
+
+        let resizedSize = CGSize(width: self.size.width*ratio, height: self.size.height*ratio)
+
+        UIGraphicsBeginImageContextWithOptions(resizedSize, false, 0.0)
+        draw(in: CGRect(x: 0, y: 0, width: resizedSize.width, height: resizedSize.height))
+        defer { UIGraphicsEndImageContext() }
+        return UIGraphicsGetImageFromCurrentImageContext()
+    }
+
+    public func toJPEG(quarity: CGFloat = 1.0) -> Data? {
+        return UIImageJPEGRepresentation(self, quarity)
+    }
+
+    public func toPNG(quarity: CGFloat = 1.0) -> Data? {
+        return UIImagePNGRepresentation(self)
+    }
+
+    public func rounded() -> UIImage? {
+        let imageView = UIImageView(image: self)
+        imageView.layer.cornerRadius = min(size.height/2, size.width/2)
+        imageView.layer.masksToBounds = true
+        UIGraphicsBeginImageContextWithOptions(imageView.bounds.size, false, 0.0)
+        guard let context = UIGraphicsGetCurrentContext() else { return nil }
+        imageView.layer.render(in: context)
+        defer { UIGraphicsEndImageContext() }
+        return UIGraphicsGetImageFromCurrentImageContext()
     }
 }
