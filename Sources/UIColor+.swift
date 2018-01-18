@@ -15,5 +15,15 @@ public extension UIColor {
         let b = CGFloat(hex & 0x0000FF) / 255.0
         self.init(red: r, green: g, blue: b, alpha: CGFloat(alpha))
     }
+
+    public convenience init?(rgbHexString: String, alpha: Double = 1.0) {
+        let scanner = Scanner(string: rgbHexString.replacingOccurrences(of: "#", with: ""))
+        var rgbHex: UInt32 = 0
+        guard scanner.scanHexInt32(&rgbHex) else {
+            return nil
+        }
+
+        self.init(hex: Int(rgbHex), alpha: alpha)
+    }
 }
 

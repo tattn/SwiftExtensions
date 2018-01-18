@@ -25,5 +25,20 @@ class UIColorTests: XCTestCase {
         XCTAssertEqual(blue, 204 / CGFloat(255))
         XCTAssertEqual(alpha, 0.5)
     }
-    
+
+    func testRGBHexStringInit() {
+        let color = UIColor(rgbHexString: "#AABBCC", alpha: 0.5)
+
+        var red: CGFloat = 0
+        var blue: CGFloat = 0
+        var green: CGFloat = 0
+        var alpha: CGFloat = 0
+
+        color!.getRed(&red, green: &green, blue: &blue, alpha: &alpha)
+
+        XCTAssertEqual(red, 170 / CGFloat(255))
+        XCTAssertEqual(green, 187 / CGFloat(255))
+        XCTAssertEqual(blue, 204 / CGFloat(255))
+        XCTAssertEqual(alpha, 0.5)
+    }
 }
