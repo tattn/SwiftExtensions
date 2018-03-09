@@ -11,7 +11,7 @@ import UIKit
 public extension UICollectionView {
     public func register<T: UICollectionViewCell>(cellType: T.Type, bundle: Bundle? = nil) {
         let className = cellType.className
-        let nib = UINib(nibName: className, bundle: bundle)
+        let nib = UINib(nibName: className, bundle: bundle ?? Bundle(for: cellType))
         register(nib, forCellWithReuseIdentifier: className)
     }
 
@@ -23,7 +23,7 @@ public extension UICollectionView {
                                                       ofKind kind: String = UICollectionElementKindSectionHeader,
                                                       bundle: Bundle? = nil) {
         let className = reusableViewType.className
-        let nib = UINib(nibName: className, bundle: bundle)
+        let nib = UINib(nibName: className, bundle: bundle ?? Bundle(for: reusableViewType))
         register(nib, forSupplementaryViewOfKind: kind, withReuseIdentifier: className)
     }
 
