@@ -9,27 +9,27 @@
 import UIKit
 
 public extension UICollectionView {
-    public func register<T: UICollectionViewCell>(cellType: T.Type, bundle: Bundle? = nil) {
+    public func register<T: UICollectionViewCell>(cellType: T.Type, bundle: Bundle = Bundle(for: T.self)) {
         let className = cellType.className
-        let nib = UINib(nibName: className, bundle: bundle ?? Bundle(for: cellType))
+        let nib = UINib(nibName: className, bundle: bundle)
         register(nib, forCellWithReuseIdentifier: className)
     }
 
-    public func register<T: UICollectionViewCell>(cellTypes: [T.Type], bundle: Bundle? = nil) {
+    public func register<T: UICollectionViewCell>(cellTypes: [T.Type], bundle: Bundle = Bundle(for: T.self)) {
         cellTypes.forEach { register(cellType: $0, bundle: bundle) }
     }
 
     public func register<T: UICollectionReusableView>(reusableViewType: T.Type,
                                                       ofKind kind: String = UICollectionElementKindSectionHeader,
-                                                      bundle: Bundle? = nil) {
+                                                      bundle: Bundle = Bundle(for: T.self)) {
         let className = reusableViewType.className
-        let nib = UINib(nibName: className, bundle: bundle ?? Bundle(for: reusableViewType))
+        let nib = UINib(nibName: className, bundle: bundle)
         register(nib, forSupplementaryViewOfKind: kind, withReuseIdentifier: className)
     }
 
     public func register<T: UICollectionReusableView>(reusableViewTypes: [T.Type],
                                                       ofKind kind: String = UICollectionElementKindSectionHeader,
-                                                      bundle: Bundle? = nil) {
+                                                      bundle: Bundle = Bundle(for: T.self)) {
         reusableViewTypes.forEach { register(reusableViewType: $0, ofKind: kind, bundle: bundle) }
     }
 
