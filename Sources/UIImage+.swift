@@ -67,30 +67,31 @@ public extension UIImage {
         return UIImage(cgImage: imageRef, scale: scale, orientation: imageOrientation)
     }
 
-    public func resize(to size: CGSize) -> UIImage? {
+    public func resize(to newSize: CGSize) -> UIImage? {
         UIGraphicsBeginImageContext(CGSize(
-            width: size.width * scale,
-            height: size.height * scale
+            width: newSize.width * scale,
+            height: newSize.height * scale
         ))
 
-        draw(in: CGRect(x: 0, y: 0, width: size.width, height: size.height))
+        draw(in: CGRect(x: 0, y: 0, width: newSize.width, height: newSize.height))
 
         let image = UIGraphicsGetImageFromCurrentImageContext()
         guard let cgImage = image?.cgImage else { return nil }
 
         defer { UIGraphicsEndImageContext() }
-        return UIImage(cgImage: cgImage, scale:  scale, orientation: imageOrientation)
+        return UIImage(cgImage: cgImage, scale: scale, orientation: imageOrientation)
     }
 
-    public func resizeAspectFit(to size: CGSize) -> UIImage? {
-        let widthRatio = size.width / self.size.width
-        let heightRatio = size.height / self.size.height
-        let ratio = widthRatio < heightRatio ? widthRatio : heightRatio
+    public func resize(to newSize: CGSize, scalingMode: ScalingMode) -> UIImage? {
+        let aspectRatio = scalingMode.aspectRatio(between: newSize, and: size)
 
-        let resizedSize = CGSize(width: self.size.width*ratio, height: self.size.height*ratio)
+        let scaledImageRect = CGRect(x: (newSize.width - size.width * aspectRatio) / 2.0,
+                                     y: (newSize.height - size.height * aspectRatio) / 2.0,
+                                     width: size.width * aspectRatio,
+                                     height: size.height * aspectRatio)
 
-        UIGraphicsBeginImageContextWithOptions(resizedSize, false, 0.0)
-        draw(in: CGRect(x: 0, y: 0, width: resizedSize.width, height: resizedSize.height))
+        UIGraphicsBeginImageContext(newSize)
+        draw(in: scaledImageRect)
         defer { UIGraphicsEndImageContext() }
         return UIGraphicsGetImageFromCurrentImageContext()
     }
@@ -112,5 +113,22 @@ public extension UIImage {
         imageView.layer.render(in: context)
         defer { UIGraphicsEndImageContext() }
         return UIGraphicsGetImageFromCurrentImageContext()
+    }
+}
+
+extension UIImage {
+    public enum ScalingMode {
+        case aspectFill
+        case aspectFit
+
+        func aspectRatio(between size: CGSize, and otherSize: CGSize) -> CGFloat {
+            let aspectWidth  = size.width / otherSize.width
+            let aspectHeight = size.height / otherSize.height
+
+            switch self {
+            case .aspectFill: return max(aspectWidth, aspectHeight)
+            case .aspectFit: return min(aspectWidth, aspectHeight)
+            }
+        }
     }
 }
