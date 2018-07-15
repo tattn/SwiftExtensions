@@ -14,6 +14,8 @@ My favorite Swift extensions.
 github "tattn/SwiftExtensions"
 ```
 
+# Docs
+[使うと手放せなくなるSwift Extension集 (Swift 4版) - Qiita](https://qiita.com/tattn/items/dc7dfe2fceec00bb4ff7) (Japanese)
 
 # Contributing
 
