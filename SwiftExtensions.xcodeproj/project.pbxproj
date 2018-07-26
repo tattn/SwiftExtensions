@@ -49,6 +49,7 @@
 		245213781FE2EC5D00561F9D /* InitialViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 245213771FE2EC5D00561F9D /* InitialViewController.storyboard */; };
 		2452137C1FE35E3500561F9D /* StoryboardInstantiatableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2452137B1FE35E3500561F9D /* StoryboardInstantiatableTests.swift */; };
 		24742A1B20FBB1BC008746E8 /* Error+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24742A1A20FBB1BC008746E8 /* Error+.swift */; };
+		24979DF32109ECA40016E77F /* Function.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24979DF22109ECA40016E77F /* Function.swift */; };
 		249F760C1FE4AB0800421BD9 /* NibInstantiatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 249F760B1FE4AB0800421BD9 /* NibInstantiatable.swift */; };
 		24FA56561FE6C24A004CC906 /* UIImage+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24FA56551FE6C24A004CC906 /* UIImage+.swift */; };
 /* End PBXBuildFile section */
@@ -110,6 +111,7 @@
 		245213771FE2EC5D00561F9D /* InitialViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = InitialViewController.storyboard; sourceTree = "<group>"; };
 		2452137B1FE35E3500561F9D /* StoryboardInstantiatableTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardInstantiatableTests.swift; sourceTree = "<group>"; };
 		24742A1A20FBB1BC008746E8 /* Error+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Error+.swift"; sourceTree = "<group>"; };
+		24979DF22109ECA40016E77F /* Function.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Function.swift; sourceTree = "<group>"; };
 		249F760B1FE4AB0800421BD9 /* NibInstantiatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NibInstantiatable.swift; sourceTree = "<group>"; };
 		24FA56551FE6C24A004CC906 /* UIImage+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -175,6 +177,7 @@
 				24296C1B1FE7014900FB0D0C /* Safe.swift */,
 				24296C1F1FE7035200FB0D0C /* StringTo.swift */,
 				24742A1A20FBB1BC008746E8 /* Error+.swift */,
+				24979DF22109ECA40016E77F /* Function.swift */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -356,6 +359,7 @@
 				24296C201FE7035200FB0D0C /* StringTo.swift in Sources */,
 				249F760C1FE4AB0800421BD9 /* NibInstantiatable.swift in Sources */,
 				244FB4CC1FE6D3C2006A60EF /* TargetedExtension.swift in Sources */,
+				24979DF32109ECA40016E77F /* Function.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
