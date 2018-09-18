@@ -9,27 +9,27 @@
 import UIKit
 
 public extension UICollectionView {
-    public func register<T: UICollectionViewCell>(cellType: T.Type, bundle: Bundle = Bundle(for: T.self)) {
+    public func register(cellType: UICollectionViewCell.Type, bundle: Bundle? = nil) {
         let className = cellType.className
         let nib = UINib(nibName: className, bundle: bundle)
         register(nib, forCellWithReuseIdentifier: className)
     }
 
-    public func register<T: UICollectionViewCell>(cellTypes: [T.Type], bundle: Bundle = Bundle(for: T.self)) {
+    public func register(cellTypes: [UICollectionViewCell.Type], bundle: Bundle? = nil) {
         cellTypes.forEach { register(cellType: $0, bundle: bundle) }
     }
 
-    public func register<T: UICollectionReusableView>(reusableViewType: T.Type,
-                                                      ofKind kind: String = UICollectionElementKindSectionHeader,
-                                                      bundle: Bundle = Bundle(for: T.self)) {
+    public func register(reusableViewType: UICollectionReusableView.Type,
+                         ofKind kind: String = UICollectionElementKindSectionHeader,
+                         bundle: Bundle? = nil) {
         let className = reusableViewType.className
         let nib = UINib(nibName: className, bundle: bundle)
         register(nib, forSupplementaryViewOfKind: kind, withReuseIdentifier: className)
     }
 
-    public func register<T: UICollectionReusableView>(reusableViewTypes: [T.Type],
-                                                      ofKind kind: String = UICollectionElementKindSectionHeader,
-                                                      bundle: Bundle = Bundle(for: T.self)) {
+    public func register(reusableViewTypes: [UICollectionReusableView.Type],
+                         ofKind kind: String = UICollectionElementKindSectionHeader,
+                         bundle: Bundle? = nil) {
         reusableViewTypes.forEach { register(reusableViewType: $0, ofKind: kind, bundle: bundle) }
     }
 
