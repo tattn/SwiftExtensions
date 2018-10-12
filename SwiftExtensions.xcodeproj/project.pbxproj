@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		240613BB2170D9BB00A4EEA9 /* UIViewController+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 240613BA2170D9BB00A4EEA9 /* UIViewController+.swift */; };
 		2412C0411FE6504B00C3D555 /* NibView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2412C0401FE6504B00C3D555 /* NibView.xib */; };
 		2412C0431FE650AE00C3D555 /* NibInstantiatableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2412C0421FE650AE00C3D555 /* NibInstantiatableTests.swift */; };
 		2412C0481FE6916300C3D555 /* EmbeddedView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2412C0461FE6901100C3D555 /* EmbeddedView.xib */; };
@@ -66,6 +67,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		240613BA2170D9BB00A4EEA9 /* UIViewController+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+.swift"; sourceTree = "<group>"; };
 		2412C0401FE6504B00C3D555 /* NibView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NibView.xib; sourceTree = "<group>"; };
 		2412C0421FE650AE00C3D555 /* NibInstantiatableTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NibInstantiatableTests.swift; sourceTree = "<group>"; };
 		2412C0461FE6901100C3D555 /* EmbeddedView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EmbeddedView.xib; sourceTree = "<group>"; };
@@ -165,6 +167,7 @@
 				245213651FE03E9700561F9D /* UICollectionView+.swift */,
 				2452136D1FE2D40500561F9D /* UIColor+.swift */,
 				245213711FE2DAA000561F9D /* UIApplication+.swift */,
+				240613BA2170D9BB00A4EEA9 /* UIViewController+.swift */,
 				245213751FE2E28900561F9D /* StoryboardInstantiatable.swift */,
 				249F760B1FE4AB0800421BD9 /* NibInstantiatable.swift */,
 				2412C0491FE6979500C3D555 /* UIView+.swift */,
@@ -358,6 +361,7 @@
 				245213661FE03E9700561F9D /* UICollectionView+.swift in Sources */,
 				24FA56561FE6C24A004CC906 /* UIImage+.swift in Sources */,
 				244FB4D81FE6DC4F006A60EF /* URL+.swift in Sources */,
+				240613BB2170D9BB00A4EEA9 /* UIViewController+.swift in Sources */,
 				2452135E1FE0351300561F9D /* UITableView+.swift in Sources */,
 				244FB4D41FE6D9F5006A60EF /* Dictionary+.swift in Sources */,
 				24296C201FE7035200FB0D0C /* StringTo.swift in Sources */,
