@@ -97,11 +97,11 @@ public extension UIImage {
     }
 
     public func toJPEG(quarity: CGFloat = 1.0) -> Data? {
-        return UIImageJPEGRepresentation(self, quarity)
+        return self.jpegData(compressionQuality: quarity)
     }
 
     public func toPNG(quarity: CGFloat = 1.0) -> Data? {
-        return UIImagePNGRepresentation(self)
+        return self.pngData()
     }
 
     public func rounded() -> UIImage? {

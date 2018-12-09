@@ -36,14 +36,14 @@ class UICollectionViewTests: XCTestCase {
         collectionView.dataSource = self // must need a datasource
         collectionView.register(cellTypes: [CollectionViewCell.self], bundle: Bundle(for: UICollectionViewTests.self))
         collectionView.register(reusableViewTypes: [CollectionViewHeaderView.self],
-                                ofKind: UICollectionElementKindSectionHeader,
+                                ofKind: UICollectionView.elementKindSectionHeader,
                                 bundle: Bundle(for: UICollectionViewTests.self))
 
         let indexPath = IndexPath(item: 0, section: 0)
         _ = collectionView.dequeueReusableCell(with: CollectionViewCell.self, for: indexPath) // must call before dequeueReusableView
         let view = collectionView.dequeueReusableView(with: CollectionViewHeaderView.self,
                                                       for: indexPath,
-                                                      ofKind: UICollectionElementKindSectionHeader)
+                                                      ofKind: UICollectionView.elementKindSectionHeader)
         XCTAssertNotNil(view.label)
         collectionView.dataSource = nil
     }

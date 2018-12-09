@@ -12,7 +12,7 @@ public protocol NibInstantiatable {
     static var nibName: String { get }
     static var nibBundle: Bundle { get }
     static var nibOwner: Any? { get }
-    static var nibOptions: [AnyHashable: Any]? { get }
+    static var nibOptions: [UINib.OptionsKey: Any]? { get }
     static var instantiateIndex: Int { get }
 }
 
@@ -20,7 +20,7 @@ public extension NibInstantiatable where Self: NSObject {
     public static var nibName: String { return className }
     public static var nibBundle: Bundle { return Bundle(for: self) }
     public static var nibOwner: Any? { return self }
-    public static var nibOptions: [AnyHashable: Any]? { return nil }
+    public static var nibOptions: [UINib.OptionsKey: Any]? { return nil }
     public static var instantiateIndex: Int { return 0 }
 }
 

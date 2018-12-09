@@ -20,7 +20,7 @@ public extension UICollectionView {
     }
 
     public func register(reusableViewType: UICollectionReusableView.Type,
-                         ofKind kind: String = UICollectionElementKindSectionHeader,
+                         ofKind kind: String = UICollectionView.elementKindSectionHeader,
                          bundle: Bundle? = nil) {
         let className = reusableViewType.className
         let nib = UINib(nibName: className, bundle: bundle)
@@ -28,7 +28,7 @@ public extension UICollectionView {
     }
 
     public func register(reusableViewTypes: [UICollectionReusableView.Type],
-                         ofKind kind: String = UICollectionElementKindSectionHeader,
+                         ofKind kind: String = UICollectionView.elementKindSectionHeader,
                          bundle: Bundle? = nil) {
         reusableViewTypes.forEach { register(reusableViewType: $0, ofKind: kind, bundle: bundle) }
     }
@@ -40,7 +40,7 @@ public extension UICollectionView {
 
     public func dequeueReusableView<T: UICollectionReusableView>(with type: T.Type,
                                                                  for indexPath: IndexPath,
-                                                                 ofKind kind: String = UICollectionElementKindSectionHeader) -> T {
+                                                                 ofKind kind: String = UICollectionView.elementKindSectionHeader) -> T {
         return dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: type.className, for: indexPath) as! T
     }
 }

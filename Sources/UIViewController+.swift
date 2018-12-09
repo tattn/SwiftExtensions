@@ -13,16 +13,16 @@ public extension UIViewController {
         loadViewIfNeeded()
         child.loadViewIfNeeded()
 
-        addChildViewController(child)
+        addChild(child)
         view.addSubview(child.view)
         layout(child.view, layoutOption: layoutOption)
-        child.didMove(toParentViewController: self)
+        child.didMove(toParent: self)
     }
 
     public func remove() {
-        willMove(toParentViewController: nil)
+        willMove(toParent: nil)
         view.removeFromSuperview()
-        removeFromParentViewController()
+        removeFromParent()
     }
 
     private func layout(_ child: UIView, layoutOption: LayoutOption) {
