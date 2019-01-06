@@ -29,12 +29,39 @@ public extension Array where Element: Hashable {
 }
 
 public extension Collection where Element: Hashable {
+    /// Returns a collection with no duplicate elememts.
+    ///
+    /// NOTE: The elementa are not garanteed to be in the same order as the original colection.
+    ///
+    /// Complexity: O(n), where n is the number of elements in the collection.
     public func unified() -> [Element] {
+        var set = Set<Element>()
         return reduce(into: []) {
-            if !$0.contains($1) {
+            if set.insert($0).inserted {
                 $0.append($1)
             }
         }
+    }
+}
+
+public extension RandomAccessCollection where Element: Hashable {
+    /// Returns a collection with no duplicate elememts.
+    ///
+    /// NOTE: The elementa are not garanteed to be in the same order as the original colection.
+    ///
+    /// Complexity: O(n), where n is the number of elements in the collection.
+    public func unified() -> Self {
+        var set = Set<Element>()
+        var r = Self()
+        var newCount = 0
+        return reduce(into: []) {
+            if set.insert($0).inserted {
+                $0.append($1)
+                newCount += 1
+            }
+        }
+        r.reserveCapacity(newCount)
+        for element in
     }
 }
 
