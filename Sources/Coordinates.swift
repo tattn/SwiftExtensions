@@ -45,22 +45,21 @@ A type that can be used for converting points into different coordinate systems.
 
  Use like this:
 
- ```swift
+ 
  var view = UIView(frame: CGRect(x: 0, y: 0, width: 100, height: 100))
  view.convertToCenter(CGPoint(x: 0, y: 0)) == CGPoint(x: 50, y: 50) // true
- ```
+ 
  You can also define custom overloads using the `CoordConvertible` protocol. This is how UIView is defined:
 
- ```swift
+ 
  struct MyStruct: CoordConvertible {
     typealias Point = MyPoint
     static let coordinateSystem: CoordSystem == .originCenter
  }
- ```
+ 
 
  For free you get the static method `convert(_:to:bounds:)`, and if you also conform to `SizeType` you one extra instance method.
-
- ```swift
+ 
  // The free static method
  MyStruct.convert(myPoint, to: .originTopLeft, bounds: someBounds)
 
@@ -71,8 +70,7 @@ A type that can be used for converting points into different coordinate systems.
  }
 
  myStruct.convert(myPoint, to: .originTopLeft)
- ```
-
+ 
  All of the standard CoreGraphics types conform to the protocols, so for example `CGRect` is a `RectType` and UIViews conform to `CoordConvertible` and `SizeType`.
 */
 public protocol CoordConvertible {
