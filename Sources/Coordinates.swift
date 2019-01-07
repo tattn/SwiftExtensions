@@ -47,7 +47,7 @@ A type that can be used for converting points into different coordinate systems.
  var view = UIView(frame: CGRect(x: 0, y: 0, width: 100, height: 100))
  view.convertToCenter(CGPoint(x: 0, y: 0)) == CGPoint(x: 50, y: 50) // true
  
- You can also define custom overloads using the `CoordConvertible` protocol. This is how UIView is defined:
+ You can also define custom overloads using the `CoordConvertible` protocol. This is how MyStruct is defined:
 
  
  struct MyStruct: CoordConvertible {
