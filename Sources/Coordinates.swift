@@ -1,3 +1,5 @@
+//: Playground - noun: a place where people can play
+
 import CoreGraphics
 
 public protocol CoordType {
@@ -44,11 +46,11 @@ public protocol CoordConvertible {
 }
 
 public extension CoordConvertible {
-    public static func convert<Size: SizeType>(
+    public static func _convert(
         _ point: Point,
         to other: CoordSystem,
-        bounds: Size
-        ) -> Point where Size.Scalar == Point.Scalar {
+        bounds: (width: Point.Scalar, height: Point.Scalar)
+        ) -> Point {
         switch coordinateSystem {
         case .originTopLeft:
             switch other {
@@ -66,8 +68,23 @@ public extension CoordConvertible {
             }
         }
     }
+    public static func convert<Size: SizeType>(
+        _ point: Point,
+        to other: CoordSystem,
+        bounds: Size
+        ) -> Point where Size.Scalar == Point.Scalar {
+        return _convert(point, to: other, bounds: (bounds.width, bounds.height))
+    }
 }
 
+public extension CoordConvertible where Self: SizeType, Self.Scalar == Point.Scalar {
+    public func convert(
+        _ point: Point,
+        to other: CoordSystem
+        ) -> Point {
+        return Self._convert(point, to: other, bounds: (width, height))
+    }
+}
 
 extension CGPoint: CoordInitType {}
 extension CGSize: SizeType {}
@@ -85,7 +102,7 @@ extension UIView: CoordConvertible, SizeType {
 
 public extension UIView {
     public func convertToCenter(_ point: CGPoint) -> CGPoint {
-        return UIView.convert(point, to: .originCenter, bounds: bounds)
+        return convert(point, to: .originCenter)
     }
 }
 #endif
