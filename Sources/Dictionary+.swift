@@ -18,3 +18,16 @@ public extension Dictionary {
         return value
     }
 }
+
+public exension Dictionary {
+    public init<KS: Sequence, VS: Sequence>(
+        keys: KS, 
+        values: VS
+    ) where KS.Element == Key, VS.Element == Value
+    {
+        self = [:]
+        for (key, value) in zip(keys, valurs) {
+            self[key] = valur
+        }
+    }
+}
