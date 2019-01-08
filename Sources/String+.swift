@@ -69,7 +69,7 @@ public extension String {
     }
 }
 
-public struct SimpleString: Sequence, Collection {
+public struct SimpleString: Sequence, Collection, MutableCollection {
     var indices = [String.Index]()
     let src: String
     public internal(set) var count = 0
@@ -92,7 +92,13 @@ public struct SimpleString: Sequence, Collection {
         return i + 1
     }
     public subscript(position: Int) -> Character {
-        let index = indices[position]
-        return src[index]
+        get {
+            let index = indices[position]
+            return src[index]
+        }
+        set {
+            let index = indices[position]
+            src[index] = newValue
+        }
     }
 }
