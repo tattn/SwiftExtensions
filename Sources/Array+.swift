@@ -22,42 +22,35 @@ public extension Array where Element: Equatable {
     }
 }
 
-public extension Array where Element: Hashable {
+public extension RangeReplacableCollection where Self: RandomAccessCollection, Element: Hashable {
+    /// Returns a collection containing the contents of the original collection with no duplicate elements.
+    ///
+    /// NOTE: The elements are not garanteed to be in the same order as the original colection.
+    ///
+    /// Complexity: O(n), where n is the number of elements in the collection.
+    public func unified() -> Self {
+        var set = Set<Element>()
+        var r = Self()
+        var newCount = 0
+        return reduce(into: []) {
+            if set.insert($0).inserted {
+                $0.append($1)
+                newCount += 1
+            }
+        }
+        r.reserveCapacity(newCount)
+        for element in set {
+            r.append(element)	
+        }
+        return r
+    }
+}
+
+public extension RangeReplacableCollection where Self: RandomAccessCollection, Element: Hashable {
     public mutating func unify() {
         self = unified()
     }
 }
-
-public extension Collection where Element: Hashable {
-    public func unified() -> [Element] {
-        return reduce(into: []) {
-            if !$0.contains($1) {
-                $0.append($1)
-            }
-        }
-    }
-}
-
-public extension RangeReplacableCollection where Self: RandomAccessCollection {
-    /// Returns a collection with no duplicate elememts.
-	    ///
-	    /// NOTE: The elementa are not garanteed to be in the same order as the original colection.
-	    ///
-	    /// Complexity: O(n), where n is the number of elements in the collection.
-	    public func unified() -> Self {
-	        var set = Set<Element>()
-	        var r = Self()
-	        var newCount = 0
-	        return reduce(into: []) {
-	            if set.insert($0).inserted {
-	                $0.append($1)
-	                newCount += 1
-	            }
-	        }
-	        r.reserveCapacity(newCount)
-	        for element in
-	    }
-	}
 
 public extension Collection {
     public subscript(safe index: Index) -> Element? {
