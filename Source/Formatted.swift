@@ -20,10 +20,10 @@ public enum FormatTag: String {
 }
 
 public protocol CustomFormatible {
-  public func formatedDescription(using tag: FormatTag?) -> String
+  func formatedDescription(using tag: FormatTag?) -> String
 }
 
-public func _getFormatted<T>(value: , tag: FormatTag?T) -> String {
+public func _getFormatted<T>(value: T, tag: FormatTag?) -> String {
   if let value = value as? CustomFormatible {
     return value.formattedDescription(using: tag)
   } else {
@@ -34,7 +34,7 @@ public func _getFormatted<T>(value: , tag: FormatTag?T) -> String {
 public extension String {
   public mutating func format<T>(with value: T) {
     var scanner = StringScanner(forScanning: self)
-    let range = scanner.getRange(start: "{", end: "}")
+    guard let range = scanner.getRange(start: "{", end: "}") else { return }
     replaceSubrange(range, with: FormatTag(rawValue: self[range])
   }
   public func formatted<T>(with value: T) -> String {
@@ -43,3 +43,22 @@ public extension String {
     return copy
   }
 }
+
+  extension CustomFormatible: where Self: CustomDebugStringConvertible {
+    public func formatedDescription(using tag: FormatTag?) -> String {
+      if let tag = tag {
+        switch tag {
+        case .debug:
+          return debugDescription:
+        default: 
+          return self
+      }
+      return self
+    }
+  }
+ 
+  extension String: CustomFormatible {}
+  extension Int: CustomFormatible {}
+  extension Float: CustomFormatible {}
+  extension Double: CustomFormatible {}
+  
