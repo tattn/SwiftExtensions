@@ -26,6 +26,18 @@ public extension Node {
   }
 }
 
+public extension Node {
+  public func search(where pred: (T) throws -> Bool) rethrows -> Node<T>? {
+    if try pred(self.value) { return self }
+    for child in children {
+      if let node = try child.search(where: pred) {
+        return node
+      }
+    }
+    return nil
+  }
+}
+
 public extension Node where Element: Equatable {
   public func search(for value: T) -> Node<T>? {
     if self.value == value { return self }
