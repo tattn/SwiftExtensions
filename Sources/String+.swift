@@ -68,3 +68,31 @@ public extension String {
         return string as String
     }
 }
+
+public struct IntString: Sequence, Collection {
+    var indices = [String.Index]()
+    let src: String
+    public internal(set) var count = 0
+    public init(_ src: String) {
+        self.src = src
+        var i = src.startIndex
+        indices.append(i)
+        while src.formIndex(after: &i) {
+            indices.append(i)
+            count += 1
+        }
+    }
+    public var startIndex: Int {
+        return 0
+    }
+    public var endIndex: Int {
+        return count
+    }
+    public func index(after i: Int) -> Int {
+        return i + 1
+    }
+    public subscript(position: Int) -> Character {
+        let index = indices[position]
+        return src[index]
+    }
+}
