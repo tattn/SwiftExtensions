@@ -2,7 +2,14 @@ import Foundation
 
 public final class Inspected<Object> {
   /// The name of the stored object's type
-  public static let name: String
+  public static var name: String {
+    return String(describing: Object.self)
+  }
+  
+  /// The full name of the stored object's type
+  public static var fullName: String {
+    return "\(#file).\(Object.self)" 
+  }
   
   public func value<T>(forKey key: String, asType type: T.Type) -> T? {
     return dict[key] as? T
@@ -34,7 +41,6 @@ public final class Inspected<Object> {
   
   private var dict = [String:Any]()
   init(_instance: Object) {
-    self.name = String(describing: Object.self)
     let mirror = Mirror(reflecting: _instance)
     for child in mirror.children {
       if let key = child.label {
