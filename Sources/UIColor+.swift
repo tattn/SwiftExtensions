@@ -31,7 +31,7 @@ public extension UIColor {
         self.init(red: CGFloat(red) / 255, green: CGFloat(green) / 255, blue: CGFloat(blue) / 255, alpha: CGFloat(alpha))
     }
     
-    extension UIColor {
+public extension UIColor {
     public struct Components {
         var _base: UIColor
         public var rgba: (CGFloat, CGFloat, CGFloat, CGFloat) {
@@ -46,10 +46,6 @@ public extension UIColor {
         }
     }
     public var components: UIColor.Components {
-        return Components(_base: self)
-    }
-}
-    public var components: Components {
         return Components(_base: self)
     }
 }
