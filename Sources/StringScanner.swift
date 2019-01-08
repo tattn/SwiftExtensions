@@ -28,4 +28,8 @@ public final class StringScanner {
       return nil
     }
   }
+  
+  public func contents<R: RangeExpression>(of r: R) -> Substring where R.Bound == String.Index {
+    return string[r] 
+  }
 }
