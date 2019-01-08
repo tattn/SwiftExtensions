@@ -69,7 +69,7 @@ public extension String {
     }
 }
 
-public struct IntString: Sequence, Collection {
+public struct SimpleString: Sequence, Collection {
     var indices = [String.Index]()
     let src: String
     public internal(set) var count = 0
