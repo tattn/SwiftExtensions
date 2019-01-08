@@ -30,5 +30,23 @@ public extension UIColor {
     convenience init(red: Int, green: Int, blue: Int, alpha: Double = 1.0) {
         self.init(red: CGFloat(red) / 255, green: CGFloat(green) / 255, blue: CGFloat(blue) / 255, alpha: CGFloat(alpha))
     }
+    
+public extension UIColor {
+    public struct Components {
+        var _base: UIColor
+        public var rgba: (CGFloat, CGFloat, CGFloat, CGFloat) {
+            var r: CGFloat = 0; var g: CGFloat = 0; var b: CGFloat = 0; var a: CGFloat = 0
+            _base.getRed(&r, green: &g, blue: &b, alpha: &a)
+            return (r, g, b, a)
+        }
+        public var hsv: (CGFloat, CGFloat, CGFloat) {
+            var h: CGFloat = 0; var s: CGFloat = 0; var v: CGFloat = 0; var a: CGFloat = 0
+            _base.getHue(&h, saturation: &s, brightness: &v, alpha: &a)
+            return (h, s, v)
+        }
+    }
+    public var components: UIColor.Components {
+        return Components(_base: self)
+    }
 }
 
