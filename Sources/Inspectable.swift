@@ -71,7 +71,7 @@ public extension Inspectable {
   }
 }
 
-public func inspect<T: Inspectable>(of value: T) -> Inspected<T> {
+public func inspect<T: Inspectable>(_ value: T) -> Inspected<T> {
   let result = Inspected<T>(_empty: ())
   let setter = KeyValueSetter(_base: result)
   value.configure(using: setter)
