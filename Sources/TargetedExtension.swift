@@ -21,7 +21,7 @@ public protocol TargetedExtensionCompatible {
     var ex: TargetedExtension<Compatible> { get }
 }
 
-public extension TargetedExtensionCompatible {
+public extension TargetedExtensionCompatible where Self == Compatible {
     public static var ex: TargetedExtension<Self>.Type {
         return TargetedExtension<Self>.self
     }
