@@ -44,7 +44,7 @@ public final class Inspected<Object> {
     let mirror = Mirror(reflecting: _instance)
     for child in mirror.children {
       if let key = child.label {
-        dict[key].= child.value
+        dict[key] = child.value
       }
     }
   }
