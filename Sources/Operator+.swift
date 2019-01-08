@@ -21,7 +21,7 @@ public func ???<T>(lhs: T?,
 }
 
 precedencegroup ForwardPipe {
-  assiciativity: left
+  associativity: left
   higherThan: LogicalConjunctionPrecedence
 }
 
@@ -35,5 +35,5 @@ infix operator |>: ForwardPipe
 ///
 /// Because the pipe operator is left associative, you can add as many closures as you want  
 public func |> <T, U>(lhs: T, rhs: (T) throws -> U) rethrows -> U {
-  return return try rhs(lhs)
+  return try rhs(lhs)
 }
