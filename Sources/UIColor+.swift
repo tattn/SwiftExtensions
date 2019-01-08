@@ -31,19 +31,24 @@ public extension UIColor {
         self.init(red: CGFloat(red) / 255, green: CGFloat(green) / 255, blue: CGFloat(blue) / 255, alpha: CGFloat(alpha))
     }
     
+    extension UIColor {
     public struct Components {
         var _base: UIColor
         public var rgba: (CGFloat, CGFloat, CGFloat, CGFloat) {
-            var r, g, b, a: CGFloat = 0
+            var r: CGFloat = 0; var g: CGFloat = 0; var b: CGFloat = 0; var a: CGFloat = 0
             _base.getRed(&r, green: &g, blue: &b, alpha: &a)
             return (r, g, b, a)
         }
         public var hsv: (CGFloat, CGFloat, CGFloat) {
-            var h, s, v, a: CGFloat = 0
-            _base.getHue(&h, saturation: &s, brightness: &b, alpha: &a)
+            var h: CGFloat = 0; var s: CGFloat = 0; var v: CGFloat = 0; var a: CGFloat = 0
+            _base.getHue(&h, saturation: &s, brightness: &v, alpha: &a)
             return (h, s, v)
         }
     }
+    public var components: UIColor.Components {
+        return Components(_base: self)
+    }
+}
     public var components: Components {
         return Components(_base: self)
     }
