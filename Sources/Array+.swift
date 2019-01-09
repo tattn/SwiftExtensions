@@ -32,7 +32,7 @@ public extension RangeReplacableCollection where Self: RandomAccessCollection, E
         var set = Set<Element>()
         var r = Self()
         var newCount = 0
-        return reduce(into: []) {
+        forEach {
             if set.insert($0).inserted {
                 $0.append($1)
                 newCount += 1
