@@ -1,6 +1,7 @@
 import Foundation
 
 public enum SafePointerConstants {
+    public static var growthFactor = 2
     public static var capacityReductionOffset = 5
 }
 
@@ -34,10 +35,10 @@ public final class SafePointer<Element>: Sequence, Collection, MutableCollection
     func getTop() -> Element {
         return ptr.advanced(by: count - 1).pointee
     }
-    func lowerTop() {
-        count -= 1
+    func lowerTop(_ n: Int, _ c_incr: Int = 0) {
+        count -= n
         if count + SafePointerConstants.capacityReductionOffset <= capacity {
-            capacity = count
+            capacity = count + c_incr
         }
     }
     
@@ -46,8 +47,10 @@ public final class SafePointer<Element>: Sequence, Collection, MutableCollection
     }
     public func _grow(by dsize: Int) {
         count += dsize
-        let result = dsize + capacity
-        _increaseCapacity(result)
+        if count * SafePointerConstants.growthFactor > capacity {
+            let result = dsize + capacity
+            _increaseCapacity(result)
+        }
     }
     public func append(_ newElement: Element) {
         _grow(by: 1)
@@ -55,7 +58,7 @@ public final class SafePointer<Element>: Sequence, Collection, MutableCollection
     }
     public func removeLast() -> Element {
         let current = getTop()
-        lowerTop()
+        lowerTop(1)
         return current
     }
     
@@ -114,5 +117,9 @@ public extension SafePointer {
     }
     public func reserveCapacity(_ n: Int) {
         self.capacity += n
+    }
+    
+    public func removeLast(_ n: Int) {
+        lowerTop(n, 1)
     }
 }
