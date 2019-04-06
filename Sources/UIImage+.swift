@@ -8,6 +8,12 @@
 
 import UIKit
 
+//: FIXME: Update all UIImage extensions with this method (see [here](https://developer.apple.com/documentation/uikit/uigraphicsimagerenderer))
+@available(iOS 10.0, *)
+public func renderImage(with body: (UIGraphicsImageRendererContext) -> ()) -> UIImage {
+    return UIGraphicsImageRenderer().image(actions: body)
+}
+
 public extension UIImage {
     convenience init(color: UIColor, size: CGSize) {
         UIGraphicsBeginImageContext(size)
