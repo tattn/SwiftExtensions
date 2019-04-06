@@ -9,13 +9,14 @@
 import UIKit
 
 public extension UIView {
-    public func fillSuperview() {
+    func fillSuperview() {
         guard let superview = self.superview else { return }
         translatesAutoresizingMaskIntoConstraints = superview.translatesAutoresizingMaskIntoConstraints
         if translatesAutoresizingMaskIntoConstraints {
             autoresizingMask = [.flexibleWidth, .flexibleHeight]
             frame = superview.bounds
         } else {
+            
             topAnchor.constraint(equalTo: superview.topAnchor).isActive = true
             bottomAnchor.constraint(equalTo: superview.bottomAnchor).isActive = true
             leftAnchor.constraint(equalTo: superview.leftAnchor).isActive = true
@@ -23,7 +24,7 @@ public extension UIView {
         }
     }
 
-    public var viewController: UIViewController? {
+    var viewController: UIViewController? {
         var parent: UIResponder? = self
         while parent != nil {
             parent = parent?.next
@@ -32,5 +33,14 @@ public extension UIView {
             }
         }
         return nil
+    }
+
+    func takeScreenshot() -> UIImage? {
+        UIGraphicsBeginImageContextWithOptions(bounds.size, false, UIScreen.main.scale)
+        drawHierarchy(in: bounds, afterScreenUpdates: true)
+        let image = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+
+        return image
     }
 }

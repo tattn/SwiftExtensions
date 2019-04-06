@@ -9,7 +9,7 @@
 import UIKit
 
 public extension UIViewController {
-    public func addChildView(_ child: UIViewController, layoutOption: LayoutOption = .fill) {
+    func addChildView(_ child: UIViewController, layoutOption: LayoutOption = .fill) {
         loadViewIfNeeded()
         child.loadViewIfNeeded()
 
@@ -19,7 +19,7 @@ public extension UIViewController {
         child.didMove(toParent: self)
     }
 
-    public func remove() {
+    func remove() {
         willMove(toParent: nil)
         view.removeFromSuperview()
         removeFromParent()
@@ -34,7 +34,7 @@ public extension UIViewController {
         }
     }
 
-    public enum LayoutOption {
+    enum LayoutOption {
         case fill
         case custom((UIView, UIView) -> Void)
     }
