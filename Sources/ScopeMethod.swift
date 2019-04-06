@@ -12,7 +12,7 @@ public protocol Appliable {}
 
 public extension Appliable {
     @discardableResult
-    public func apply(closure: (Self) -> Void) -> Self {
+    func apply(closure: (Self) -> Void) -> Self {
         closure(self)
         return self
     }
@@ -22,7 +22,7 @@ public protocol Runnable {}
 
 public extension Runnable {
     @discardableResult
-    public func run<T>(closure: (Self) -> T) -> T {
+    func run<T>(closure: (Self) -> T) -> T {
         return closure(self)
     }
 }

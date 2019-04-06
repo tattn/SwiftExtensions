@@ -14,11 +14,11 @@ public protocol ClassNameProtocol {
 }
 
 public extension ClassNameProtocol {
-    public static var className: String {
+    static var className: String {
         return String(describing: self)
     }
 
-    public var className: String {
+    var className: String {
         return type(of: self).className
     }
 }
@@ -26,7 +26,7 @@ public extension ClassNameProtocol {
 extension NSObject: ClassNameProtocol {}
 
 public extension NSObjectProtocol {
-    public var describedProperty: String {
+    var describedProperty: String {
         let mirror = Mirror(reflecting: self)
         return mirror.children.map { element -> String in
             let key = element.label ?? "Unknown"

@@ -9,14 +9,14 @@
 import UIKit
 
 public extension UIColor {
-    public convenience init(hex: Int, alpha: Double = 1.0) {
+    convenience init(hex: Int, alpha: Double = 1.0) {
         let r = CGFloat((hex & 0xFF0000) >> 16) / 255.0
         let g = CGFloat((hex & 0x00FF00) >> 8) / 255.0
         let b = CGFloat(hex & 0x0000FF) / 255.0
         self.init(red: r, green: g, blue: b, alpha: CGFloat(alpha))
     }
 
-    public convenience init?(rgbHexString: String, alpha: Double = 1.0) {
+    convenience init?(rgbHexString: String, alpha: Double = 1.0) {
         let scanner = Scanner(string: rgbHexString.replacingOccurrences(of: "#", with: ""))
         var rgbHex: UInt32 = 0
         guard scanner.scanHexInt32(&rgbHex) else {
@@ -33,7 +33,7 @@ public extension UIColor {
 }
     
 public extension UIColor {
-    public struct Components {
+    struct Components {
         var _base: UIColor
         public var rgba: (CGFloat, CGFloat, CGFloat, CGFloat) {
             var r: CGFloat = 0; var g: CGFloat = 0; var b: CGFloat = 0; var a: CGFloat = 0
@@ -46,7 +46,7 @@ public extension UIColor {
             return (h, s, v)
         }
     }
-    public var components: UIColor.Components {
+    var components: UIColor.Components {
         return Components(_base: self)
     }
 }

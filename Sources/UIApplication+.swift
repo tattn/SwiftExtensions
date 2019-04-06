@@ -9,7 +9,7 @@
 import UIKit
 
 public extension UIApplication {
-    public var topViewController: UIViewController? {
+    var topViewController: UIViewController? {
         guard var topViewController = UIApplication.shared.keyWindow?.rootViewController else { return nil }
 
         while let presentedViewController = topViewController.presentedViewController {
@@ -19,7 +19,7 @@ public extension UIApplication {
     }
 
 
-    public var topNavigationController: UINavigationController? {
+    var topNavigationController: UINavigationController? {
         return topViewController as? UINavigationController
     }
 }

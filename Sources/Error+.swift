@@ -8,7 +8,7 @@
 
 import Foundation
 
-extension Error {
-    public var code: Int { return (self as NSError).code }
-    public var domain: String { return (self as NSError).domain }
+public extension Error {
+    var code: Int { return (self as NSError).code }
+    var domain: String { return (self as NSError).domain }
 }

@@ -17,15 +17,15 @@ public protocol NibInstantiatable {
 }
 
 public extension NibInstantiatable where Self: NSObject {
-    public static var nibName: String { return className }
-    public static var nibBundle: Bundle { return Bundle(for: self) }
-    public static var nibOwner: Any? { return self }
-    public static var nibOptions: [UINib.OptionsKey: Any]? { return nil }
-    public static var instantiateIndex: Int { return 0 }
+    static var nibName: String { return className }
+    static var nibBundle: Bundle { return Bundle(for: self) }
+    static var nibOwner: Any? { return self }
+    static var nibOptions: [UINib.OptionsKey: Any]? { return nil }
+    static var instantiateIndex: Int { return 0 }
 }
 
 public extension NibInstantiatable where Self: UIView {
-    public static func instantiate() -> Self {
+    static func instantiate() -> Self {
         let nib = UINib(nibName: nibName, bundle: nibBundle)
         return nib.instantiate(withOwner: nibOwner, options: nibOptions)[instantiateIndex] as! Self
     }
@@ -36,9 +36,9 @@ public protocol EmbeddedNibInstantiatable {
 }
 
 public extension EmbeddedNibInstantiatable where Self: UIView, Embedded: UIView {
-    public var embedded: Embedded { return subviews[0] as! Embedded }
+    var embedded: Embedded { return subviews[0] as! Embedded }
 
-    public func configureEmbededView() {
+    func configureEmbededView() {
         let view = Embedded.instantiate()
         insertSubview(view, at: 0)
         view.fillSuperview()

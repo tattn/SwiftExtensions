@@ -20,11 +20,11 @@ public protocol StoryboardInstantiatable {
 }
 
 public extension StoryboardInstantiatable where Self: NSObject {
-    public static var storyboardName: String {
+    static var storyboardName: String {
         return className
     }
 
-    public static var storyboardBundle: Bundle {
+    static var storyboardBundle: Bundle {
         return Bundle(for: self)
     }
 
@@ -32,13 +32,13 @@ public extension StoryboardInstantiatable where Self: NSObject {
         return UIStoryboard(name: storyboardName, bundle: storyboardBundle)
     }
 
-    public static var instantiateType: StoryboardInstantiateType {
+    static var instantiateType: StoryboardInstantiateType {
         return .identifier(className)
     }
 }
 
 public extension StoryboardInstantiatable where Self: UIViewController {
-    public static func instantiate() -> Self {
+    static func instantiate() -> Self {
         switch instantiateType {
         case .initial:
             return storyboard.instantiateInitialViewController() as! Self

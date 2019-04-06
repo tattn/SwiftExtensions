@@ -9,7 +9,7 @@
 import UIKit
 
 public extension UIImage {
-    public convenience init(color: UIColor, size: CGSize) {
+    convenience init(color: UIColor, size: CGSize) {
         UIGraphicsBeginImageContext(size)
         guard let context: CGContext = UIGraphicsGetCurrentContext() else {
             self.init()
@@ -32,7 +32,7 @@ public extension UIImage {
         }
     }
 
-    public func image(withTint color: UIColor) -> UIImage {
+    func image(withTint color: UIColor) -> UIImage {
         let rect = CGRect(x: 0, y: 0, width: size.width, height: size.height)
         UIGraphicsBeginImageContextWithOptions(rect.size, false, 0)
 
@@ -53,7 +53,7 @@ public extension UIImage {
         return image
     }
 
-    public func cropping(to rect: CGRect) -> UIImage? {
+    func cropping(to rect: CGRect) -> UIImage? {
         let originalRect = CGRect(
             x: rect.origin.x * scale,
             y: rect.origin.y * scale,
@@ -67,7 +67,7 @@ public extension UIImage {
         return UIImage(cgImage: imageRef, scale: scale, orientation: imageOrientation)
     }
 
-    public func resize(to newSize: CGSize) -> UIImage? {
+    func resize(to newSize: CGSize) -> UIImage? {
         UIGraphicsBeginImageContext(CGSize(
             width: newSize.width * scale,
             height: newSize.height * scale
@@ -82,7 +82,7 @@ public extension UIImage {
         return UIImage(cgImage: cgImage, scale: scale, orientation: imageOrientation)
     }
 
-    public func resize(to newSize: CGSize, scalingMode: ScalingMode) -> UIImage? {
+    func resize(to newSize: CGSize, scalingMode: ScalingMode) -> UIImage? {
         let aspectRatio = scalingMode.aspectRatio(between: newSize, and: size)
 
         let scaledImageRect = CGRect(x: (newSize.width - size.width * aspectRatio) / 2.0,
@@ -96,15 +96,15 @@ public extension UIImage {
         return UIGraphicsGetImageFromCurrentImageContext()
     }
 
-    public func toJPEG(quarity: CGFloat = 1.0) -> Data? {
+    func toJPEG(quarity: CGFloat = 1.0) -> Data? {
         return self.jpegData(compressionQuality: quarity)
     }
 
-    public func toPNG(quarity: CGFloat = 1.0) -> Data? {
+    func toPNG(quarity: CGFloat = 1.0) -> Data? {
         return self.pngData()
     }
 
-    public func rounded() -> UIImage? {
+    func rounded() -> UIImage? {
         let imageView = UIImageView(image: self)
         imageView.layer.cornerRadius = min(size.height/2, size.width/2)
         imageView.layer.masksToBounds = true
