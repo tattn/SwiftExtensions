@@ -50,6 +50,8 @@
 		245213781FE2EC5D00561F9D /* InitialViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 245213771FE2EC5D00561F9D /* InitialViewController.storyboard */; };
 		2452137C1FE35E3500561F9D /* StoryboardInstantiatableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2452137B1FE35E3500561F9D /* StoryboardInstantiatableTests.swift */; };
 		24742A1B20FBB1BC008746E8 /* Error+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24742A1A20FBB1BC008746E8 /* Error+.swift */; };
+		249378E922588A720016FB9C /* Result+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 249378E822588A720016FB9C /* Result+.swift */; };
+		249378EB22588BFE0016FB9C /* ResultTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 249378EA22588BFE0016FB9C /* ResultTests.swift */; };
 		24979DF32109ECA40016E77F /* Function.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24979DF22109ECA40016E77F /* Function.swift */; };
 		249F760C1FE4AB0800421BD9 /* NibInstantiatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 249F760B1FE4AB0800421BD9 /* NibInstantiatable.swift */; };
 		24CD1B9821514D2B0065244F /* TableViewCell2.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24CD1B9721514D2B0065244F /* TableViewCell2.xib */; };
@@ -115,6 +117,8 @@
 		245213771FE2EC5D00561F9D /* InitialViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = InitialViewController.storyboard; sourceTree = "<group>"; };
 		2452137B1FE35E3500561F9D /* StoryboardInstantiatableTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardInstantiatableTests.swift; sourceTree = "<group>"; };
 		24742A1A20FBB1BC008746E8 /* Error+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Error+.swift"; sourceTree = "<group>"; };
+		249378E822588A720016FB9C /* Result+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Result+.swift"; sourceTree = "<group>"; };
+		249378EA22588BFE0016FB9C /* ResultTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultTests.swift; sourceTree = "<group>"; };
 		24979DF22109ECA40016E77F /* Function.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Function.swift; sourceTree = "<group>"; };
 		249F760B1FE4AB0800421BD9 /* NibInstantiatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NibInstantiatable.swift; sourceTree = "<group>"; };
 		24CD1B9721514D2B0065244F /* TableViewCell2.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableViewCell2.xib; sourceTree = "<group>"; };
@@ -186,6 +190,7 @@
 				24742A1A20FBB1BC008746E8 /* Error+.swift */,
 				24979DF22109ECA40016E77F /* Function.swift */,
 				24DE987521BD76F400FA570A /* Comparable+.swift */,
+				249378E822588A720016FB9C /* Result+.swift */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -211,6 +216,7 @@
 				24296C191FE6F35900FB0D0C /* ScopeMethodTests.swift */,
 				24296C1D1FE7018A00FB0D0C /* SafeTests.swift */,
 				24296C211FE7037C00FB0D0C /* StringToTests.swift */,
+				249378EA22588BFE0016FB9C /* ResultTests.swift */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -361,6 +367,7 @@
 				24296C181FE6F30600FB0D0C /* ScopeMethod.swift in Sources */,
 				24742A1B20FBB1BC008746E8 /* Error+.swift in Sources */,
 				24296C1C1FE7014900FB0D0C /* Safe.swift in Sources */,
+				249378E922588A720016FB9C /* Result+.swift in Sources */,
 				2412C0501FE6A52400C3D555 /* Array+.swift in Sources */,
 				2412C04A1FE6979500C3D555 /* UIView+.swift in Sources */,
 				245213661FE03E9700561F9D /* UICollectionView+.swift in Sources */,
@@ -382,6 +389,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2412C04C1FE6993F00C3D555 /* UIViewTests.swift in Sources */,
+				249378EB22588BFE0016FB9C /* ResultTests.swift in Sources */,
 				244F63EA1FE0310E00E3C372 /* NSObjectTests.swift in Sources */,
 				245213701FE2D4C100561F9D /* UIColorTests.swift in Sources */,
 				2452137C1FE35E3500561F9D /* StoryboardInstantiatableTests.swift in Sources */,
