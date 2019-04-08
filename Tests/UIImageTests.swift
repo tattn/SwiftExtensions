@@ -12,12 +12,6 @@ import SwiftExtensions
 class UIImageTests: XCTestCase {
     private lazy var scaleTransform = CGAffineTransform(scaleX: UIScreen.main.scale, y: UIScreen.main.scale)
 
-    override func setUp() {
-    }
-
-    override func tearDown() {
-    }
-
     func testTestImage() {
         XCTAssertEqual(TestImage.image.scale, 1)
         XCTAssertEqual(TestImage.image.size, TestImage.image3x.size.applying(.init(scaleX: 3, y: 3)))
@@ -133,6 +127,5 @@ private enum TestImage {
     static let image = UIImage(data: data)!
     static let image3x = UIImage(data: data, scale: 3)!
     static let image3xLeft = UIImage(cgImage: image.cgImage!, scale: 3.0, orientation: .left)
-    static let imageColor = UIImage.init(cgImage: )
     static let size = CGSize(width: 460, height: 459)
 }
