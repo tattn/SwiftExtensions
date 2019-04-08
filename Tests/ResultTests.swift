@@ -7,6 +7,7 @@
 //
 
 import XCTest
+import SwiftExtensions
 
 class ResultTests: XCTestCase {
     func testError() {
