@@ -8,28 +8,12 @@
 
 import UIKit
 
-//: FIXME: Update all UIImage extensions with this method (see [here](https://developer.apple.com/documentation/uikit/uigraphicsimagerenderer))
-@available(iOS 10.0, *)
-public func renderImage(with body: (UIGraphicsImageRendererContext) -> ()) -> UIImage {
-    return UIGraphicsImageRenderer().image(actions: body)
-}
-
 public extension UIImage {
     convenience init(color: UIColor, size: CGSize) {
-        UIGraphicsBeginImageContext(size)
-        guard let context: CGContext = UIGraphicsGetCurrentContext() else {
-            self.init()
-            return
+        let image = UIGraphicsImageRenderer(size: size).image { context in
+            context.cgContext.setFillColor(color.cgColor)
+            context.fill(CGRect(x: 0, y: 0, width: size.width, height: size.height))
         }
-
-        context.setFillColor(color.cgColor)
-        context.fill(CGRect(x: 0, y: 0, width: size.width, height: size.height))
-
-        guard let image: UIImage = UIGraphicsGetImageFromCurrentImageContext() else {
-            self.init()
-            return
-        }
-        UIGraphicsEndImageContext()
 
         if let cgImage = image.cgImage {
             self.init(cgImage: cgImage)
@@ -39,67 +23,43 @@ public extension UIImage {
     }
 
     func image(withTint color: UIColor) -> UIImage {
-        let rect = CGRect(x: 0, y: 0, width: size.width, height: size.height)
-        UIGraphicsBeginImageContextWithOptions(rect.size, false, 0)
-
-        guard let context: CGContext = UIGraphicsGetCurrentContext(), let cgImage = cgImage else {
-            return UIImage()
+        guard let cgImage = cgImage else { return self }
+        let rect = CGRect(origin: .zero, size: size)
+        return UIGraphicsImageRenderer(size: size).image { context in
+            context.cgContext.scaleBy(x: 1, y: -1)
+            context.cgContext.translateBy(x: 0, y: -self.size.height)
+            context.cgContext.clip(to: rect, mask: cgImage)
+            context.cgContext.setFillColor(color.cgColor)
+            context.fill(rect)
         }
-
-        context.scaleBy(x: 1, y: -1)
-        context.translateBy(x: 0, y: -self.size.height)
-        context.clip(to: rect, mask: cgImage)
-        context.setFillColor(color.cgColor)
-        context.fill(rect)
-        guard let image = UIGraphicsGetImageFromCurrentImageContext() else {
-            return UIImage()
-        }
-        UIGraphicsEndImageContext()
-
-        return image
     }
 
-    func cropping(to rect: CGRect) -> UIImage? {
-        let originalRect = CGRect(
-            x: rect.origin.x * scale,
-            y: rect.origin.y * scale,
-            width: rect.size.width * scale,
-            height: rect.size.height * scale
-        )
-
+    func cropped(to rect: CGRect) -> UIImage {
         guard let cgImage = cgImage,
-            let imageRef = cgImage.cropping(to: originalRect) else { return nil }
+            let imageRef = cgImage.cropping(to: rect) else { return UIImage() }
 
         return UIImage(cgImage: imageRef, scale: scale, orientation: imageOrientation)
     }
 
-    func resize(to newSize: CGSize) -> UIImage? {
-        UIGraphicsBeginImageContext(CGSize(
-            width: newSize.width * scale,
-            height: newSize.height * scale
-        ))
-
-        draw(in: CGRect(x: 0, y: 0, width: newSize.width, height: newSize.height))
-
-        let image = UIGraphicsGetImageFromCurrentImageContext()
-        guard let cgImage = image?.cgImage else { return nil }
-
-        defer { UIGraphicsEndImageContext() }
-        return UIImage(cgImage: cgImage, scale: scale, orientation: imageOrientation)
+    func resized(to newSize: CGSize) -> UIImage {
+        let scaledSize = newSize.applying(.init(scaleX: 1 / scale, y: 1 / scale))
+        return UIGraphicsImageRenderer(size: scaledSize).image { context in
+            draw(in: .init(origin: .zero, size: scaledSize))
+        }
     }
 
-    func resize(to newSize: CGSize, scalingMode: ScalingMode) -> UIImage? {
-        let aspectRatio = scalingMode.aspectRatio(between: newSize, and: size)
+    func resized(to newSize: CGSize, scalingMode: ScalingMode) -> UIImage {
+        let scaledNewSize = newSize.applying(.init(scaleX: 1 / scale, y: 1 / scale))
+        let aspectRatio = scalingMode.aspectRatio(between: scaledNewSize, and: size)
 
-        let scaledImageRect = CGRect(x: (newSize.width - size.width * aspectRatio) / 2.0,
-                                     y: (newSize.height - size.height * aspectRatio) / 2.0,
-                                     width: size.width * aspectRatio,
-                                     height: size.height * aspectRatio)
+        let aspectRect = CGRect(x: (scaledNewSize.width - size.width * aspectRatio) / 2.0,
+                                y: (scaledNewSize.height - size.height * aspectRatio) / 2.0,
+                                width: size.width * aspectRatio,
+                                height: size.height * aspectRatio)
 
-        UIGraphicsBeginImageContext(newSize)
-        draw(in: scaledImageRect)
-        defer { UIGraphicsEndImageContext() }
-        return UIGraphicsGetImageFromCurrentImageContext()
+        return UIGraphicsImageRenderer(size: scaledNewSize).image { context in
+            draw(in: aspectRect)
+        }
     }
 
     func toJPEG(quarity: CGFloat = 1.0) -> Data? {
@@ -110,15 +70,62 @@ public extension UIImage {
         return self.pngData()
     }
 
-    func rounded() -> UIImage? {
-        let imageView = UIImageView(image: self)
-        imageView.layer.cornerRadius = min(size.height/2, size.width/2)
-        imageView.layer.masksToBounds = true
-        UIGraphicsBeginImageContextWithOptions(imageView.bounds.size, false, 0.0)
-        guard let context = UIGraphicsGetCurrentContext() else { return nil }
-        imageView.layer.render(in: context)
-        defer { UIGraphicsEndImageContext() }
-        return UIGraphicsGetImageFromCurrentImageContext()
+    func rounded(cornerRadius: CGFloat? = nil, borderWidth: CGFloat = 0, borderColor: UIColor = .white) -> UIImage {
+        let diameter = min(size.width, size.height)
+        let isLandscape = size.width > size.height
+
+        let xOffset = isLandscape ? (size.width - diameter) / 2 : 0
+        let yOffset = isLandscape ? 0 : (size.height - diameter) / 2
+
+        let imageSize = CGSize(width: diameter, height: diameter)
+
+        return UIGraphicsImageRenderer(size: imageSize).image { _ in
+            let roundedPath = UIBezierPath(roundedRect: CGRect(origin: .zero, size: imageSize),
+                                           cornerRadius: cornerRadius ?? diameter / 2)
+            roundedPath.addClip()
+            draw(at: CGPoint(x: -xOffset, y: -yOffset))
+            if borderWidth > 0 {
+                borderColor.setStroke()
+                roundedPath.lineWidth = borderWidth
+                roundedPath.stroke()
+            }
+        }
+    }
+
+    func pixelColor(at point: CGPoint) -> UIColor? {
+        let size = cgImage.map { CGSize(width: $0.width, height: $0.height) } ?? self.size
+        guard point.x >= 0, point.x < size.width, point.y >= 0, point.y < size.height,
+            let data = cgImage?.dataProvider?.data,
+            let pointer = CFDataGetBytePtr(data) else { return nil }
+
+        let numberOfComponents = 4
+        let pixelData = Int((size.width * point.y) + point.x) * numberOfComponents
+
+        let r = CGFloat(pointer[pixelData]) / 255.0
+        let g = CGFloat(pointer[pixelData + 1]) / 255.0
+        let b = CGFloat(pointer[pixelData + 2]) / 255.0
+        let a = CGFloat(pointer[pixelData + 3]) / 255.0
+
+        return UIColor(red: r, green: g, blue: b, alpha: a)
+    }
+
+    var canonicalized: UIImage {
+        guard let cgImage = cgImage else { return self }
+        let bytesPerPixel = 4
+        var data = [UInt8](repeating: 0, count: cgImage.width * cgImage.height * bytesPerPixel)
+        let bytesPerRow = bytesPerPixel * cgImage.width
+
+        guard let context = CGContext(data: &data,
+                                      width: cgImage.width,
+                                      height: cgImage.height,
+                                      bitsPerComponent: 8,
+                                      bytesPerRow: bytesPerRow,
+                                      space: CGColorSpaceCreateDeviceRGB(),
+                                      bitmapInfo: CGImageAlphaInfo.premultipliedLast.rawValue) else { return self }
+
+        context.draw(cgImage, in: CGRect(origin: .zero, size: CGSize(width: cgImage.width, height: cgImage.height)))
+        guard let image = context.makeImage() else { return self }
+        return UIImage(cgImage: image, scale: 1, orientation: .up)
     }
 }
 
