@@ -1,15 +1,15 @@
 
 Pod::Spec.new do |s|
 
-s.name         = "SwiftExtensions"
-s.version      = "2.0.3"
+s.name         = "BTSwiftExtensions"
+s.version      = "2.0.4"
 s.summary      = "SwiftExtension for iOS."
-s.homepage     = "https://github.com/biostome/SwiftExtensions.git"
+s.homepage     = "https://github.com/biostome/BTSwiftExtensions.git"
 s.license          = { :type => "MIT", :file => "LICENSE" }
 s.author       = { "biostome" => "453816118@qq.com" }
 s.platform     = :ios, "10.0"
-s.source       = { :git => "https://github.com/biostome/SwiftExtensions.git", :tag => s.version }
-s.source_files = "Sources/*"
+s.source       = { :git => "https://github.com/biostome/BTSwiftExtensions.git", :tag => s.version }
+s.source_files = "Sources/*.swift"
 s.framework    = "UIKit","Foundation"
 s.requires_arc = true
 s.ios.deployment_target = "10.0"
