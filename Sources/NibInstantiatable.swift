@@ -6,7 +6,7 @@
 //  Copyright © 2017年 tattn. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 public protocol NibInstantiatable {
     static var nibName: String { get }

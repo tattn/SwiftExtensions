@@ -25,7 +25,7 @@
 		24296C1E1FE7018A00FB0D0C /* SafeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24296C1D1FE7018A00FB0D0C /* SafeTests.swift */; };
 		24296C201FE7035200FB0D0C /* StringTo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24296C1F1FE7035200FB0D0C /* StringTo.swift */; };
 		24296C221FE7037C00FB0D0C /* StringToTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24296C211FE7037C00FB0D0C /* StringToTests.swift */; };
-		244F63E51FE0310E00E3C372 /* SwiftExtensions.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 244F63DB1FE0310E00E3C372 /* SwiftExtensions.framework */; };
+		244F63E51FE0310E00E3C372 /* BTSwiftExtensions.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 244F63DB1FE0310E00E3C372 /* BTSwiftExtensions.framework */; };
 		244F63EA1FE0310E00E3C372 /* NSObjectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244F63E91FE0310E00E3C372 /* NSObjectTests.swift */; };
 		244F63EC1FE0310E00E3C372 /* SwiftExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = 244F63DE1FE0310E00E3C372 /* SwiftExtensions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		244F63F61FE0315700E3C372 /* NSObject+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244F63F51FE0315700E3C372 /* NSObject+.swift */; };
@@ -102,10 +102,10 @@
 		24296C1D1FE7018A00FB0D0C /* SafeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafeTests.swift; sourceTree = "<group>"; };
 		24296C1F1FE7035200FB0D0C /* StringTo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringTo.swift; sourceTree = "<group>"; };
 		24296C211FE7037C00FB0D0C /* StringToTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringToTests.swift; sourceTree = "<group>"; };
-		244F63DB1FE0310E00E3C372 /* SwiftExtensions.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftExtensions.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		244F63DB1FE0310E00E3C372 /* BTSwiftExtensions.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = BTSwiftExtensions.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		244F63DE1FE0310E00E3C372 /* SwiftExtensions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SwiftExtensions.h; sourceTree = "<group>"; };
 		244F63DF1FE0310E00E3C372 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		244F63E41FE0310E00E3C372 /* SwiftExtensionsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftExtensionsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		244F63E41FE0310E00E3C372 /* BTSwiftExtensionsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BTSwiftExtensionsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		244F63E91FE0310E00E3C372 /* NSObjectTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSObjectTests.swift; sourceTree = "<group>"; };
 		244F63EB1FE0310E00E3C372 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		244F63F51FE0315700E3C372 /* NSObject+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSObject+.swift"; sourceTree = "<group>"; };
@@ -164,7 +164,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				244F63E51FE0310E00E3C372 /* SwiftExtensions.framework in Frameworks */,
+				244F63E51FE0310E00E3C372 /* BTSwiftExtensions.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -183,8 +183,8 @@
 		244F63DC1FE0310E00E3C372 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				244F63DB1FE0310E00E3C372 /* SwiftExtensions.framework */,
-				244F63E41FE0310E00E3C372 /* SwiftExtensionsTests.xctest */,
+				244F63DB1FE0310E00E3C372 /* BTSwiftExtensions.framework */,
+				244F63E41FE0310E00E3C372 /* BTSwiftExtensionsTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -289,9 +289,9 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		244F63DA1FE0310E00E3C372 /* SwiftExtensions */ = {
+		244F63DA1FE0310E00E3C372 /* BTSwiftExtensions */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 244F63EF1FE0310E00E3C372 /* Build configuration list for PBXNativeTarget "SwiftExtensions" */;
+			buildConfigurationList = 244F63EF1FE0310E00E3C372 /* Build configuration list for PBXNativeTarget "BTSwiftExtensions" */;
 			buildPhases = (
 				244F63D61FE0310E00E3C372 /* Sources */,
 				244F63D71FE0310E00E3C372 /* Frameworks */,
@@ -302,14 +302,14 @@
 			);
 			dependencies = (
 			);
-			name = SwiftExtensions;
+			name = BTSwiftExtensions;
 			productName = SwiftExtensions;
-			productReference = 244F63DB1FE0310E00E3C372 /* SwiftExtensions.framework */;
+			productReference = 244F63DB1FE0310E00E3C372 /* BTSwiftExtensions.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		244F63E31FE0310E00E3C372 /* SwiftExtensionsTests */ = {
+		244F63E31FE0310E00E3C372 /* BTSwiftExtensionsTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 244F63F21FE0310E00E3C372 /* Build configuration list for PBXNativeTarget "SwiftExtensionsTests" */;
+			buildConfigurationList = 244F63F21FE0310E00E3C372 /* Build configuration list for PBXNativeTarget "BTSwiftExtensionsTests" */;
 			buildPhases = (
 				244F63E01FE0310E00E3C372 /* Sources */,
 				244F63E11FE0310E00E3C372 /* Frameworks */,
@@ -320,9 +320,9 @@
 			dependencies = (
 				244F63E71FE0310E00E3C372 /* PBXTargetDependency */,
 			);
-			name = SwiftExtensionsTests;
+			name = BTSwiftExtensionsTests;
 			productName = SwiftExtensionsTests;
-			productReference = 244F63E41FE0310E00E3C372 /* SwiftExtensionsTests.xctest */;
+			productReference = 244F63E41FE0310E00E3C372 /* BTSwiftExtensionsTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -347,7 +347,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 244F63D51FE0310E00E3C372 /* Build configuration list for PBXProject "SwiftExtensions" */;
+			buildConfigurationList = 244F63D51FE0310E00E3C372 /* Build configuration list for PBXProject "BTSwiftExtensions" */;
 			compatibilityVersion = "Xcode 8.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -361,8 +361,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				244F63DA1FE0310E00E3C372 /* SwiftExtensions */,
-				244F63E31FE0310E00E3C372 /* SwiftExtensionsTests */,
+				244F63DA1FE0310E00E3C372 /* BTSwiftExtensions */,
+				244F63E31FE0310E00E3C372 /* BTSwiftExtensionsTests */,
 			);
 		};
 /* End PBXProject section */
@@ -465,7 +465,7 @@
 /* Begin PBXTargetDependency section */
 		244F63E71FE0310E00E3C372 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 244F63DA1FE0310E00E3C372 /* SwiftExtensions */;
+			target = 244F63DA1FE0310E00E3C372 /* BTSwiftExtensions */;
 			targetProxy = 244F63E61FE0310E00E3C372 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -676,7 +676,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		244F63D51FE0310E00E3C372 /* Build configuration list for PBXProject "SwiftExtensions" */ = {
+		244F63D51FE0310E00E3C372 /* Build configuration list for PBXProject "BTSwiftExtensions" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				244F63ED1FE0310E00E3C372 /* Debug */,
@@ -685,7 +685,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		244F63EF1FE0310E00E3C372 /* Build configuration list for PBXNativeTarget "SwiftExtensions" */ = {
+		244F63EF1FE0310E00E3C372 /* Build configuration list for PBXNativeTarget "BTSwiftExtensions" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				244F63F01FE0310E00E3C372 /* Debug */,
@@ -694,7 +694,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		244F63F21FE0310E00E3C372 /* Build configuration list for PBXNativeTarget "SwiftExtensionsTests" */ = {
+		244F63F21FE0310E00E3C372 /* Build configuration list for PBXNativeTarget "BTSwiftExtensionsTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				244F63F31FE0310E00E3C372 /* Debug */,

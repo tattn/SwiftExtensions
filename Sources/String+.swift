@@ -6,7 +6,7 @@
 //  Copyright © 2017年 tattn. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 public extension String {
     var localized: String {
