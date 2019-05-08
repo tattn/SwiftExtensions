@@ -62,6 +62,7 @@
 		24DE987621BD76F400FA570A /* Comparable+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24DE987521BD76F400FA570A /* Comparable+.swift */; };
 		24FA56561FE6C24A004CC906 /* UIImage+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24FA56551FE6C24A004CC906 /* UIImage+.swift */; };
 		D8053EBC2282DA450039AEA9 /* String+Regular.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8053EBB2282DA450039AEA9 /* String+Regular.swift */; };
+		D8053EBE2282DEA60039AEA9 /* UISegmentedControl+.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8053EBD2282DEA60039AEA9 /* UISegmentedControl+.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -134,6 +135,7 @@
 		24DE987521BD76F400FA570A /* Comparable+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Comparable+.swift"; sourceTree = "<group>"; };
 		24FA56551FE6C24A004CC906 /* UIImage+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+.swift"; sourceTree = "<group>"; };
 		D8053EBB2282DA450039AEA9 /* String+Regular.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Regular.swift"; sourceTree = "<group>"; };
+		D8053EBD2282DEA60039AEA9 /* UISegmentedControl+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UISegmentedControl+.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -203,6 +205,7 @@
 				24DE987521BD76F400FA570A /* Comparable+.swift */,
 				249378E822588A720016FB9C /* Result+.swift */,
 				2498975A225E5969000E1CC3 /* CaseIterable+.swift */,
+				D8053EBD2282DEA60039AEA9 /* UISegmentedControl+.swift */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -380,6 +383,7 @@
 				245213761FE2E28900561F9D /* StoryboardInstantiatable.swift in Sources */,
 				D8053EBC2282DA450039AEA9 /* String+Regular.swift in Sources */,
 				2452136E1FE2D40500561F9D /* UIColor+.swift in Sources */,
+				D8053EBE2282DEA60039AEA9 /* UISegmentedControl+.swift in Sources */,
 				244FB4D01FE6D630006A60EF /* Operator+.swift in Sources */,
 				24296C181FE6F30600FB0D0C /* ScopeMethod.swift in Sources */,
 				24742A1B20FBB1BC008746E8 /* Error+.swift in Sources */,
