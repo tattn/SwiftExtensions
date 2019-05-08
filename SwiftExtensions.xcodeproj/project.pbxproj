@@ -61,6 +61,7 @@
 		24CD1B9821514D2B0065244F /* TableViewCell2.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24CD1B9721514D2B0065244F /* TableViewCell2.xib */; };
 		24DE987621BD76F400FA570A /* Comparable+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24DE987521BD76F400FA570A /* Comparable+.swift */; };
 		24FA56561FE6C24A004CC906 /* UIImage+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24FA56551FE6C24A004CC906 /* UIImage+.swift */; };
+		D8053EBC2282DA450039AEA9 /* String+Regular.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8053EBB2282DA450039AEA9 /* String+Regular.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -132,6 +133,7 @@
 		24CD1B9721514D2B0065244F /* TableViewCell2.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableViewCell2.xib; sourceTree = "<group>"; };
 		24DE987521BD76F400FA570A /* Comparable+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Comparable+.swift"; sourceTree = "<group>"; };
 		24FA56551FE6C24A004CC906 /* UIImage+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+.swift"; sourceTree = "<group>"; };
+		D8053EBB2282DA450039AEA9 /* String+Regular.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Regular.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -195,6 +197,7 @@
 				24296C171FE6F30600FB0D0C /* ScopeMethod.swift */,
 				24296C1B1FE7014900FB0D0C /* Safe.swift */,
 				24296C1F1FE7035200FB0D0C /* StringTo.swift */,
+				D8053EBB2282DA450039AEA9 /* String+Regular.swift */,
 				24742A1A20FBB1BC008746E8 /* Error+.swift */,
 				24979DF22109ECA40016E77F /* Function.swift */,
 				24DE987521BD76F400FA570A /* Comparable+.swift */,
@@ -375,6 +378,7 @@
 				244F63F61FE0315700E3C372 /* NSObject+.swift in Sources */,
 				2412C0521FE6B2B100C3D555 /* String+.swift in Sources */,
 				245213761FE2E28900561F9D /* StoryboardInstantiatable.swift in Sources */,
+				D8053EBC2282DA450039AEA9 /* String+Regular.swift in Sources */,
 				2452136E1FE2D40500561F9D /* UIColor+.swift in Sources */,
 				244FB4D01FE6D630006A60EF /* Operator+.swift in Sources */,
 				24296C181FE6F30600FB0D0C /* ScopeMethod.swift in Sources */,
