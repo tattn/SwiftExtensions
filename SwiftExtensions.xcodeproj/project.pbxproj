@@ -63,6 +63,13 @@
 		24FA56561FE6C24A004CC906 /* UIImage+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24FA56551FE6C24A004CC906 /* UIImage+.swift */; };
 		D8053EBC2282DA450039AEA9 /* String+Regular.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8053EBB2282DA450039AEA9 /* String+Regular.swift */; };
 		D8053EBE2282DEA60039AEA9 /* UISegmentedControl+.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8053EBD2282DEA60039AEA9 /* UISegmentedControl+.swift */; };
+		D8053EC02282DEF70039AEA9 /* UIImageView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8053EBF2282DEF70039AEA9 /* UIImageView+.swift */; };
+		D8053EC22282E0090039AEA9 /* UISearchBar+.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8053EC12282E0090039AEA9 /* UISearchBar+.swift */; };
+		D8053EC42282E03C0039AEA9 /* UIAlertController+.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8053EC32282E03C0039AEA9 /* UIAlertController+.swift */; };
+		D8053EC62282E0660039AEA9 /* Optional+.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8053EC52282E0660039AEA9 /* Optional+.swift */; };
+		D8053EC82282E07C0039AEA9 /* Common+.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8053EC72282E07C0039AEA9 /* Common+.swift */; };
+		D8053ECA2282E0D00039AEA9 /* Locale+.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8053EC92282E0D00039AEA9 /* Locale+.swift */; };
+		D8053ECC2282E0E30039AEA9 /* UITextField+.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8053ECB2282E0E30039AEA9 /* UITextField+.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -136,6 +143,13 @@
 		24FA56551FE6C24A004CC906 /* UIImage+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+.swift"; sourceTree = "<group>"; };
 		D8053EBB2282DA450039AEA9 /* String+Regular.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Regular.swift"; sourceTree = "<group>"; };
 		D8053EBD2282DEA60039AEA9 /* UISegmentedControl+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UISegmentedControl+.swift"; sourceTree = "<group>"; };
+		D8053EBF2282DEF70039AEA9 /* UIImageView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+.swift"; sourceTree = "<group>"; };
+		D8053EC12282E0090039AEA9 /* UISearchBar+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UISearchBar+.swift"; sourceTree = "<group>"; };
+		D8053EC32282E03C0039AEA9 /* UIAlertController+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIAlertController+.swift"; sourceTree = "<group>"; };
+		D8053EC52282E0660039AEA9 /* Optional+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Optional+.swift"; sourceTree = "<group>"; };
+		D8053EC72282E07C0039AEA9 /* Common+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Common+.swift"; sourceTree = "<group>"; };
+		D8053EC92282E0D00039AEA9 /* Locale+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Locale+.swift"; sourceTree = "<group>"; };
+		D8053ECB2282E0E30039AEA9 /* UITextField+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -192,6 +206,7 @@
 				2412C04F1FE6A52400C3D555 /* Array+.swift */,
 				2412C0511FE6B2B100C3D555 /* String+.swift */,
 				24FA56551FE6C24A004CC906 /* UIImage+.swift */,
+				D8053EC12282E0090039AEA9 /* UISearchBar+.swift */,
 				244FB4CB1FE6D3C2006A60EF /* TargetedExtension.swift */,
 				244FB4CF1FE6D630006A60EF /* Operator+.swift */,
 				244FB4D31FE6D9F5006A60EF /* Dictionary+.swift */,
@@ -206,6 +221,12 @@
 				249378E822588A720016FB9C /* Result+.swift */,
 				2498975A225E5969000E1CC3 /* CaseIterable+.swift */,
 				D8053EBD2282DEA60039AEA9 /* UISegmentedControl+.swift */,
+				D8053EC32282E03C0039AEA9 /* UIAlertController+.swift */,
+				D8053EBF2282DEF70039AEA9 /* UIImageView+.swift */,
+				D8053EC52282E0660039AEA9 /* Optional+.swift */,
+				D8053EC72282E07C0039AEA9 /* Common+.swift */,
+				D8053EC92282E0D00039AEA9 /* Locale+.swift */,
+				D8053ECB2282E0E30039AEA9 /* UITextField+.swift */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -380,12 +401,17 @@
 				245213721FE2DAA000561F9D /* UIApplication+.swift in Sources */,
 				244F63F61FE0315700E3C372 /* NSObject+.swift in Sources */,
 				2412C0521FE6B2B100C3D555 /* String+.swift in Sources */,
+				D8053ECA2282E0D00039AEA9 /* Locale+.swift in Sources */,
 				245213761FE2E28900561F9D /* StoryboardInstantiatable.swift in Sources */,
+				D8053EC42282E03C0039AEA9 /* UIAlertController+.swift in Sources */,
 				D8053EBC2282DA450039AEA9 /* String+Regular.swift in Sources */,
+				D8053EC22282E0090039AEA9 /* UISearchBar+.swift in Sources */,
 				2452136E1FE2D40500561F9D /* UIColor+.swift in Sources */,
 				D8053EBE2282DEA60039AEA9 /* UISegmentedControl+.swift in Sources */,
 				244FB4D01FE6D630006A60EF /* Operator+.swift in Sources */,
 				24296C181FE6F30600FB0D0C /* ScopeMethod.swift in Sources */,
+				D8053EC62282E0660039AEA9 /* Optional+.swift in Sources */,
+				D8053EC02282DEF70039AEA9 /* UIImageView+.swift in Sources */,
 				24742A1B20FBB1BC008746E8 /* Error+.swift in Sources */,
 				24296C1C1FE7014900FB0D0C /* Safe.swift in Sources */,
 				249378E922588A720016FB9C /* Result+.swift in Sources */,
@@ -393,6 +419,7 @@
 				2412C04A1FE6979500C3D555 /* UIView+.swift in Sources */,
 				245213661FE03E9700561F9D /* UICollectionView+.swift in Sources */,
 				24FA56561FE6C24A004CC906 /* UIImage+.swift in Sources */,
+				D8053ECC2282E0E30039AEA9 /* UITextField+.swift in Sources */,
 				244FB4D81FE6DC4F006A60EF /* URL+.swift in Sources */,
 				240613BB2170D9BB00A4EEA9 /* UIViewController+.swift in Sources */,
 				2452135E1FE0351300561F9D /* UITableView+.swift in Sources */,
@@ -401,6 +428,7 @@
 				249F760C1FE4AB0800421BD9 /* NibInstantiatable.swift in Sources */,
 				244FB4CC1FE6D3C2006A60EF /* TargetedExtension.swift in Sources */,
 				2498975B225E5969000E1CC3 /* CaseIterable+.swift in Sources */,
+				D8053EC82282E07C0039AEA9 /* Common+.swift in Sources */,
 				24979DF32109ECA40016E77F /* Function.swift in Sources */,
 				24DE987621BD76F400FA570A /* Comparable+.swift in Sources */,
 			);

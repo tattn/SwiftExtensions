@@ -39,3 +39,11 @@ public extension UIViewController {
         case custom((UIView, UIView) -> Void)
     }
 }
+
+extension UIViewController {
+    
+    var alertController: UIAlertController? {
+        guard let alert = UIApplication.shared.topViewController as? UIAlertController else { return nil }
+        return alert
+    }
+}
