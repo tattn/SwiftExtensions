@@ -23,3 +23,10 @@ public extension UIApplication {
         return topViewController as? UINavigationController
     }
 }
+
+// MARK: Version
+public extension UIApplication {
+    var appVersion:String {
+        return Bundle.main.infoDictionary?["CFBundleShortVersionString"] as! String
+    }
+}

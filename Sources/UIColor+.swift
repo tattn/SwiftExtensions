@@ -49,4 +49,56 @@ public extension UIColor {
     var components: UIColor.Components {
         return Components(_base: self)
     }
+    
 }
+
+
+
+extension UIColor {
+    enum IHGradientChangeDirection {
+        case directionLevel
+        case directionVertical
+        case upwardDiagonalLine
+        case downDiagonalLine
+    }
+    class func bm_colorGradientChange(size:CGSize,direction:IHGradientChangeDirection, startColor:UIColor, endColor:UIColor) -> UIColor? {
+        if size.equalTo(CGSize.zero) {
+            return nil
+        }
+        let gradientLayer = CAGradientLayer.init()
+        gradientLayer.frame = CGRect.init(x: 0, y: 0, width: size.width, height: size.height)
+        
+        var startPoint = CGPoint.zero
+        if direction == .downDiagonalLine {
+            startPoint = CGPoint.init(x: 0.0, y: 1.0)
+        }
+        gradientLayer.startPoint = startPoint
+        
+        var endPoint = CGPoint.init(x: 1.0, y: 0.0)
+        switch direction {
+        case .directionLevel:
+            endPoint = CGPoint.init(x: 1.0, y: 0.0)
+        case .directionVertical:
+            endPoint = CGPoint.init(x: 0.0, y: 1.0)
+        case .upwardDiagonalLine:
+            endPoint = CGPoint.init(x: 1.0, y: 1.0)
+        case .downDiagonalLine:
+            endPoint = CGPoint.init(x: 1.0, y: 0.0)
+        }
+        gradientLayer.endPoint = endPoint
+        gradientLayer.colors = [startColor.cgColor,endColor.cgColor]
+        UIGraphicsBeginImageContext(size)
+        gradientLayer.render(in: UIGraphicsGetCurrentContext()!)
+        let image = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        guard let img = image else {
+            return nil
+        }
+        return UIColor.init(patternImage: img)
+    }
+    
+    class var mainColor:UIColor {
+        return "F9506A".color
+    }
+}
+
