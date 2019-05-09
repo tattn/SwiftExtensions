@@ -55,20 +55,19 @@ public extension UIColor {
 
 
 
-extension UIColor {
-    enum IHGradientChangeDirection {
+public extension UIColor {
+    enum IHGradient {
         case directionLevel
         case directionVertical
         case upwardDiagonalLine
         case downDiagonalLine
     }
-    class func bm_colorGradientChange(size:CGSize,direction:IHGradientChangeDirection, startColor:UIColor, endColor:UIColor) -> UIColor? {
-        if size.equalTo(CGSize.zero) {
-            return nil
-        }
+    
+    convenience init?(size:CGSize,direction:IHGradient = .directionLevel, startColor:UIColor, endColor:UIColor) {
+        if size.equalTo(CGSize.zero) {return nil}
+        
         let gradientLayer = CAGradientLayer.init()
         gradientLayer.frame = CGRect.init(x: 0, y: 0, width: size.width, height: size.height)
-        
         var startPoint = CGPoint.zero
         if direction == .downDiagonalLine {
             startPoint = CGPoint.init(x: 0.0, y: 1.0)
@@ -92,10 +91,8 @@ extension UIColor {
         gradientLayer.render(in: UIGraphicsGetCurrentContext()!)
         let image = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
-        guard let img = image else {
-            return nil
-        }
-        return UIColor.init(patternImage: img)
+        guard let img = image else {return nil}
+        self.init(patternImage: img)
     }
 }
 

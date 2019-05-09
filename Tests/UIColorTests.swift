@@ -58,3 +58,10 @@ class UIColorTests: XCTestCase {
         XCTAssertEqual(alpha, 0.5)
     }
 }
+
+extension UIColorTests {
+    func testColorGradient() {
+        let c = UIColor.init(size: CGSize.init(width: 100, height: 100), direction: .directionLevel, startColor: .red, endColor: .green)
+        XCTAssertNotNil(c)
+    }
+}
