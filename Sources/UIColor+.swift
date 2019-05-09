@@ -63,7 +63,7 @@ public extension UIColor {
         case downDiagonalLine
     }
     
-    convenience init?(size:CGSize,direction:IHGradient = .directionLevel, startColor:UIColor, endColor:UIColor) {
+    convenience init?(direction:IHGradient = .directionLevel,size:CGSize, startColor:UIColor, endColor:UIColor) {
         if size.equalTo(CGSize.zero) {return nil}
         
         let gradientLayer = CAGradientLayer.init()
