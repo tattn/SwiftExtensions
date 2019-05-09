@@ -11,27 +11,27 @@ import Foundation
 // MARK: Regular
 public extension String {
     
-    public var validateEmail:Bool{
+    var validateEmail:Bool{
         let predicateStr = "^([a-z0-9_\\.-]+)@([\\da-z\\.-]+)\\.([a-z\\.]{2,6})$"
         let predicate =  NSPredicate(format: "SELF MATCHES %@" ,predicateStr)
         return predicate.evaluate(with: self)
     }
-    public var validatePhone:Bool{
+    var validatePhone:Bool{
         let predicateStr = "^1+[356789]+\\d{9}$"
         let predicate =  NSPredicate(format: "SELF MATCHES %@" ,predicateStr)
         return predicate.evaluate(with: self)
     }
-    public var validateNickname:Bool {
+    var validateNickname:Bool {
         let predicateStr = "^[\\u4e00-\\u9fa5]{4,8}$"
         let predicate =  NSPredicate(format: "SELF MATCHES %@" ,predicateStr)
         return predicate.evaluate(with: self)
     }
-    public var validateURL:Bool{
+    var validateURL:Bool{
         let predicateStr = "^(https?:\\/\\/)?([\\da-z\\.-]+)\\.([a-z\\.]{2,6})([\\/\\w \\.-]*)*\\/?$"
         let predicate =  NSPredicate(format: "SELF MATCHES %@" ,predicateStr)
         return predicate.evaluate(with: self)
     }
-    public var validateIP:Bool{
+    var validateIP:Bool{
         let predicateStr = "^(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$"
         let predicate =  NSPredicate(format: "SELF MATCHES %@" ,predicateStr)
         return predicate.evaluate(with: self)
