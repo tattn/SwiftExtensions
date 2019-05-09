@@ -1,6 +1,6 @@
-SwiftExtensions
+BTSwiftExtensions
 ===
-
+This extensions fork form athor tattn [![athor tattn](https://dev.to/tattn/my-favorite--swift-extensions-8g7)
 [![Build Status](https://app.bitrise.io/app/e58694b1fa46a551/status.svg?token=E2FYmP02umcT9pjF4NKDSw)](https://app.bitrise.io/app/e58694b1fa46a551)
 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 [![Swift Version](https://img.shields.io/badge/Swift-5-F16D39.svg)](https://developer.apple.com/swift)
@@ -9,16 +9,14 @@ My favorite Swift extensions.
 
 # Installation
 
-## Carthage
-
 ```ruby
-github "tattn/SwiftExtensions"
+github "BTSwiftExtensions"
 ```
 
 # Usage
 
 ```swift
-@_exported import SwiftExtensions
+@_exported import BTSwiftExtensions
 ```
 
 # Docs
@@ -35,4 +33,4 @@ github "tattn/SwiftExtensions"
 
 # License
 
-SwiftExtensions is released under the MIT license. See LICENSE for details.
+BTSwiftExtensions is released under the MIT license. See LICENSE for details.
