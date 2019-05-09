@@ -21,26 +21,6 @@ extension String {
         let predicate =  NSPredicate(format: "SELF MATCHES %@" ,predicateStr)
         return predicate.evaluate(with: self)
     }
-    public var validateLoginUsername:Bool{
-        let predicateStr = ".{1,9999}"
-        let predicate =  NSPredicate(format: "SELF MATCHES %@" ,predicateStr)
-        return predicate.evaluate(with: self)
-    }
-    public var validateLoginPasswrod:Bool{
-        let predicateStr = ".{1,9999}"
-        let predicate =  NSPredicate(format: "SELF MATCHES %@" ,predicateStr)
-        return predicate.evaluate(with: self)
-    }
-    public var validateRegisterUsername:Bool{
-        let predicateStr = "^[0-9A-Za-z]{4,12}$"
-        let predicate =  NSPredicate(format: "SELF MATCHES %@" ,predicateStr)
-        return predicate.evaluate(with: self)
-    }
-    public var validateRegisterPasswrod:Bool{
-        let predicateStr = "^[0-9A-Za-z]{6,12}$"
-        let predicate =  NSPredicate(format: "SELF MATCHES %@" ,predicateStr)
-        return predicate.evaluate(with: self)
-    }
     public var validateNickname:Bool {
         let predicateStr = "^[\\u4e00-\\u9fa5]{4,8}$"
         let predicate =  NSPredicate(format: "SELF MATCHES %@" ,predicateStr)
