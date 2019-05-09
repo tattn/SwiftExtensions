@@ -125,3 +125,22 @@ public extension String {
     }
 }
 
+
+public extension String{
+    
+    /*
+     APP Bundle Version Comparison
+     
+     Given the function:
+     NSComparisonResult f(int a, int b)
+     
+     If:
+     a < b   then return NSOrderedAscending. The left operand is smaller than the right operand.
+     a > b   then return NSOrderedDescending. The left operand is greater than the right operand.
+     a == b  then return NSOrderedSame. The operands are equal.
+     */
+    var compareBundleVersion:ComparisonResult {
+        let flag = compare(UIApplication.shared.appVersion, options: String.CompareOptions.numeric)
+        return flag
+    }
+}
