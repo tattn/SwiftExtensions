@@ -9,6 +9,7 @@
 import UIKit
 
 public extension UIImage {
+    @available(iOS 10.0, *)
     convenience init(color: UIColor, size: CGSize) {
         let image = UIGraphicsImageRenderer(size: size).image { context in
             context.cgContext.setFillColor(color.cgColor)
@@ -22,6 +23,7 @@ public extension UIImage {
         }
     }
 
+    @available(iOS 10.0, *)
     func image(withTint color: UIColor) -> UIImage {
         guard let cgImage = cgImage else { return self }
         let rect = CGRect(origin: .zero, size: size)
@@ -41,6 +43,7 @@ public extension UIImage {
         return UIImage(cgImage: imageRef, scale: scale, orientation: imageOrientation)
     }
 
+    @available(iOS 10.0, *)
     func resized(to newSize: CGSize) -> UIImage {
         let scaledSize = newSize.applying(.init(scaleX: 1 / scale, y: 1 / scale))
         return UIGraphicsImageRenderer(size: scaledSize).image { context in
@@ -48,6 +51,7 @@ public extension UIImage {
         }
     }
 
+    @available(iOS 10.0, *)
     func resized(to newSize: CGSize, scalingMode: ScalingMode) -> UIImage {
         let scaledNewSize = newSize.applying(.init(scaleX: 1 / scale, y: 1 / scale))
         let aspectRatio = scalingMode.aspectRatio(between: scaledNewSize, and: size)
@@ -70,6 +74,7 @@ public extension UIImage {
         return self.pngData()
     }
 
+    @available(iOS 10.0, *)
     func rounded(cornerRadius: CGFloat? = nil, borderWidth: CGFloat = 0, borderColor: UIColor = .white) -> UIImage {
         let diameter = min(size.width, size.height)
         let isLandscape = size.width > size.height
