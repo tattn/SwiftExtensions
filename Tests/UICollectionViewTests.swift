@@ -7,7 +7,7 @@
 //
 
 import XCTest
-import SwiftExtensions
+import BTSwiftExtensions
 import UIKit
 
 final class CollectionViewCell: UICollectionViewCell {

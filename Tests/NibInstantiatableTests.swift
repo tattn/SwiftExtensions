@@ -7,7 +7,7 @@
 //
 
 import XCTest
-import SwiftExtensions
+import BTSwiftExtensions
 
 final class NibView: UIView, NibInstantiatable {
     @IBOutlet weak var label: UILabel!

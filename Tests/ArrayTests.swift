@@ -7,7 +7,7 @@
 //
 
 import XCTest
-import SwiftExtensions
+import BTSwiftExtensions
 
 class ArrayTests: XCTestCase {
     

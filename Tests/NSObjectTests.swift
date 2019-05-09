@@ -7,21 +7,21 @@
 //
 
 import XCTest
-import SwiftExtensions
+import BTSwiftExtensions
 
-class SwiftExtensionsTests: XCTestCase {
-    let expectedClassName = "SwiftExtensionsTests"
+class BTSwiftExtensionsTests: XCTestCase {
+    let expectedClassName = "BTSwiftExtensionsTests"
 
     func testStaticClassName() {
-        XCTAssertEqual(SwiftExtensionsTests.className, expectedClassName)
+        XCTAssertEqual(BTSwiftExtensionsTests.className, expectedClassName)
     }
 
     func testInstanceClassName() {
-        XCTAssertEqual(SwiftExtensionsTests().className, expectedClassName)
+        XCTAssertEqual(BTSwiftExtensionsTests().className, expectedClassName)
     }
 }
 
-extension SwiftExtensionsTests {
+extension BTSwiftExtensionsTests {
     func testDescribedProperty() {
         class Foo: NSObject {
             var foo = 1

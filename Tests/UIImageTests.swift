@@ -7,7 +7,7 @@
 //
 
 import XCTest
-import SwiftExtensions
+import BTSwiftExtensions
 
 class UIImageTests: XCTestCase {
     private lazy var scaleTransform = CGAffineTransform(scaleX: UIScreen.main.scale, y: UIScreen.main.scale)
@@ -25,8 +25,9 @@ class UIImageTests: XCTestCase {
             XCTAssertNil(pixelColor(.init(x: 0, y: -1)), message)
             XCTAssertNil(pixelColor(.init(x: image.size.width, y: 0)), message)
             XCTAssertNil(pixelColor(.init(x: 0, y: image.size.height)), message)
-            XCTAssertEqual(pixelColor(.zero), UIColor(red: 236, green: 216, blue: 182), message)
-            XCTAssertEqual(pixelColor(.init(x: image.size.width - 1, y: image.size.height - 1)), UIColor(red: 62, green: 56, blue: 71), message)
+            XCTAssertEqual(pixelColor(.zero), UIColor.init(red: 236, green: 216, blue: 182, alpha: 1), message)
+            
+            XCTAssertEqual(pixelColor(.init(x: image.size.width - 1, y: image.size.height - 1)), UIColor.init(red: 62, green: 56, blue: 71, alpha: 1), message)
         }
 
         assert(pixelColor: image.pixelColor(at:), message: "pixelColor")
@@ -41,6 +42,7 @@ class UIImageTests: XCTestCase {
         assert(pixelColor: pixelColor3xLeft, message: "pixelColor3xLeft")
     }
 
+    @available(iOS 10.0, *)
     func testInitColor() {
         let color = UIColor.red
         let size = CGSize(width: 100, height: 80)
@@ -51,6 +53,7 @@ class UIImageTests: XCTestCase {
         XCTAssertEqual(colorImage.size, size.applying(scaleTransform))
     }
 
+    @available(iOS 10.0, *)
     func testTintColor() {
         let tintedImage = TestImage.image.image(withTint: .red)
         XCTAssertEqual(tintedImage.canonicalized.pixelColor(at: .zero), UIColor(red: 216, green: 0, blue: 0, alpha: 216 / 255.0))
@@ -70,6 +73,7 @@ class UIImageTests: XCTestCase {
         XCTAssertEqual(croppedImage.size.applying(scaleTransform), croppedRect.size)
     }
 
+    @available(iOS 10.0, *)
     func testResized() {
         XCTAssertEqual(TestImage.image.resized(to: .zero).size, .zero)
         XCTAssertEqual(TestImage.image.resized(to: .init(width: -1, height: -1)).size, .zero)
@@ -80,6 +84,7 @@ class UIImageTests: XCTestCase {
         XCTAssertEqual(resizedImage.size.applying(scaleTransform), resizedSize)
     }
 
+    @available(iOS 10.0, *)
     func testResizedByAspectFill() {
         XCTAssertEqual(TestImage.image.resized(to: .zero, scalingMode: .aspectFill).size, .zero)
         XCTAssertEqual(TestImage.image.resized(to: .init(width: -1, height: -1), scalingMode: .aspectFill).size, .zero)
@@ -90,6 +95,7 @@ class UIImageTests: XCTestCase {
         XCTAssertEqual(resizedFillImage.size.applying(scaleTransform), resizedSize)
     }
 
+    @available(iOS 10.0, *)
     func testResizedByAspectFit() {
         XCTAssertEqual(TestImage.image.resized(to: .zero, scalingMode: .aspectFit).size, .zero)
         XCTAssertEqual(TestImage.image.resized(to: .init(width: -1, height: -1), scalingMode: .aspectFit).size, .zero)
@@ -101,6 +107,7 @@ class UIImageTests: XCTestCase {
         XCTAssertEqual(resizedFitImage.size.applying(scaleTransform), resizedSize)
     }
 
+    @available(iOS 10.0, *)
     func testRounded() {
         let roundedImage = TestImage.image3x.rounded()
         XCTAssertEqual(roundedImage.canonicalized.pixelColor(at: .init(x: 30, y: 30)), UIColor(red: 0, green: 0, blue: 0, alpha: 0))

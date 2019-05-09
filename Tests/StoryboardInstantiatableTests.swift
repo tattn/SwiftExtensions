@@ -7,7 +7,7 @@
 //
 
 import XCTest
-import SwiftExtensions
+import BTSwiftExtensions
 
 final class InitialViewController: UIViewController, StoryboardInstantiatable {
     @IBOutlet weak var label: UILabel!
