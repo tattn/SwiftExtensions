@@ -69,6 +69,7 @@
 		D8053EC82282E07C0039AEA9 /* Common+.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8053EC72282E07C0039AEA9 /* Common+.swift */; };
 		D8053ECA2282E0D00039AEA9 /* Locale+.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8053EC92282E0D00039AEA9 /* Locale+.swift */; };
 		D8053ECC2282E0E30039AEA9 /* UITextField+.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8053ECB2282E0E30039AEA9 /* UITextField+.swift */; };
+		D897FF6D2284208F0015726C /* NSAttributedString+.swift in Sources */ = {isa = PBXBuildFile; fileRef = D897FF6C2284208F0015726C /* NSAttributedString+.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -148,6 +149,7 @@
 		D8053EC72282E07C0039AEA9 /* Common+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Common+.swift"; sourceTree = "<group>"; };
 		D8053EC92282E0D00039AEA9 /* Locale+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Locale+.swift"; sourceTree = "<group>"; };
 		D8053ECB2282E0E30039AEA9 /* UITextField+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+.swift"; sourceTree = "<group>"; };
+		D897FF6C2284208F0015726C /* NSAttributedString+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSAttributedString+.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -204,6 +206,7 @@
 				2412C04F1FE6A52400C3D555 /* Array+.swift */,
 				2412C0511FE6B2B100C3D555 /* String+.swift */,
 				24296C1F1FE7035200FB0D0C /* StringTo.swift */,
+				D897FF6C2284208F0015726C /* NSAttributedString+.swift */,
 				D8053EBB2282DA450039AEA9 /* String+Regular.swift */,
 				24FA56551FE6C24A004CC906 /* UIImage+.swift */,
 				D8053EC12282E0090039AEA9 /* UISearchBar+.swift */,
@@ -411,6 +414,7 @@
 				24742A1B20FBB1BC008746E8 /* Error+.swift in Sources */,
 				24296C1C1FE7014900FB0D0C /* Safe.swift in Sources */,
 				249378E922588A720016FB9C /* Result+.swift in Sources */,
+				D897FF6D2284208F0015726C /* NSAttributedString+.swift in Sources */,
 				2412C0501FE6A52400C3D555 /* Array+.swift in Sources */,
 				2412C04A1FE6979500C3D555 /* UIView+.swift in Sources */,
 				245213661FE03E9700561F9D /* UICollectionView+.swift in Sources */,
