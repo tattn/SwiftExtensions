@@ -9,7 +9,7 @@
 import Foundation
 
 // MARK: Regular
-extension String {
+public extension String {
     
     public var validateEmail:Bool{
         let predicateStr = "^([a-z0-9_\\.-]+)@([\\da-z\\.-]+)\\.([a-z\\.]{2,6})$"

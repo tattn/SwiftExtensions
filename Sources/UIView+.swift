@@ -310,16 +310,13 @@ extension UIView {
     }
 }
 
-extension UIView {
-    
+public extension UIView {
     var converToImage:UIImage? {
-        get{
-            let size = CGSize.init(width: self.layer.bounds.size.width, height: self.layer.bounds.size.height)
-            UIGraphicsBeginImageContextWithOptions(size, false, UIScreen.main.scale)
-            self.layer.render(in: UIGraphicsGetCurrentContext()!)
-            let image = UIGraphicsGetImageFromCurrentImageContext()
-            UIGraphicsEndImageContext()
-            return image
-        }
+        let size = CGSize.init(width: self.layer.bounds.size.width, height: self.layer.bounds.size.height)
+        UIGraphicsBeginImageContextWithOptions(size, false, UIScreen.main.scale)
+        self.layer.render(in: UIGraphicsGetCurrentContext()!)
+        let image = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        return image
     }
 }

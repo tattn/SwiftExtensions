@@ -18,3 +18,21 @@ public extension Dictionary {
         return value
     }
 }
+
+public protocol PrettyPrintedProtocal {}
+
+public extension PrettyPrintedProtocal {
+    
+    var prettyPrinted:String? {
+        let jsonData = try! JSONSerialization.data(withJSONObject: self, options: .prettyPrinted)
+        if let jsonString = String(data: jsonData, encoding: .utf8) {
+            return jsonString
+        }
+        return nil
+    }
+}
+
+extension Dictionary :PrettyPrintedProtocal{}
+
+extension Array :PrettyPrintedProtocal{}
+
