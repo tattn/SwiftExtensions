@@ -97,10 +97,6 @@ extension UIColor {
         }
         return UIColor.init(patternImage: img)
     }
-    
-    class var mainColor:UIColor {
-        return "F9506A".color
-    }
 }
 
 
