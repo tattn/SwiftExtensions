@@ -134,8 +134,8 @@ public extension UIImage {
     }
 }
 
-extension UIImage {
-    public enum ScalingMode {
+public extension UIImage {
+    enum ScalingMode {
         case aspectFill
         case aspectFit
 
@@ -151,7 +151,7 @@ extension UIImage {
     }
 }
 
-extension UIImage {
+public extension UIImage {
     
     /// Resizes an image to the specified size.
     ///

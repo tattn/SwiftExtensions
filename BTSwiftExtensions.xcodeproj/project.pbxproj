@@ -69,6 +69,8 @@
 		D8053EC82282E07C0039AEA9 /* Common+.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8053EC72282E07C0039AEA9 /* Common+.swift */; };
 		D8053ECA2282E0D00039AEA9 /* Locale+.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8053EC92282E0D00039AEA9 /* Locale+.swift */; };
 		D8053ECC2282E0E30039AEA9 /* UITextField+.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8053ECB2282E0E30039AEA9 /* UITextField+.swift */; };
+		D84551412286EE6400A47141 /* Date+.swift in Sources */ = {isa = PBXBuildFile; fileRef = D84551402286EE6400A47141 /* Date+.swift */; };
+		D84551432286EE8D00A47141 /* UITextView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = D84551422286EE8D00A47141 /* UITextView+.swift */; };
 		D897FF6D2284208F0015726C /* NSAttributedString+.swift in Sources */ = {isa = PBXBuildFile; fileRef = D897FF6C2284208F0015726C /* NSAttributedString+.swift */; };
 /* End PBXBuildFile section */
 
@@ -149,6 +151,8 @@
 		D8053EC72282E07C0039AEA9 /* Common+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Common+.swift"; sourceTree = "<group>"; };
 		D8053EC92282E0D00039AEA9 /* Locale+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Locale+.swift"; sourceTree = "<group>"; };
 		D8053ECB2282E0E30039AEA9 /* UITextField+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+.swift"; sourceTree = "<group>"; };
+		D84551402286EE6400A47141 /* Date+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+.swift"; sourceTree = "<group>"; };
+		D84551422286EE8D00A47141 /* UITextView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextView+.swift"; sourceTree = "<group>"; };
 		D897FF6C2284208F0015726C /* NSAttributedString+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSAttributedString+.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -227,6 +231,8 @@
 				D8053EC72282E07C0039AEA9 /* Common+.swift */,
 				D8053EC92282E0D00039AEA9 /* Locale+.swift */,
 				D8053ECB2282E0E30039AEA9 /* UITextField+.swift */,
+				D84551402286EE6400A47141 /* Date+.swift */,
+				D84551422286EE8D00A47141 /* UITextView+.swift */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -427,6 +433,8 @@
 				24296C201FE7035200FB0D0C /* StringTo.swift in Sources */,
 				249F760C1FE4AB0800421BD9 /* NibInstantiatable.swift in Sources */,
 				244FB4CC1FE6D3C2006A60EF /* TargetedExtension.swift in Sources */,
+				D84551412286EE6400A47141 /* Date+.swift in Sources */,
+				D84551432286EE8D00A47141 /* UITextView+.swift in Sources */,
 				2498975B225E5969000E1CC3 /* CaseIterable+.swift in Sources */,
 				D8053EC82282E07C0039AEA9 /* Common+.swift in Sources */,
 				24979DF32109ECA40016E77F /* Function.swift in Sources */,

@@ -2,11 +2,11 @@ import UIKit
 
 // MARK: - Properties
 
-extension UITextField {
+public extension UITextField {
     
-    public typealias TextFieldConfig = (UITextField) -> Swift.Void
+    typealias TextFieldConfig = (UITextField) -> Swift.Void
     
-    public func config(textField configurate: TextFieldConfig?) {
+    func config(textField configurate: TextFieldConfig?) {
         configurate?(self)
     }
     

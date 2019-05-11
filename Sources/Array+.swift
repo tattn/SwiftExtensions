@@ -20,32 +20,6 @@ public extension Array where Element: Equatable {
     mutating func remove(_ elements: [Element]) -> [Index] {
         return elements.compactMap { remove($0) }
     }
-    
-    
-    @discardableResult
-    mutating func append(_ newArray: Array) -> CountableRange<Int> {
-        let range = count..<(count + newArray.count)
-        self += newArray
-        return range
-    }
-    
-    @discardableResult
-    mutating func insert(_ newArray: Array, at index: Int) -> CountableRange<Int> {
-        let mIndex = Swift.max(0, index)
-        let start = Swift.min(count, mIndex)
-        let end = start + newArray.count
-        
-        let left = self[0..<start]
-        let right = self[start..<count]
-        self = left + newArray + right
-        return start..<end
-    }
-    
-    func each(_ exe: (Int, Element) -> ()) {
-        for (index, item) in enumerated() {
-            exe(index, item)
-        }
-    }
 }
 
 public extension Array {
@@ -81,6 +55,31 @@ public extension Array {
     func item(index:Int) -> Element? {
         guard index >= 0 && index < count else { return nil }
         return self[index]
+    }
+    
+    @discardableResult
+    mutating func append(_ newArray: Array) -> CountableRange<Int> {
+        let range = count..<(count + newArray.count)
+        self += newArray
+        return range
+    }
+    
+    @discardableResult
+    mutating func insert(_ newArray: Array, at index: Int) -> CountableRange<Int> {
+        let mIndex = Swift.max(0, index)
+        let start = Swift.min(count, mIndex)
+        let end = start + newArray.count
+        
+        let left = self[0..<start]
+        let right = self[start..<count]
+        self = left + newArray + right
+        return start..<end
+    }
+    
+    func each(_ exe: (Int, Element) -> ()) {
+        for (index, item) in enumerated() {
+            exe(index, item)
+        }
     }
 }
 
