@@ -2,7 +2,7 @@
 Pod::Spec.new do |s|
 
 s.name         = "BTSwiftExtensions"
-s.version      = "2.0.7"
+s.version      = "2.0.8"
 s.summary      = "SwiftExtension for iOS."
 s.homepage     = "https://github.com/biostome/BTSwiftExtensions.git"
 s.license          = { :type => "MIT", :file => "LICENSE" }
