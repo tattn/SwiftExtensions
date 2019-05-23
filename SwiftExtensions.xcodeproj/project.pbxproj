@@ -18,6 +18,8 @@
 		2412C0521FE6B2B100C3D555 /* String+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2412C0511FE6B2B100C3D555 /* String+.swift */; };
 		2412C0561FE6B63D00C3D555 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2412C0581FE6B63D00C3D555 /* Localizable.strings */; };
 		2412C05B1FE6B6A900C3D555 /* StringTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2412C05A1FE6B6A900C3D555 /* StringTests.swift */; };
+		2420E15E22970CFA00879025 /* UINavigationController+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2420E15D22970CFA00879025 /* UINavigationController+.swift */; };
+		2420E16022970F6C00879025 /* UINavigationControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2420E15F22970F6C00879025 /* UINavigationControllerTests.swift */; };
 		24296C121FE6DCC900FB0D0C /* URLTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24296C111FE6DCC900FB0D0C /* URLTests.swift */; };
 		24296C181FE6F30600FB0D0C /* ScopeMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24296C171FE6F30600FB0D0C /* ScopeMethod.swift */; };
 		24296C1A1FE6F35900FB0D0C /* ScopeMethodTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24296C191FE6F35900FB0D0C /* ScopeMethodTests.swift */; };
@@ -86,6 +88,8 @@
 		2412C0571FE6B63D00C3D555 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		2412C0591FE6B65300C3D555 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
 		2412C05A1FE6B6A900C3D555 /* StringTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringTests.swift; sourceTree = "<group>"; };
+		2420E15D22970CFA00879025 /* UINavigationController+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationController+.swift"; sourceTree = "<group>"; };
+		2420E15F22970F6C00879025 /* UINavigationControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UINavigationControllerTests.swift; sourceTree = "<group>"; };
 		24296C111FE6DCC900FB0D0C /* URLTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLTests.swift; sourceTree = "<group>"; };
 		24296C171FE6F30600FB0D0C /* ScopeMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScopeMethod.swift; sourceTree = "<group>"; };
 		24296C191FE6F35900FB0D0C /* ScopeMethodTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScopeMethodTests.swift; sourceTree = "<group>"; };
@@ -182,6 +186,7 @@
 				2452136D1FE2D40500561F9D /* UIColor+.swift */,
 				245213711FE2DAA000561F9D /* UIApplication+.swift */,
 				240613BA2170D9BB00A4EEA9 /* UIViewController+.swift */,
+				2420E15D22970CFA00879025 /* UINavigationController+.swift */,
 				245213751FE2E28900561F9D /* StoryboardInstantiatable.swift */,
 				249F760B1FE4AB0800421BD9 /* NibInstantiatable.swift */,
 				2412C0491FE6979500C3D555 /* UIView+.swift */,
@@ -213,6 +218,7 @@
 				245213631FE0388500561F9D /* UITableViewTests.swift */,
 				245213671FE03F5D00561F9D /* UICollectionViewTests.swift */,
 				2452136F1FE2D4C100561F9D /* UIColorTests.swift */,
+				2420E15F22970F6C00879025 /* UINavigationControllerTests.swift */,
 				2452137B1FE35E3500561F9D /* StoryboardInstantiatableTests.swift */,
 				2412C0421FE650AE00C3D555 /* NibInstantiatableTests.swift */,
 				2412C04B1FE6993F00C3D555 /* UIViewTests.swift */,
@@ -392,6 +398,7 @@
 				24296C201FE7035200FB0D0C /* StringTo.swift in Sources */,
 				249F760C1FE4AB0800421BD9 /* NibInstantiatable.swift in Sources */,
 				244FB4CC1FE6D3C2006A60EF /* TargetedExtension.swift in Sources */,
+				2420E15E22970CFA00879025 /* UINavigationController+.swift in Sources */,
 				2498975B225E5969000E1CC3 /* CaseIterable+.swift in Sources */,
 				24979DF32109ECA40016E77F /* Function.swift in Sources */,
 				24DE987621BD76F400FA570A /* Comparable+.swift in Sources */,
@@ -409,6 +416,7 @@
 				2452137C1FE35E3500561F9D /* StoryboardInstantiatableTests.swift in Sources */,
 				244FB4D21FE6D6F3006A60EF /* OperatorTests.swift in Sources */,
 				24296C1E1FE7018A00FB0D0C /* SafeTests.swift in Sources */,
+				2420E16022970F6C00879025 /* UINavigationControllerTests.swift in Sources */,
 				244FB4D61FE6DAE8006A60EF /* DictionaryTests.swift in Sources */,
 				245213641FE0388500561F9D /* UITableViewTests.swift in Sources */,
 				244FB4CE1FE6D46D006A60EF /* TargetedExtensionTests.swift in Sources */,
