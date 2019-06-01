@@ -499,8 +499,8 @@ public extension Date {
     
     func toString(dateFormat:String="yyyy-MM-dd HH:mm:ss") -> String {
         let formatter = DateFormatter()
-        formatter.timeZone = TimeZone.init(identifier: "UTC")
-        formatter.locale = Locale.init(identifier: "zh_CN")
+        formatter.timeZone = TimeZone.current
+        formatter.locale = Locale.current
         formatter.dateFormat = dateFormat
         return formatter.string(from: self)
     }

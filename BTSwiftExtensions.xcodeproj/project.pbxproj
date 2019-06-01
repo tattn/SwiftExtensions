@@ -71,6 +71,7 @@
 		D8053ECC2282E0E30039AEA9 /* UITextField+.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8053ECB2282E0E30039AEA9 /* UITextField+.swift */; };
 		D84551412286EE6400A47141 /* Date+.swift in Sources */ = {isa = PBXBuildFile; fileRef = D84551402286EE6400A47141 /* Date+.swift */; };
 		D84551432286EE8D00A47141 /* UITextView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = D84551422286EE8D00A47141 /* UITextView+.swift */; };
+		D85DE44522A2459E00BF0596 /* DateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D85DE44422A2459E00BF0596 /* DateTests.swift */; };
 		D897FF6D2284208F0015726C /* NSAttributedString+.swift in Sources */ = {isa = PBXBuildFile; fileRef = D897FF6C2284208F0015726C /* NSAttributedString+.swift */; };
 /* End PBXBuildFile section */
 
@@ -153,6 +154,7 @@
 		D8053ECB2282E0E30039AEA9 /* UITextField+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+.swift"; sourceTree = "<group>"; };
 		D84551402286EE6400A47141 /* Date+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+.swift"; sourceTree = "<group>"; };
 		D84551422286EE8D00A47141 /* UITextView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextView+.swift"; sourceTree = "<group>"; };
+		D85DE44422A2459E00BF0596 /* DateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateTests.swift; sourceTree = "<group>"; };
 		D897FF6C2284208F0015726C /* NSAttributedString+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSAttributedString+.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -251,6 +253,7 @@
 				2412C04B1FE6993F00C3D555 /* UIViewTests.swift */,
 				2412C04D1FE6A4E600C3D555 /* ArrayTests.swift */,
 				2412C05A1FE6B6A900C3D555 /* StringTests.swift */,
+				D85DE44422A2459E00BF0596 /* DateTests.swift */,
 				249378EC22589EE70016FB9C /* UIImageTests.swift */,
 				244FB4CD1FE6D46D006A60EF /* TargetedExtensionTests.swift */,
 				244FB4D11FE6D6F3006A60EF /* OperatorTests.swift */,
@@ -465,6 +468,7 @@
 				245213681FE03F5D00561F9D /* UICollectionViewTests.swift in Sources */,
 				2498975D225E59CE000E1CC3 /* CaseIterableTests.swift in Sources */,
 				249378ED22589EE70016FB9C /* UIImageTests.swift in Sources */,
+				D85DE44522A2459E00BF0596 /* DateTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

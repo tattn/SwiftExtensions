@@ -112,6 +112,21 @@ public extension String {
     }
 }
 
+// MARK:  date
+public extension String {
+    
+    func toDate(_ dateFormat :String = "yyyy-MM-dd HH:mm:ss") ->Date?{
+        let formatter = DateFormatter()
+        formatter.timeZone = TimeZone.init(identifier: "GMT")
+        formatter.locale = Locale.init(identifier: "zh_CN")
+        formatter.calendar = Calendar(identifier: .gregorian)
+        formatter.dateFormat = dateFormat
+        let date = formatter.date(from: self)
+        return date
+    }
+}
+
+
 public extension String {
     var attributedFromHTMLString:NSAttributedString? {
         do {
