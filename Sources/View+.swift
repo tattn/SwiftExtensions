@@ -20,4 +20,6 @@ public extension View {
         hostingController.didMove(toParent: parent)
         return hostingController.view
     }
+
+    var erased: AnyView { AnyView(self) }
 }
