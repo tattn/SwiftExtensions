@@ -9,6 +9,7 @@
 import XCTest
 import SwiftExtensions
 
+#if canImport(UIKit)
 final class InitialViewController: UIViewController, StoryboardInstantiatable {
     @IBOutlet weak var label: UILabel!
     static var instantiateType: StoryboardInstantiateType {
@@ -37,3 +38,4 @@ class UIViewController_InstantiateTests: XCTestCase {
         XCTAssertNotNil(viewControlelr.label)
     }
 }
+#endif // canImport(UIKit)

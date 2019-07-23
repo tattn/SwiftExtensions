@@ -9,6 +9,7 @@
 import XCTest
 import SwiftExtensions
 
+#if canImport(UIKit)
 final class NibView: UIView, NibInstantiatable {
     @IBOutlet weak var label: UILabel!
 }
@@ -58,3 +59,4 @@ class NibInstantiatableTests: XCTestCase {
         XCTAssertNotNil(view.embeddedView.embedded.label)
     }
 }
+#endif // canImport(UIKit)

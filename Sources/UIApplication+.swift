@@ -6,6 +6,7 @@
 //  Copyright © 2017年 tattn. All rights reserved.
 //
 
+#if canImport(UIKit)
 import UIKit
 
 public extension UIApplication {
@@ -23,3 +24,4 @@ public extension UIApplication {
         return topViewController as? UINavigationController
     }
 }
+#endif // canImport(UIKit)

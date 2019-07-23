@@ -9,6 +9,7 @@
 import XCTest
 import SwiftExtensions
 
+#if canImport(UIKit)
 class UIViewTests: XCTestCase {
 
     func testFillSuperviewByAutoresizingMask() {
@@ -39,3 +40,4 @@ class UIViewTests: XCTestCase {
         XCTAssertEqual(view.frame, superview.bounds)
     }
 }
+#endif // canImport(UIKit)

@@ -6,6 +6,7 @@
 //  Copyright © 2019 tattn. All rights reserved.
 //
 
+#if canImport(UIKit)
 import UIKit
 
 extension UINavigationController {
@@ -43,3 +44,4 @@ extension UINavigationController {
         coordinator.animate(alongsideTransition: nil) { _ in completion() }
     }
 }
+#endif // canImport(UIKit)

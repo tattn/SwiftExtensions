@@ -6,6 +6,7 @@
 //  Copyright © 2017年 tattn. All rights reserved.
 //
 
+#if canImport(UIKit)
 import UIKit
 
 public extension UICollectionView {
@@ -44,3 +45,4 @@ public extension UICollectionView {
         return dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: type.className, for: indexPath) as! T
     }
 }
+#endif // canImport(UIKit)

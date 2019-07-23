@@ -8,6 +8,7 @@
 
 import XCTest
 import SwiftExtensions
+#if canImport(UIKit)
 import UIKit
 
 final class CollectionViewCell: UICollectionViewCell {
@@ -62,3 +63,4 @@ extension UICollectionViewTests: UICollectionViewDataSource {
         return .init()
     }
 }
+#endif // canImport(UIKit)

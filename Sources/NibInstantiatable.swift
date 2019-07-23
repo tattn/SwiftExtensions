@@ -6,6 +6,7 @@
 //  Copyright © 2017年 tattn. All rights reserved.
 //
 
+#if canImport(UIKit)
 import Foundation
 
 public protocol NibInstantiatable {
@@ -44,3 +45,4 @@ public extension EmbeddedNibInstantiatable where Self: UIView, Embedded: UIView 
         view.fillSuperview()
     }
 }
+#endif // canImport(UIKit)
