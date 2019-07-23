@@ -8,6 +8,7 @@
 
 #if canImport(UIKit)
 import Foundation
+import UIKit
 
 public protocol NibInstantiatable {
     static var nibName: String { get }
