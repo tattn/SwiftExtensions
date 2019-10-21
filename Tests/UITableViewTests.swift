@@ -8,6 +8,7 @@
 
 import XCTest
 import SwiftExtensions
+#if canImport(UIKit)
 import UIKit
 
 final class TableViewCell: UITableViewCell {
@@ -40,3 +41,4 @@ class UITableViewTests: XCTestCase {
         XCTAssertNotNil(cell2.label)
     }
 }
+#endif // canImport(UIKit)

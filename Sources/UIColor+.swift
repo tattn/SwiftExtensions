@@ -6,6 +6,7 @@
 //  Copyright © 2017年 tattn. All rights reserved.
 //
 
+#if canImport(UIKit)
 import UIKit
 
 public extension UIColor {
@@ -30,6 +31,17 @@ public extension UIColor {
     convenience init(red: Int, green: Int, blue: Int, alpha: Double = 1.0) {
         self.init(red: CGFloat(red) / 255, green: CGFloat(green) / 255, blue: CGFloat(blue) / 255, alpha: CGFloat(alpha))
     }
+
+    /// Create a dynamic color.
+    /// - Parameter light: a color in light mode
+    /// - Parameter dark: a color in dark mode
+    convenience init(light: UIColor, dark: UIColor) {
+        if #available(iOS 13, *) {
+            self.init { $0.userInterfaceStyle == .dark ? dark : light }
+        } else {
+            self.init(cgColor: light.cgColor)
+        }
+    }
 }
     
 public extension UIColor {
@@ -50,3 +62,4 @@ public extension UIColor {
         return Components(_base: self)
     }
 }
+#endif // canImport(UIKit)

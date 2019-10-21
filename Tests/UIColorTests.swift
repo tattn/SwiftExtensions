@@ -8,6 +8,7 @@
 
 import XCTest
 import SwiftExtensions
+#if canImport(UIKit)
 
 class UIColorTests: XCTestCase {
     func testHexInit() {
@@ -58,3 +59,4 @@ class UIColorTests: XCTestCase {
         XCTAssertEqual(alpha, 0.5)
     }
 }
+#endif // canImport(UIKit)

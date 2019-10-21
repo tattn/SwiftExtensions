@@ -8,6 +8,7 @@
 
 import XCTest
 import SwiftExtensions
+#if canImport(UIKit)
 import UIKit
 
 extension UIView: TargetedExtensionCompatible {}
@@ -22,3 +23,4 @@ class TargetedExtensionTests: XCTestCase {
         UIView().ex.foo()
     }
 }
+#endif // canImport(UIKit)

@@ -7,7 +7,7 @@
 //
 
 import XCTest
-import SwiftExtensions
+@testable import SwiftExtensions
 
 class SwiftExtensionsTests: XCTestCase {
     let expectedClassName = "SwiftExtensionsTests"
@@ -16,9 +16,11 @@ class SwiftExtensionsTests: XCTestCase {
         XCTAssertEqual(SwiftExtensionsTests.className, expectedClassName)
     }
 
+    #if !SWIFT_PACKAGE // avoid a bug
     func testInstanceClassName() {
         XCTAssertEqual(SwiftExtensionsTests().className, expectedClassName)
     }
+    #endif
 }
 
 extension SwiftExtensionsTests {

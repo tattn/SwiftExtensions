@@ -9,6 +9,7 @@
 import XCTest
 import SwiftExtensions
 
+#if canImport(UIKit)
 class ScopeMethodTests: XCTestCase {
     
     func testAppliable() {
@@ -28,3 +29,4 @@ class ScopeMethodTests: XCTestCase {
         XCTAssertEqual(string, "foo")
     }
 }
+#endif // canImport(UIKit)

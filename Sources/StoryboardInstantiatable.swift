@@ -6,6 +6,7 @@
 //  Copyright © 2017年 tattn. All rights reserved.
 //
 
+#if canImport(UIKit)
 import UIKit
 
 public enum StoryboardInstantiateType {
@@ -47,3 +48,4 @@ public extension StoryboardInstantiatable where Self: UIViewController {
         }
     }
 }
+#endif // canImport(UIKit)

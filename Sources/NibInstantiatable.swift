@@ -6,7 +6,9 @@
 //  Copyright © 2017年 tattn. All rights reserved.
 //
 
+#if canImport(UIKit)
 import Foundation
+import UIKit
 
 public protocol NibInstantiatable {
     static var nibName: String { get }
@@ -44,3 +46,4 @@ public extension EmbeddedNibInstantiatable where Self: UIView, Embedded: UIView 
         view.fillSuperview()
     }
 }
+#endif // canImport(UIKit)

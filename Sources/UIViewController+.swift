@@ -6,6 +6,7 @@
 //  Copyright © 2018年 tattn. All rights reserved.
 //
 
+#if canImport(UIKit)
 import UIKit
 
 public extension UIViewController {
@@ -39,3 +40,4 @@ public extension UIViewController {
         case custom((UIView, UIView) -> Void)
     }
 }
+#endif // canImport(UIKit)

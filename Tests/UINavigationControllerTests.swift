@@ -6,9 +6,11 @@
 //  Copyright © 2019 tattn. All rights reserved.
 //
 
-import UIKit
 import XCTest
 import SwiftExtensions
+
+#if canImport(UIKit)
+import UIKit
 
 class UINavigationControllerTests: XCTestCase {
     var rootViewController: UIViewController!
@@ -81,3 +83,4 @@ class UINavigationControllerTests: XCTestCase {
         wait(for: [expectCompletion], timeout: 2)
     }
 }
+#endif // canImport(UIKit)
