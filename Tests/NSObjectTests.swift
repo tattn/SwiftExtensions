@@ -21,6 +21,16 @@ class SwiftExtensionsTests: XCTestCase {
         XCTAssertEqual(SwiftExtensionsTests().className, expectedClassName)
     }
     #endif
+
+    func testStaticStructName() {
+        struct StructType: ClassNameProtocol {}
+        XCTAssertEqual(StructType.className, "StructType")
+    }
+
+    func testInstanceStructName() {
+        struct StructType: ClassNameProtocol {}
+        XCTAssertEqual(StructType().className, "StructType")
+    }
 }
 
 extension SwiftExtensionsTests {
