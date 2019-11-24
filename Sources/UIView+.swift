@@ -17,13 +17,25 @@ public extension UIView {
             autoresizingMask = [.flexibleWidth, .flexibleHeight]
             frame = superview.bounds
         } else {
-            
-            topAnchor.constraint(equalTo: superview.topAnchor).isActive = true
-            bottomAnchor.constraint(equalTo: superview.bottomAnchor).isActive = true
-            leftAnchor.constraint(equalTo: superview.leftAnchor).isActive = true
-            rightAnchor.constraint(equalTo: superview.rightAnchor).isActive = true
+            NSLayoutConstraint.activate([
+                topAnchor.constraint(equalTo: superview.topAnchor),
+                bottomAnchor.constraint(equalTo: superview.bottomAnchor),
+                leftAnchor.constraint(equalTo: superview.leftAnchor),
+                rightAnchor.constraint(equalTo: superview.rightAnchor)
+            ])
         }
     }
+
+//    var viewController: UIViewController? {
+//        var parent: UIResponder? = self
+//        while parent != nil {
+//            parent = parent?.next
+//            if let viewController = parent as? UIViewController {
+//                return viewController
+//            }
+//        }
+//        return nil
+//    }
 
     var viewController: UIViewController? {
         var parent: UIResponder? = self

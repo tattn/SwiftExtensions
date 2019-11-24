@@ -62,6 +62,7 @@
 		2498975B225E5969000E1CC3 /* CaseIterable+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2498975A225E5969000E1CC3 /* CaseIterable+.swift */; };
 		2498975D225E59CE000E1CC3 /* CaseIterableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2498975C225E59CE000E1CC3 /* CaseIterableTests.swift */; };
 		249F760C1FE4AB0800421BD9 /* NibInstantiatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 249F760B1FE4AB0800421BD9 /* NibInstantiatable.swift */; };
+		24BCBAD3238A739D00BDED93 /* Optional+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24BCBAD2238A739D00BDED93 /* Optional+.swift */; };
 		24CD1B9821514D2B0065244F /* TableViewCell2.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24CD1B9721514D2B0065244F /* TableViewCell2.xib */; };
 		24DE987621BD76F400FA570A /* Comparable+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24DE987521BD76F400FA570A /* Comparable+.swift */; };
 		24FA56561FE6C24A004CC906 /* UIImage+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24FA56551FE6C24A004CC906 /* UIImage+.swift */; };
@@ -137,6 +138,7 @@
 		2498975A225E5969000E1CC3 /* CaseIterable+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CaseIterable+.swift"; sourceTree = "<group>"; };
 		2498975C225E59CE000E1CC3 /* CaseIterableTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaseIterableTests.swift; sourceTree = "<group>"; };
 		249F760B1FE4AB0800421BD9 /* NibInstantiatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NibInstantiatable.swift; sourceTree = "<group>"; };
+		24BCBAD2238A739D00BDED93 /* Optional+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Optional+.swift"; sourceTree = "<group>"; };
 		24CD1B9721514D2B0065244F /* TableViewCell2.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableViewCell2.xib; sourceTree = "<group>"; };
 		24DE987521BD76F400FA570A /* Comparable+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Comparable+.swift"; sourceTree = "<group>"; };
 		24FA56551FE6C24A004CC906 /* UIImage+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+.swift"; sourceTree = "<group>"; };
@@ -198,6 +200,7 @@
 				2412C04F1FE6A52400C3D555 /* Array+.swift */,
 				2412C0511FE6B2B100C3D555 /* String+.swift */,
 				244FB4CB1FE6D3C2006A60EF /* TargetedExtension.swift */,
+				24BCBAD2238A739D00BDED93 /* Optional+.swift */,
 				244FB4CF1FE6D630006A60EF /* Operator+.swift */,
 				244FB4D31FE6D9F5006A60EF /* Dictionary+.swift */,
 				244FB4D71FE6DC4F006A60EF /* URL+.swift */,
@@ -402,6 +405,7 @@
 				244FB4D81FE6DC4F006A60EF /* URL+.swift in Sources */,
 				240613BB2170D9BB00A4EEA9 /* UIViewController+.swift in Sources */,
 				2452135E1FE0351300561F9D /* UITableView+.swift in Sources */,
+				24BCBAD3238A739D00BDED93 /* Optional+.swift in Sources */,
 				244FB4D41FE6D9F5006A60EF /* Dictionary+.swift in Sources */,
 				24296C201FE7035200FB0D0C /* StringTo.swift in Sources */,
 				249F760C1FE4AB0800421BD9 /* NibInstantiatable.swift in Sources */,

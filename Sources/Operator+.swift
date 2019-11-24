@@ -8,21 +8,9 @@
 
 import Foundation
 
-// MARK: - ???
-
-//see: https://gist.github.com/erica/5a26d523f3d6ffb74e34d179740596f7
-
-infix operator ???
-
-public func ???<T>(lhs: T?,
-                   error: @autoclosure () -> Error) throws -> T {
-    guard let value = lhs else { throw error() }
-    return value
-}
-
 precedencegroup ForwardPipe {
-  associativity: left
-  higherThan: LogicalConjunctionPrecedence
+    associativity: left
+    higherThan: LogicalConjunctionPrecedence
 }
 
 infix operator |>: ForwardPipe
@@ -35,5 +23,5 @@ infix operator |>: ForwardPipe
 ///
 /// Because the pipe operator is left associative, you can add as many closures as you want  
 public func |> <T, U>(lhs: T, rhs: (T) throws -> U) rethrows -> U {
-  return try rhs(lhs)
+    try rhs(lhs)
 }

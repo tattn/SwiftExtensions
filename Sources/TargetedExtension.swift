@@ -23,10 +23,10 @@ public protocol TargetedExtensionCompatible {
 
 public extension TargetedExtensionCompatible where Self == Compatible {
     static var ex: TargetedExtension<Self>.Type {
-        return TargetedExtension<Self>.self
+        TargetedExtension<Self>.self
     }
 
     var ex: TargetedExtension<Self> {
-        return TargetedExtension(self)
+        TargetedExtension(self)
     }
 }

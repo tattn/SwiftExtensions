@@ -11,7 +11,8 @@ import UIKit
 
 public extension UIApplication {
     var topViewController: UIViewController? {
-        guard var topViewController = UIApplication.shared.keyWindow?.rootViewController else { return nil }
+        let keyWindow = UIApplication.shared.windows.first { $0.isKeyWindow }
+        guard var topViewController = keyWindow?.rootViewController else { return nil }
 
         while let presentedViewController = topViewController.presentedViewController {
             topViewController = presentedViewController
@@ -21,7 +22,7 @@ public extension UIApplication {
 
 
     var topNavigationController: UINavigationController? {
-        return topViewController as? UINavigationController
+        topViewController as? UINavigationController
     }
 }
 #endif // canImport(UIKit)

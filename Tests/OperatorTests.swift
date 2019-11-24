@@ -18,7 +18,7 @@ class OperatorTests: XCTestCase {
         struct OptionalError: Error {}
 
         do {
-            _ = try value ??? OptionalError()
+            _ = try value.orThrow(OptionalError())
         } catch is OptionalError {
             isError = true
         } catch {

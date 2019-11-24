@@ -26,7 +26,7 @@ public extension ClassNameProtocol {
 extension NSObject: ClassNameProtocol {}
 
 public extension NSObjectProtocol {
-    var describedProperty: String {
+    var propertyDescription: String {
         let mirror = Mirror(reflecting: self)
         return mirror.children.map { element -> String in
             let key = element.label ?? "Unknown"

@@ -13,7 +13,7 @@ public extension UIImage {
     convenience init(color: UIColor, size: CGSize) {
         let image = UIGraphicsImageRenderer(size: size).image { context in
             context.cgContext.setFillColor(color.cgColor)
-            context.fill(CGRect(x: 0, y: 0, width: size.width, height: size.height))
+            context.fill(CGRect(origin: .zero, size: size))
         }
 
         if let cgImage = image.cgImage {

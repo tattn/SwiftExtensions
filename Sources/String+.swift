@@ -10,17 +10,17 @@ import Foundation
 
 public extension String {
     var localized: String {
-        return NSLocalizedString(self, comment: self)
+        NSLocalizedString(self, comment: self)
     }
 
     func localized(withTableName tableName: String? = nil, bundle: Bundle = Bundle.main, value: String = "") -> String {
-        return NSLocalizedString(self, tableName: tableName, bundle: bundle, value: value, comment: self)
+        NSLocalizedString(self, tableName: tableName, bundle: bundle, value: value, comment: self)
     }
 }
 
 public extension String {
     var url: URL? {
-        return URL(string: self)
+        URL(string: self)
     }
 }
 
@@ -55,11 +55,11 @@ public extension String {
 
 public extension String {
     var halfWidth: String {
-        return transformFullWidthToHalfWidth(reverse: false)
+        transformFullWidthToHalfWidth(reverse: false)
     }
 
     var fullWidth: String {
-        return transformFullWidthToHalfWidth(reverse: true)
+        transformFullWidthToHalfWidth(reverse: true)
     }
 
     private func transformFullWidthToHalfWidth(reverse: Bool) -> String {

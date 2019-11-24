@@ -40,6 +40,6 @@ extension SwiftExtensionsTests {
             let bar = "bar"
         }
 
-        XCTAssertEqual(Foo().describedProperty, "foo: 1\nbar: bar")
+        XCTAssertEqual(Foo().propertyDescription, "foo: 1\nbar: bar")
     }
 }

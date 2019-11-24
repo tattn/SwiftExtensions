@@ -36,13 +36,13 @@ public extension UICollectionView {
 
     func dequeueReusableCell<T: UICollectionViewCell>(with type: T.Type,
                                                              for indexPath: IndexPath) -> T {
-        return dequeueReusableCell(withReuseIdentifier: type.className, for: indexPath) as! T
+        dequeueReusableCell(withReuseIdentifier: type.className, for: indexPath) as! T
     }
 
     func dequeueReusableView<T: UICollectionReusableView>(with type: T.Type,
                                                                  for indexPath: IndexPath,
                                                                  ofKind kind: String = UICollectionView.elementKindSectionHeader) -> T {
-        return dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: type.className, for: indexPath) as! T
+        dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: type.className, for: indexPath) as! T
     }
 }
 #endif // canImport(UIKit)

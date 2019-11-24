@@ -22,19 +22,19 @@ public protocol StoryboardInstantiatable {
 
 public extension StoryboardInstantiatable where Self: NSObject {
     static var storyboardName: String {
-        return className
+        className
     }
 
     static var storyboardBundle: Bundle {
-        return Bundle(for: self)
+        Bundle(for: self)
     }
 
     private static var storyboard: UIStoryboard {
-        return UIStoryboard(name: storyboardName, bundle: storyboardBundle)
+        UIStoryboard(name: storyboardName, bundle: storyboardBundle)
     }
 
     static var instantiateType: StoryboardInstantiateType {
-        return .identifier(className)
+        .identifier(className)
     }
 }
 

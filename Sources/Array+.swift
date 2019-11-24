@@ -18,7 +18,7 @@ public extension Array where Element: Equatable {
 
     @discardableResult
     mutating func remove(_ elements: [Element]) -> [Index] {
-        return elements.compactMap { remove($0) }
+        elements.compactMap { remove($0) }
     }
 }
 
@@ -30,7 +30,7 @@ public extension Array where Element: Hashable {
 
 public extension Collection where Element: Hashable {
     func unified() -> [Element] {
-        return reduce(into: []) {
+        reduce(into: []) {
             if !$0.contains($1) {
                 $0.append($1)
             }
@@ -40,6 +40,6 @@ public extension Collection where Element: Hashable {
 
 public extension Collection {
     subscript(safe index: Index) -> Element? {
-        return startIndex <= index && index < endIndex ? self[index] : nil
+        startIndex <= index && index < endIndex ? self[index] : nil
     }
 }
