@@ -1,6 +1,6 @@
 //
-//  CodableStringToTests.swift
-//  CodableExtensionPackTests
+//  FromStringTests.swift
+//  SwiftExtensions
 //
 //  Created by Tatsuya Tanaka on 20171030.
 //  Copyright © 2017年 tattn. All rights reserved.
@@ -9,7 +9,7 @@
 import XCTest
 import SwiftExtensions
 
-class StringToTests: XCTestCase {
+class FromStringTests: XCTestCase {
 
     // https://developer.yahoo.co.jp/webapi/shopping/shopping/v1/itemsearch.html
     let json = """
@@ -20,8 +20,8 @@ class StringToTests: XCTestCase {
 }
 """
     struct Root: Codable {
-        let int: StringTo<Int>
-        let customClass: StringTo<CustomClass>
+        @FromString var int: Int
+        @FromString var customClass: CustomClass
 
         struct CustomClass: LosslessStringConvertible, Codable {
             var description: String
@@ -44,8 +44,8 @@ class StringToTests: XCTestCase {
         let data = json.data(using: .utf8)!
         let decoder = JSONDecoder()
         let root = try! decoder.decode(Root.self, from: data)
-        XCTAssertEqual(root.int.value, 100)
-        XCTAssertEqual(root.customClass.value.description, "https://store.shopping.yahoo.co.jp/try3/4905524907230.html")
+        XCTAssertEqual(root.int, 100)
+        XCTAssertEqual(root.customClass.description, "https://store.shopping.yahoo.co.jp/try3/4905524907230.html")
     }
 
 }

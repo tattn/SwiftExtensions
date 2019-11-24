@@ -8,20 +8,25 @@
 
 import Foundation
 
-public struct Safe<Wrapped: Decodable>: Codable {
-    public let value: Wrapped?
+@propertyWrapper
+public struct Safe<Wrapped: Codable>: Codable {
+    public let wrappedValue: Wrapped?
+
+    public init(wrappedValue: Wrapped?) {
+        self.wrappedValue = wrappedValue
+    }
 
     public init(from decoder: Decoder) throws {
         do {
             let container = try decoder.singleValueContainer()
-            self.value = try container.decode(Wrapped.self)
+            self.wrappedValue = try container.decode(Wrapped.self)
         } catch {
-            self.value = nil
+            self.wrappedValue = nil
         }
     }
 
     public func encode(to encoder: Encoder) throws {
         var container = encoder.singleValueContainer()
-        try container.encodeNil()
+        try container.encode(wrappedValue)
     }
 }

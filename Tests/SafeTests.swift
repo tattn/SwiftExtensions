@@ -27,7 +27,7 @@ class SafeTests: XCTestCase {
 ]
 """.data(using: .utf8)!
 
-        struct User: Decodable {
+        struct User: Codable {
             let name: String
             let age: Int
         }
@@ -35,26 +35,28 @@ class SafeTests: XCTestCase {
         let users = try! JSONDecoder().decode([Safe<User>].self,
                                               from: json)
 
-        XCTAssertEqual(users[0].value?.name, "Taro")
-        XCTAssertEqual(users[0].value?.age, 20)
-        XCTAssertNil(users[1].value)
+        XCTAssertEqual(users[0].wrappedValue?.name, "Taro")
+        XCTAssertEqual(users[0].wrappedValue?.age, 20)
+        XCTAssertNil(users[1].wrappedValue)
     }
 
     func testFailableURL() {
         let json = """
-{"url": "https://foo.com", "url2": "invalid url string"}
+{"url": "https://foo.com", "url2": "invalid url string", "url3": "invalid url string"}
 """.data(using: .utf8)!
 
         struct Model: Decodable {
-            let url: Safe<URL>
+            @Safe var url: URL?
             let url2: Safe<URL>
+            @Safe var url3: URL?
         }
 
         let model = try! JSONDecoder().decode(Model.self,
                                               from: json)
 
-        XCTAssertEqual(model.url.value?.absoluteString, "https://foo.com")
-        XCTAssertNil(model.url2.value)
+        XCTAssertEqual(model.url?.absoluteString, "https://foo.com")
+        XCTAssertNil(model.url2.wrappedValue)
+        XCTAssertNil(model.url3)
     }
 
 }

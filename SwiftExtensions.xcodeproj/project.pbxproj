@@ -25,8 +25,8 @@
 		24296C1A1FE6F35900FB0D0C /* ScopeMethodTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24296C191FE6F35900FB0D0C /* ScopeMethodTests.swift */; };
 		24296C1C1FE7014900FB0D0C /* Safe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24296C1B1FE7014900FB0D0C /* Safe.swift */; };
 		24296C1E1FE7018A00FB0D0C /* SafeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24296C1D1FE7018A00FB0D0C /* SafeTests.swift */; };
-		24296C201FE7035200FB0D0C /* StringTo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24296C1F1FE7035200FB0D0C /* StringTo.swift */; };
-		24296C221FE7037C00FB0D0C /* StringToTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24296C211FE7037C00FB0D0C /* StringToTests.swift */; };
+		24296C201FE7035200FB0D0C /* FromString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24296C1F1FE7035200FB0D0C /* FromString.swift */; };
+		24296C221FE7037C00FB0D0C /* FromStringTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24296C211FE7037C00FB0D0C /* FromStringTests.swift */; };
 		244F63E51FE0310E00E3C372 /* SwiftExtensions.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 244F63DB1FE0310E00E3C372 /* SwiftExtensions.framework */; };
 		244F63EA1FE0310E00E3C372 /* NSObjectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244F63E91FE0310E00E3C372 /* NSObjectTests.swift */; };
 		244F63EC1FE0310E00E3C372 /* SwiftExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = 244F63DE1FE0310E00E3C372 /* SwiftExtensions.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -98,8 +98,8 @@
 		24296C191FE6F35900FB0D0C /* ScopeMethodTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScopeMethodTests.swift; sourceTree = "<group>"; };
 		24296C1B1FE7014900FB0D0C /* Safe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Safe.swift; sourceTree = "<group>"; };
 		24296C1D1FE7018A00FB0D0C /* SafeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafeTests.swift; sourceTree = "<group>"; };
-		24296C1F1FE7035200FB0D0C /* StringTo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringTo.swift; sourceTree = "<group>"; };
-		24296C211FE7037C00FB0D0C /* StringToTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringToTests.swift; sourceTree = "<group>"; };
+		24296C1F1FE7035200FB0D0C /* FromString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FromString.swift; sourceTree = "<group>"; };
+		24296C211FE7037C00FB0D0C /* FromStringTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FromStringTests.swift; sourceTree = "<group>"; };
 		244F63DB1FE0310E00E3C372 /* SwiftExtensions.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftExtensions.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		244F63DE1FE0310E00E3C372 /* SwiftExtensions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SwiftExtensions.h; sourceTree = "<group>"; };
 		244F63DF1FE0310E00E3C372 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -206,7 +206,7 @@
 				244FB4D71FE6DC4F006A60EF /* URL+.swift */,
 				24296C171FE6F30600FB0D0C /* ScopeMethod.swift */,
 				24296C1B1FE7014900FB0D0C /* Safe.swift */,
-				24296C1F1FE7035200FB0D0C /* StringTo.swift */,
+				24296C1F1FE7035200FB0D0C /* FromString.swift */,
 				24742A1A20FBB1BC008746E8 /* Error+.swift */,
 				24979DF22109ECA40016E77F /* Function.swift */,
 				24DE987521BD76F400FA570A /* Comparable+.swift */,
@@ -240,7 +240,7 @@
 				24296C111FE6DCC900FB0D0C /* URLTests.swift */,
 				24296C191FE6F35900FB0D0C /* ScopeMethodTests.swift */,
 				24296C1D1FE7018A00FB0D0C /* SafeTests.swift */,
-				24296C211FE7037C00FB0D0C /* StringToTests.swift */,
+				24296C211FE7037C00FB0D0C /* FromStringTests.swift */,
 				249378EA22588BFE0016FB9C /* ResultTests.swift */,
 				2498975C225E59CE000E1CC3 /* CaseIterableTests.swift */,
 			);
@@ -407,7 +407,7 @@
 				2452135E1FE0351300561F9D /* UITableView+.swift in Sources */,
 				24BCBAD3238A739D00BDED93 /* Optional+.swift in Sources */,
 				244FB4D41FE6D9F5006A60EF /* Dictionary+.swift in Sources */,
-				24296C201FE7035200FB0D0C /* StringTo.swift in Sources */,
+				24296C201FE7035200FB0D0C /* FromString.swift in Sources */,
 				249F760C1FE4AB0800421BD9 /* NibInstantiatable.swift in Sources */,
 				244FB4CC1FE6D3C2006A60EF /* TargetedExtension.swift in Sources */,
 				2420E15E22970CFA00879025 /* UINavigationController+.swift in Sources */,
@@ -434,7 +434,7 @@
 				244FB4CE1FE6D46D006A60EF /* TargetedExtensionTests.swift in Sources */,
 				2412C04E1FE6A4E600C3D555 /* ArrayTests.swift in Sources */,
 				2412C0431FE650AE00C3D555 /* NibInstantiatableTests.swift in Sources */,
-				24296C221FE7037C00FB0D0C /* StringToTests.swift in Sources */,
+				24296C221FE7037C00FB0D0C /* FromStringTests.swift in Sources */,
 				2412C05B1FE6B6A900C3D555 /* StringTests.swift in Sources */,
 				24296C121FE6DCC900FB0D0C /* URLTests.swift in Sources */,
 				24296C1A1FE6F35900FB0D0C /* ScopeMethodTests.swift in Sources */,
