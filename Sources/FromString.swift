@@ -35,21 +35,3 @@ public struct FromString<T: LosslessStringConvertible>: Codable {
         try container.encode(wrappedValue.description)
     }
 }
-
-@propertyWrapper
-public struct DefaultValue<T: Codable>: Codable {
-    public let wrappedValue: T
-
-    public init(wrappedValue: T) {
-        self.wrappedValue = wrappedValue
-    }
-
-    public init(from decoder: Decoder) throws {
-        let container = try decoder.singleValueContainer()
-        self.wrappedValue = (try? container.decode(T.self)) ?? Default.defaultValue
-    }
-
-    public func encode(to encoder: Encoder) throws {
-        try wrappedValue.encode(to: encoder)
-    }
-}

@@ -10,6 +10,6 @@ import Foundation
 
 public extension Hashable where Self: CaseIterable {
     var caseIndex: AllCases.Index {
-        return type(of: self).allCases.firstIndex(of: self)!
+        Self.allCases.firstIndex(of: self)!
     }
 }
