@@ -6,6 +6,7 @@
 //  Copyright © 2019 tattn. All rights reserved.
 //
 
+#if canImport(SwiftUI)
 import SwiftUI
 
 #if canImport(UIKit)
@@ -58,3 +59,5 @@ private struct SizePreferenceReader: View {
         }
     }
 }
+
+#endif // canImport(SwiftUI)

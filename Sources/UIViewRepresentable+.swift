@@ -6,6 +6,8 @@
 //  Copyright © 2019 tattn. All rights reserved.
 //
 
+#if canImport(SwiftUI)
+
 import SwiftUI
 
 #if canImport(UIKit)
@@ -32,3 +34,5 @@ public extension UIViewRepresentable where Self: UIView {
     }
 }
 #endif // canImport(UIKit)
+
+#endif // canImport(SwiftUI)
