@@ -31,8 +31,14 @@ public extension View {
 public extension View {
     @inlinable var erased: AnyView { AnyView(self) }
 
-    @inlinable func hidden(isHidden: Bool) -> Self? {
-        isHidden ? nil : self
+    @inlinable func hidden(isHidden: Bool) -> some View {
+        Group {
+            if isHidden {
+                hidden()
+            } else {
+                self
+            }
+        }
     }
 }
 
