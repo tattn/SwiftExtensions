@@ -38,6 +38,7 @@
 		244FB4D41FE6D9F5006A60EF /* Dictionary+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244FB4D31FE6D9F5006A60EF /* Dictionary+.swift */; };
 		244FB4D61FE6DAE8006A60EF /* DictionaryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244FB4D51FE6DAE8006A60EF /* DictionaryTests.swift */; };
 		244FB4D81FE6DC4F006A60EF /* URL+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244FB4D71FE6DC4F006A60EF /* URL+.swift */; };
+		244FF961239BAB510093504B /* AppEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244FF960239BAB510093504B /* AppEnvironment.swift */; };
 		2452135E1FE0351300561F9D /* UITableView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2452135D1FE0351300561F9D /* UITableView+.swift */; };
 		245213621FE0384A00561F9D /* TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 245213601FE0383500561F9D /* TableViewCell.xib */; };
 		245213641FE0388500561F9D /* UITableViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245213631FE0388500561F9D /* UITableViewTests.swift */; };
@@ -114,6 +115,7 @@
 		244FB4D31FE6D9F5006A60EF /* Dictionary+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Dictionary+.swift"; sourceTree = "<group>"; };
 		244FB4D51FE6DAE8006A60EF /* DictionaryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryTests.swift; sourceTree = "<group>"; };
 		244FB4D71FE6DC4F006A60EF /* URL+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL+.swift"; sourceTree = "<group>"; };
+		244FF960239BAB510093504B /* AppEnvironment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppEnvironment.swift; sourceTree = "<group>"; };
 		2452135D1FE0351300561F9D /* UITableView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+.swift"; sourceTree = "<group>"; };
 		245213601FE0383500561F9D /* TableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableViewCell.xib; sourceTree = "<group>"; };
 		245213631FE0388500561F9D /* UITableViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewTests.swift; sourceTree = "<group>"; };
@@ -243,6 +245,7 @@
 				24296C211FE7037C00FB0D0C /* FromStringTests.swift */,
 				249378EA22588BFE0016FB9C /* ResultTests.swift */,
 				2498975C225E59CE000E1CC3 /* CaseIterableTests.swift */,
+				244FF960239BAB510093504B /* AppEnvironment.swift */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -437,6 +440,7 @@
 				24296C221FE7037C00FB0D0C /* FromStringTests.swift in Sources */,
 				2412C05B1FE6B6A900C3D555 /* StringTests.swift in Sources */,
 				24296C121FE6DCC900FB0D0C /* URLTests.swift in Sources */,
+				244FF961239BAB510093504B /* AppEnvironment.swift in Sources */,
 				24296C1A1FE6F35900FB0D0C /* ScopeMethodTests.swift in Sources */,
 				245213681FE03F5D00561F9D /* UICollectionViewTests.swift in Sources */,
 				2498975D225E59CE000E1CC3 /* CaseIterableTests.swift in Sources */,
