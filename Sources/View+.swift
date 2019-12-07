@@ -34,30 +34,6 @@ public extension View {
     @inlinable func hidden(isHidden: Bool) -> Self? {
         isHidden ? nil : self
     }
-
-    func onChangeSize(perform: @escaping (CGSize) -> Void) -> some View {
-        self.background(SizePreferenceReader())
-            .onPreferenceChange(SizePreferenceKey.self, perform: perform)
-    }
-}
-
-private struct SizePreferenceKey: PreferenceKey {
-    static let defaultValue: CGSize = .zero
-
-    static func reduce(value: inout CGSize, nextValue: () -> CGSize) {
-        value = nextValue()
-    }
-}
-
-@available(iOS 13.0, OSX 10.15, tvOS 13.0, watchOS 6.0, *)
-private struct SizePreferenceReader: View {
-    var body: some View {
-        GeometryReader { geometry in
-            return Rectangle()
-                .foregroundColor(.clear)
-                .preference(key: SizePreferenceKey.self, value: geometry.size)
-        }
-    }
 }
 
 #endif // canImport(SwiftUI)
