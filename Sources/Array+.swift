@@ -10,15 +10,15 @@ import Foundation
 
 public extension Array where Element: Equatable {
     @discardableResult
-    mutating func remove(_ element: Element) -> Index? {
+    mutating func removeFirst(_ element: Element) -> Index? {
         guard let index = firstIndex(of: element) else { return nil }
         remove(at: index)
         return index
     }
 
     @discardableResult
-    mutating func remove(_ elements: [Element]) -> [Index] {
-        elements.compactMap { remove($0) }
+    mutating func removeFirst(_ elements: [Element]) -> [Index] {
+        elements.compactMap { removeFirst($0) }
     }
 }
 
