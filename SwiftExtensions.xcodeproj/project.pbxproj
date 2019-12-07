@@ -41,6 +41,8 @@
 		244FF95F239BA2FA0093504B /* UITraitCollection+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244FF95E239BA2FA0093504B /* UITraitCollection+.swift */; };
 		244FF961239BAB510093504B /* AppEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244FF960239BAB510093504B /* AppEnvironment.swift */; };
 		244FF963239BAC6D0093504B /* UITraitCollectionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244FF962239BAC6D0093504B /* UITraitCollectionTests.swift */; };
+		244FF965239BF3B90093504B /* Binding+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244FF964239BF3B90093504B /* Binding+.swift */; };
+		244FF967239BF4190093504B /* BindingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244FF966239BF4190093504B /* BindingTests.swift */; };
 		2452135E1FE0351300561F9D /* UITableView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2452135D1FE0351300561F9D /* UITableView+.swift */; };
 		245213621FE0384A00561F9D /* TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 245213601FE0383500561F9D /* TableViewCell.xib */; };
 		245213641FE0388500561F9D /* UITableViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245213631FE0388500561F9D /* UITableViewTests.swift */; };
@@ -120,6 +122,8 @@
 		244FF95E239BA2FA0093504B /* UITraitCollection+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITraitCollection+.swift"; sourceTree = "<group>"; };
 		244FF960239BAB510093504B /* AppEnvironment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppEnvironment.swift; sourceTree = "<group>"; };
 		244FF962239BAC6D0093504B /* UITraitCollectionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITraitCollectionTests.swift; sourceTree = "<group>"; };
+		244FF964239BF3B90093504B /* Binding+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Binding+.swift"; sourceTree = "<group>"; };
+		244FF966239BF4190093504B /* BindingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BindingTests.swift; sourceTree = "<group>"; };
 		2452135D1FE0351300561F9D /* UITableView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+.swift"; sourceTree = "<group>"; };
 		245213601FE0383500561F9D /* TableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableViewCell.xib; sourceTree = "<group>"; };
 		245213631FE0388500561F9D /* UITableViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewTests.swift; sourceTree = "<group>"; };
@@ -221,6 +225,7 @@
 				2498975A225E5969000E1CC3 /* CaseIterable+.swift */,
 				245719A122CBBB63008ECC4A /* View+.swift */,
 				245719A322CBBCED008ECC4A /* UIViewRepresentable+.swift */,
+				244FF964239BF3B90093504B /* Binding+.swift */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -239,6 +244,7 @@
 				2412C0421FE650AE00C3D555 /* NibInstantiatableTests.swift */,
 				2412C04B1FE6993F00C3D555 /* UIViewTests.swift */,
 				244FF962239BAC6D0093504B /* UITraitCollectionTests.swift */,
+				244FF960239BAB510093504B /* AppEnvironment.swift */,
 				2412C04D1FE6A4E600C3D555 /* ArrayTests.swift */,
 				2412C05A1FE6B6A900C3D555 /* StringTests.swift */,
 				249378EC22589EE70016FB9C /* UIImageTests.swift */,
@@ -251,7 +257,7 @@
 				24296C211FE7037C00FB0D0C /* FromStringTests.swift */,
 				249378EA22588BFE0016FB9C /* ResultTests.swift */,
 				2498975C225E59CE000E1CC3 /* CaseIterableTests.swift */,
-				244FF960239BAB510093504B /* AppEnvironment.swift */,
+				244FF966239BF4190093504B /* BindingTests.swift */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -400,6 +406,7 @@
 				2412C0521FE6B2B100C3D555 /* String+.swift in Sources */,
 				245213761FE2E28900561F9D /* StoryboardInstantiatable.swift in Sources */,
 				2452136E1FE2D40500561F9D /* UIColor+.swift in Sources */,
+				244FF965239BF3B90093504B /* Binding+.swift in Sources */,
 				244FB4D01FE6D630006A60EF /* Operator+.swift in Sources */,
 				24296C181FE6F30600FB0D0C /* ScopeMethod.swift in Sources */,
 				24742A1B20FBB1BC008746E8 /* Error+.swift in Sources */,
@@ -451,6 +458,7 @@
 				244FF961239BAB510093504B /* AppEnvironment.swift in Sources */,
 				24296C1A1FE6F35900FB0D0C /* ScopeMethodTests.swift in Sources */,
 				245213681FE03F5D00561F9D /* UICollectionViewTests.swift in Sources */,
+				244FF967239BF4190093504B /* BindingTests.swift in Sources */,
 				2498975D225E59CE000E1CC3 /* CaseIterableTests.swift in Sources */,
 				249378ED22589EE70016FB9C /* UIImageTests.swift in Sources */,
 			);
