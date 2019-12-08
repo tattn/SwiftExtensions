@@ -9,7 +9,7 @@
 import Foundation
 
 @propertyWrapper @dynamicMemberLookup
-public class Box<Wrapped> {
+public class Ref<Wrapped> {
     public var wrappedValue: Wrapped
 
     public init(wrappedValue: Wrapped) {
@@ -20,13 +20,8 @@ public class Box<Wrapped> {
         self.wrappedValue = wrappedValue
     }
 
-    public subscript<T>(dynamicMember keyPath: WritableKeyPath<Wrapped, T>) -> T {
+    public subscript<T>(dynamicMember keyPath: KeyPath<Wrapped, T>) -> T {
         wrappedValue[keyPath: keyPath]
-    }
-
-    public subscript<T>(dynamicMember keyPath: ReferenceWritableKeyPath<Wrapped, T>) -> T {
-        get { wrappedValue[keyPath: keyPath] }
-        set { wrappedValue[keyPath: keyPath] = newValue }
     }
 }
 
@@ -42,10 +37,6 @@ public class Weak<Wrapped: AnyObject> {
         self.wrappedValue = wrappedValue
     }
 
-    public subscript<T>(dynamicMember keyPath: WritableKeyPath<Wrapped, T>) -> T? {
-        wrappedValue?[keyPath: keyPath]
-    }
-
     public subscript<T>(dynamicMember keyPath: ReferenceWritableKeyPath<Wrapped, T>) -> T? {
         get { wrappedValue?[keyPath: keyPath] }
         set {
@@ -57,8 +48,6 @@ public class Weak<Wrapped: AnyObject> {
 
     public subscript<T>(dynamicMember keyPath: ReferenceWritableKeyPath<Wrapped, T?>) -> T? {
         get { wrappedValue?[keyPath: keyPath] }
-        set {
-            wrappedValue?[keyPath: keyPath] = newValue
-        }
+        set { wrappedValue?[keyPath: keyPath] = newValue }
     }
 }

@@ -262,8 +262,8 @@
 				24296C211FE7037C00FB0D0C /* FromStringTests.swift */,
 				249378EA22588BFE0016FB9C /* ResultTests.swift */,
 				2498975C225E59CE000E1CC3 /* CaseIterableTests.swift */,
-				244FF966239BF4190093504B /* BindingTests.swift */,
 				244FF96A239C0DC10093504B /* BoxTests.swift */,
+				244FF966239BF4190093504B /* BindingTests.swift */,
 			);
 			path = Tests;
 			sourceTree = "<group>";

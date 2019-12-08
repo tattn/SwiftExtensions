@@ -10,22 +10,22 @@ import XCTest
 import SwiftExtensions
 
 class BoxTests: XCTestCase {
-    func testBox() {
-        struct BoxHolder {
-            @Box var boxedValue: Int = 0
+    func testRef() {
+        struct Holder {
+            @Ref var refValue: Int = 0
             var value: Int = 0
-            let boxedValueYouCanWriteLikeThis = Box(0)
+            let boxedValueYouCanWriteLikeThis = Ref(0)
         }
 
-        var holder = BoxHolder()
-        holder.boxedValue = 1
+        var holder = Holder()
+        holder.refValue = 1
         holder.value = 1
 
         var copyHolder = holder
-        copyHolder.boxedValue = 2
+        copyHolder.refValue = 2
         copyHolder.value = 2
 
-        XCTAssertEqual(holder.boxedValue, 2)
+        XCTAssertEqual(holder.refValue, 2)
         XCTAssertEqual(holder.value, 1)
     }
 
