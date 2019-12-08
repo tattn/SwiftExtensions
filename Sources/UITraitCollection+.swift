@@ -11,15 +11,15 @@ import UIKit
 
 public extension UITraitCollection {
     static var isDarkMode: Bool {
-        if #available(iOS 13, *), current.isDarkMode {
-            return true
+        if #available(iOS 13, *) {
+            return current.isDarkMode
         }
         return false
     }
 
     var isDarkMode: Bool {
-        if #available(iOS 13, *), userInterfaceStyle == .dark {
-            return true
+        if #available(iOS 13, *) {
+            return userInterfaceStyle == .dark
         }
         return false
     }
