@@ -28,7 +28,7 @@ github "tattn/SwiftExtensions"
 
 # Docs
 - [My favorite ❤️ Swift extensions](https://dev.to/tattn/my-favorite--swift-extensions-8g7) (English)
-- [使うと手放せなくなるSwift Extension集 (Swift 4版) - Qiita](https://qiita.com/tattn/items/dc7dfe2fceec00bb4ff7) (Japanese)
+- [使うと手放せなくなるSwift Extension集 (Swift 5版) - Qiita](https://qiita.com/tattn/items/ff50e575bc149ecb8e80) (Japanese)
 
 # Contributing
 
