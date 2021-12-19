@@ -102,12 +102,11 @@ public extension UIImage {
         let numberOfComponents = 4
         let pixelData = Int((size.width * point.y) + point.x) * numberOfComponents
 
-        let r = CGFloat(pointer[pixelData]) / 255.0
-        let g = CGFloat(pointer[pixelData + 1]) / 255.0
-        let b = CGFloat(pointer[pixelData + 2]) / 255.0
-        let a = CGFloat(pointer[pixelData + 3]) / 255.0
-
-        return UIColor(red: r, green: g, blue: b, alpha: a)
+        return UIColor(
+            red: Int(pointer[pixelData]),
+            green: Int(pointer[pixelData + 1]),
+            blue: Int(pointer[pixelData + 2]),
+            alpha: Double(pointer[pixelData + 3]))
     }
 
     var canonicalized: UIImage {

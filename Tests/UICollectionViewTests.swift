@@ -24,7 +24,7 @@ class UICollectionViewTests: XCTestCase {
     func testRegisterAndDequeueReusableCell() {
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewFlowLayout())
         collectionView.dataSource = self // must need a datasource
-        collectionView.register(cellTypes: [CollectionViewCell.self], bundle: Bundle(for: UICollectionViewTests.self))
+        collectionView.register(cellTypes: [CollectionViewCell.self], bundle: .module)
 
         let indexPath = IndexPath(item: 0, section: 0)
         let cell = collectionView.dequeueReusableCell(with: CollectionViewCell.self, for: indexPath)
@@ -35,10 +35,10 @@ class UICollectionViewTests: XCTestCase {
     func testRegisterAndDequeueReusableView() {
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewFlowLayout())
         collectionView.dataSource = self // must need a datasource
-        collectionView.register(cellTypes: [CollectionViewCell.self], bundle: Bundle(for: UICollectionViewTests.self))
+        collectionView.register(cellTypes: [CollectionViewCell.self], bundle: .module)
         collectionView.register(reusableViewTypes: [CollectionViewHeaderView.self],
                                 ofKind: UICollectionView.elementKindSectionHeader,
-                                bundle: Bundle(for: UICollectionViewTests.self))
+                                bundle: .module)
 
         let indexPath = IndexPath(item: 0, section: 0)
         _ = collectionView.dequeueReusableCell(with: CollectionViewCell.self, for: indexPath) // must call before dequeueReusableView

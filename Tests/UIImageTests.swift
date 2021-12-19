@@ -86,8 +86,8 @@ class UIImageTests: XCTestCase {
         XCTAssertEqual(TestImage.image.resized(to: .init(width: -1, height: -1), scalingMode: .aspectFill).size, .zero)
         let resizedSize = CGSize(width: 128, height: 24)
         let resizedFillImage = TestImage.image3x.resized(to: resizedSize, scalingMode: .aspectFill)
-        XCTAssertEqual(resizedFillImage.canonicalized.pixelColor(at: .zero), UIColor(red: 205, green: 183, blue: 169, alpha: 1))
-        XCTAssertEqual(resizedFillImage.canonicalized.pixelColor(at: .init(x: resizedSize.width - 1, y: resizedSize.height - 1)), UIColor(red: 143, green: 113, blue: 113, alpha: 1))
+        XCTAssertEqual(resizedFillImage.canonicalized.pixelColor(at: .zero), UIColor(red: 205, green: 184, blue: 170, alpha: 1))
+        XCTAssertEqual(resizedFillImage.canonicalized.pixelColor(at: .init(x: resizedSize.width - 1, y: resizedSize.height - 1)), UIColor(red: 143, green: 116, blue: 114, alpha: 1))
         XCTAssertEqual(resizedFillImage.size.applying(scaleTransform), resizedSize)
     }
 
@@ -124,7 +124,7 @@ class UIImageTests: XCTestCase {
 
 private enum TestImage {
     private static let data = try! Data(contentsOf:
-        Bundle(for: UIImageTests.self).url(forResource: "TestImage", withExtension: "png")!)
+                                            Bundle.module.url(forResource: "TestImage", withExtension: "png")!)
     static let image = UIImage(data: data)!
     static let image3x = UIImage(data: data, scale: 3)!
     static let image3xLeft = UIImage(cgImage: image.cgImage!, scale: 3.0, orientation: .left)

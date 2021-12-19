@@ -1,18 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina4_7" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view contentMode="scaleToFill" id="X7n-Zk-vhu" customClass="NibView" customModule="SwiftExtensionsTests" customModuleProvider="target">
+        <view contentMode="scaleToFill" id="X7n-Zk-vhu" customClass="NibView" customModule="SwiftExtensionsTests">
             <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
@@ -24,15 +21,15 @@
                     <nil key="highlightedColor"/>
                 </label>
             </subviews>
+            <viewLayoutGuide key="safeArea" id="2Pe-cN-35q"/>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <viewLayoutGuide key="safeArea" id="2Pe-cN-35q"/>
             <connections>
                 <outlet property="label" destination="Yof-nR-vRI" id="QVy-G4-gop"/>
             </connections>
             <point key="canvasLocation" x="-72.5" y="-435"/>
         </view>
-        <view contentMode="scaleToFill" id="QM6-4o-B4h" customClass="SecondaryNibView" customModule="SwiftExtensionsTests" customModuleProvider="target">
+        <view contentMode="scaleToFill" id="QM6-4o-B4h" customClass="SecondaryNibView" customModule="SwiftExtensionsTests">
             <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
@@ -44,27 +41,27 @@
                     <nil key="highlightedColor"/>
                 </label>
             </subviews>
+            <viewLayoutGuide key="safeArea" id="IJ3-ek-IUX"/>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <viewLayoutGuide key="safeArea" id="IJ3-ek-IUX"/>
             <connections>
                 <outlet property="label" destination="4LJ-VR-c9O" id="pBt-3y-3Jc"/>
             </connections>
             <point key="canvasLocation" x="365" y="-435"/>
         </view>
-        <view contentMode="scaleToFill" id="tfW-S5-2hk" userLabel="SuperviewOfEmbeddedView" customClass="SuperviewOfEmbeddedView" customModule="SwiftExtensionsTests" customModuleProvider="target">
+        <view contentMode="scaleToFill" id="tfW-S5-2hk" userLabel="SuperviewOfEmbeddedView" customClass="SuperviewOfEmbeddedView" customModule="SwiftExtensionsTests">
             <rect key="frame" x="0.0" y="0.0" width="375" height="208"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
-                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="79G-Q3-Rkk" userLabel="IBEmbedded View" customClass="IBEmbeddedView" customModule="SwiftExtensionsTests" customModuleProvider="target">
+                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="79G-Q3-Rkk" userLabel="IBEmbedded View" customClass="IBEmbeddedView" customModule="SwiftExtensionsTests">
                     <rect key="frame" x="0.0" y="40" width="375" height="128"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                 </view>
             </subviews>
+            <viewLayoutGuide key="safeArea" id="ejU-42-J5L"/>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <viewLayoutGuide key="safeArea" id="ejU-42-J5L"/>
             <connections>
                 <outlet property="embeddedView" destination="79G-Q3-Rkk" id="dk4-vt-tPl"/>
             </connections>

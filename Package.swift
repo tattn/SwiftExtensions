@@ -1,9 +1,10 @@
-// swift-tools-version:5.0
+// swift-tools-version:5.5
 
 import PackageDescription
 
 let package = Package(
     name: "SwiftExtensions",
+    defaultLocalization: "en",
     platforms: [
         .macOS(.v10_12),
         .iOS(.v10),
@@ -22,8 +23,8 @@ let package = Package(
         .testTarget(
             name: "SwiftExtensionsTests",
             dependencies: ["SwiftExtensions"],
-            path: "Tests"),
-    ],
-    swiftLanguageVersions: [.v5]
+            path: "Tests",
+            resources: [.process("Resources")]),
+    ]
 )
 

@@ -23,7 +23,7 @@ class UITableViewTests: XCTestCase {
     
     func testRegisterAndDequeueReusableCell() {
         let tableView = UITableView()
-        tableView.register(cellTypes: [TableViewCell.self], bundle: Bundle(for: UITableViewTests.self))
+        tableView.register(cellTypes: [TableViewCell.self], bundle: .module)
 
         let indexPath = IndexPath(row: 0, section: 0)
         let cell = tableView.dequeueReusableCell(with: TableViewCell.self, for: indexPath)
@@ -32,7 +32,7 @@ class UITableViewTests: XCTestCase {
 
     func testRegisterAndDequeueReusableMultipleCells() {
         let tableView = UITableView()
-        tableView.register(cellTypes: [TableViewCell.self, TableViewCell2.self], bundle: Bundle(for: UITableViewTests.self))
+        tableView.register(cellTypes: [TableViewCell.self, TableViewCell2.self], bundle: .module)
 
         let indexPath = IndexPath(row: 0, section: 0)
         let cell = tableView.dequeueReusableCell(with: TableViewCell.self, for: indexPath)

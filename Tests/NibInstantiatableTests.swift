@@ -12,16 +12,19 @@ import SwiftExtensions
 #if canImport(UIKit)
 final class NibView: UIView, NibInstantiatable {
     @IBOutlet weak var label: UILabel!
+    static var nibBundle: Bundle { .module }
 }
 
 final class SecondaryNibView: UIView, NibInstantiatable {
     static var nibName: String { return NibView.className }
+    static var nibBundle: Bundle { .module }
     static var instantiateIndex: Int { return 1 }
 
     @IBOutlet weak var label: UILabel!
 }
 
 final class EmbeddedView: UIView, NibInstantiatable {
+    static var nibBundle: Bundle { .module }
     @IBOutlet weak var label: UILabel!
 }
 
@@ -37,6 +40,7 @@ final class IBEmbeddedView: UIView, EmbeddedNibInstantiatable {
 
 final class SuperviewOfEmbeddedView: UIView, NibInstantiatable {
     static var nibName: String { return NibView.className }
+    static var nibBundle: Bundle { .module }
     static var instantiateIndex: Int { return 2 }
 
     @IBOutlet weak var embeddedView: IBEmbeddedView!

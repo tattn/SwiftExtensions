@@ -12,6 +12,7 @@ import SwiftExtensions
 #if canImport(UIKit)
 final class InitialViewController: UIViewController, StoryboardInstantiatable {
     @IBOutlet weak var label: UILabel!
+    static var storyboardBundle: Bundle { .module }
     static var instantiateType: StoryboardInstantiateType {
         return .initial
     }
@@ -20,6 +21,7 @@ final class InitialViewController: UIViewController, StoryboardInstantiatable {
 final class IdentifierViewController: UIViewController, StoryboardInstantiatable {
     @IBOutlet weak var label: UILabel!
     static var storyboardName: String { return InitialViewController.className }
+    static var storyboardBundle: Bundle { .module }
 }
 
 class UIViewController_InstantiateTests: XCTestCase {
