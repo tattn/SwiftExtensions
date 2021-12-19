@@ -16,6 +16,6 @@ class ResultTests: XCTestCase {
         }
         let error = MyError(message: "MyError")
         let result = Result<Int, MyError>.failure(error)
-        XCTAssertEqual(result.error(), error)
+        XCTAssertEqual(result.error, error)
     }
 }

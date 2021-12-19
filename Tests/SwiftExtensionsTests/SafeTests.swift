@@ -3,7 +3,7 @@
 //  CodableExtensionPackTests
 //
 //  Created by Tatsuya Tanaka on 20171128.
-//  Copyright © 2017年 tattn. All rights reserved.
+//  Copyright © 2017 tattn. All rights reserved.
 //
 
 import XCTest

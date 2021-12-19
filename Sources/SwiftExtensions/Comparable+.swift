@@ -8,10 +8,8 @@
 
 import Foundation
 
-public extension Comparable {
-    func clamped(min: Self, max: Self) -> Self {
-        if self < min { return min }
-        if self > max { return max }
-        return self
+public extension Comparable {    
+    func clamped(to limits: ClosedRange<Self>) -> Self {
+        min(max(limits.lowerBound, self), limits.upperBound)
     }
 }

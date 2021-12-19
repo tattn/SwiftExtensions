@@ -3,7 +3,7 @@
 //  SwiftExtensionsTests
 //
 //  Created by Tatsuya Tanaka on 20171217.
-//  Copyright © 2017年 tattn. All rights reserved.
+//  Copyright © 2017 tattn. All rights reserved.
 //
 
 import XCTest
@@ -49,16 +49,16 @@ class ArrayTests: XCTestCase {
 }
 
 extension ArrayTests {
-    func testUnified() {
+    func testUniqued() {
         let array = [1, 2, 3, 3, 2, 1, 4]
-        let unifiedArray = array.unified()
+        let unifiedArray = array.uniqued()
         XCTAssertEqual(array, [1, 2, 3, 3, 2, 1, 4])
         XCTAssertEqual(unifiedArray, [1, 2, 3, 4])
     }
 
-    func testUnify() {
+    func testUnique() {
         var array = [1, 2, 3, 3, 2, 1, 4]
-        array.unify()
+        array.unique()
         XCTAssertEqual(array, [1, 2, 3, 4])
     }
 }

@@ -3,7 +3,7 @@
 //  SwiftExtensions
 //
 //  Created by Tatsuya Tanaka on 20181012.
-//  Copyright © 2018年 tattn. All rights reserved.
+//  Copyright © 2018 tattn. All rights reserved.
 //
 
 #if canImport(UIKit)

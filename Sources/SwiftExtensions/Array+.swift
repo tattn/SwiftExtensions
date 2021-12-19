@@ -3,7 +3,7 @@
 //  SwiftExtensions
 //
 //  Created by Tatsuya Tanaka on 20171217.
-//  Copyright © 2017年 tattn. All rights reserved.
+//  Copyright © 2017 tattn. All rights reserved.
 //
 
 import Foundation
@@ -23,18 +23,15 @@ public extension Array where Element: Equatable {
 }
 
 public extension Array where Element: Hashable {
-    mutating func unify() {
-        self = unified()
+    mutating func unique() {
+        self = uniqued()
     }
 }
 
 public extension Collection where Element: Hashable {
-    func unified() -> [Element] {
-        reduce(into: []) {
-            if !$0.contains($1) {
-                $0.append($1)
-            }
-        }
+    func uniqued() -> [Element] {
+        var seen = Set<Element>()
+        return filter { seen.insert($0).inserted }
     }
 }
 

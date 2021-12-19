@@ -3,7 +3,7 @@
 //  SwiftExtensionsTests
 //
 //  Created by Tatsuya Tanaka on 20171213.
-//  Copyright © 2017年 tattn. All rights reserved.
+//  Copyright © 2017 tattn. All rights reserved.
 //
 
 import XCTest

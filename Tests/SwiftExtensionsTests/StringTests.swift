@@ -3,7 +3,7 @@
 //  SwiftExtensionsTests
 //
 //  Created by Tatsuya Tanaka on 20171217.
-//  Copyright © 2017年 tattn. All rights reserved.
+//  Copyright © 2017 tattn. All rights reserved.
 //
 
 import XCTest
@@ -15,19 +15,7 @@ class StringTests: XCTestCase {
         XCTAssertEqual("hello".localized, "hello")
 //        UserDefaults.standard.set(["ja"], forKey: "AppleLanguages")
 //        UserDefaults.standard.synchronize()
-//        XCTAssertEqual("hello".localized, "こんにちは")
-    }
-}
-
-extension StringTests {
-    func testUrl() {
-        let string = "https://example.com"
-        XCTAssertEqual(string.url, URL(string: "https://example.com")!)
-    }
-
-    func testUrlNil() {
-        let string = "🐱"
-        XCTAssertNil(string.url)
+//        XCTAssertEqual("hello".localized(bundle: .module), "こんにちは")
     }
 }
 

@@ -3,7 +3,7 @@
 //  SwiftExtensions
 //
 //  Created by Tatsuya Tanaka on 20171217.
-//  Copyright © 2017年 tattn. All rights reserved.
+//  Copyright © 2017 tattn. All rights reserved.
 //
 
 import Foundation
@@ -15,12 +15,6 @@ public extension String {
 
     func localized(withTableName tableName: String? = nil, bundle: Bundle = Bundle.main, value: String = "") -> String {
         NSLocalizedString(self, tableName: tableName, bundle: bundle, value: value, comment: self)
-    }
-}
-
-public extension String {
-    var url: URL? {
-        URL(string: self)
     }
 }
 
