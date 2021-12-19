@@ -11,20 +11,26 @@ let package = Package(
         .tvOS(.v10),
         .watchOS(.v3)
     ],
-    products: [
-        .library(
-            name: "SwiftExtensions",
-            targets: ["SwiftExtensions"])
-    ],
     targets: [
         .target(
             name: "SwiftExtensions",
-            path: "Sources"),
+            path: "Sources",
+            exclude: ["SwiftExtensionsUIKit"]),
         .testTarget(
             name: "SwiftExtensionsTests",
             dependencies: ["SwiftExtensions"],
             path: "Tests",
+            exclude: ["SwiftExtensionsUIKitTests"],
+            resources: [.process("Resources")]),
+        
+        .target(name: "SwiftExtensionsUIKit"),
+        .testTarget(
+            name: "SwiftExtensionsUIKitTests",
+            dependencies: ["SwiftExtensionsUIKit"],
             resources: [.process("Resources")]),
     ]
 )
 
+package.products = package.targets
+    .filter { !$0.isTest }
+    .map { Product.library(name: $0.name, targets: [$0.name]) }

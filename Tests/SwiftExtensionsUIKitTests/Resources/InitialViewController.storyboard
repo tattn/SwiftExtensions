@@ -10,7 +10,7 @@
         <!--Initial View Controller-->
         <scene sceneID="rlc-Y5-MpN">
             <objects>
-                <viewController id="ttr-eJ-FQ9" customClass="InitialViewController" customModule="SwiftExtensionsTests" sceneMemberID="viewController">
+                <viewController id="ttr-eJ-FQ9" customClass="InitialViewController" customModule="SwiftExtensionsUIKitTests" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="vdQ-Em-SLK">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -37,7 +37,7 @@
         <!--Identifier View Controller-->
         <scene sceneID="nrf-og-sXb">
             <objects>
-                <viewController storyboardIdentifier="IdentifierViewController" id="HZX-xx-EV4" customClass="IdentifierViewController" customModule="SwiftExtensionsTests" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="IdentifierViewController" id="HZX-xx-EV4" customClass="IdentifierViewController" customModule="SwiftExtensionsUIKitTests" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="377-lX-I7b">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

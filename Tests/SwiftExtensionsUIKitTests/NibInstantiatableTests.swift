@@ -7,7 +7,7 @@
 //
 
 import XCTest
-import SwiftExtensions
+import SwiftExtensionsUIKit
 
 #if canImport(UIKit)
 final class NibView: UIView, NibInstantiatable {
