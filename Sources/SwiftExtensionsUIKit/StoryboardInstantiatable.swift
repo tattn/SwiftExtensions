@@ -8,6 +8,7 @@
 
 #if canImport(UIKit)
 import UIKit
+import SwiftExtensions
 
 public enum StoryboardInstantiateType {
     case initial

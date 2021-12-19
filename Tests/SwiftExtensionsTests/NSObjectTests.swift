@@ -7,7 +7,7 @@
 //
 
 import XCTest
-@testable import SwiftExtensionsUIKit
+import SwiftExtensions
 
 class SwiftExtensionsTests: XCTestCase {
     let expectedClassName = "SwiftExtensionsTests"

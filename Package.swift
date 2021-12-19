@@ -12,15 +12,10 @@ let package = Package(
         .watchOS(.v3)
     ],
     targets: [
-        .target(
-            name: "SwiftExtensions",
-            path: "Sources",
-            exclude: ["SwiftExtensionsUIKit", "SwiftExtensionsUI"]),
+        .target(name: "SwiftExtensions"),
         .testTarget(
             name: "SwiftExtensionsTests",
             dependencies: ["SwiftExtensions"],
-            path: "Tests",
-            exclude: ["SwiftExtensionsUIKitTests"],
             resources: [.process("Resources")]),
     
         .target(name: "SwiftExtensionsUI"),
@@ -28,7 +23,7 @@ let package = Package(
 //            name: "SwiftExtensionsUITests",
 //            dependencies: ["SwiftExtensionsUI"]),
         
-        .target(name: "SwiftExtensionsUIKit"),
+        .target(name: "SwiftExtensionsUIKit", dependencies: ["SwiftExtensions"]),
         .testTarget(
             name: "SwiftExtensionsUIKitTests",
             dependencies: ["SwiftExtensionsUIKit"],
