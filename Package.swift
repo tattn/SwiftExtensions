@@ -15,13 +15,18 @@ let package = Package(
         .target(
             name: "SwiftExtensions",
             path: "Sources",
-            exclude: ["SwiftExtensionsUIKit"]),
+            exclude: ["SwiftExtensionsUIKit", "SwiftExtensionsUI"]),
         .testTarget(
             name: "SwiftExtensionsTests",
             dependencies: ["SwiftExtensions"],
             path: "Tests",
             exclude: ["SwiftExtensionsUIKitTests"],
             resources: [.process("Resources")]),
+    
+        .target(name: "SwiftExtensionsUI"),
+//        .testTarget(
+//            name: "SwiftExtensionsUITests",
+//            dependencies: ["SwiftExtensionsUI"]),
         
         .target(name: "SwiftExtensionsUIKit"),
         .testTarget(
