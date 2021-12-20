@@ -8,19 +8,27 @@ ARCHIVE_DIR=${OUTPUT_DIR}/${CONFIGURATION}-archive
 XCFRAMEWORK_DIR=${OUTPUT_DIR}/${CONFIGURATION}-xcframework
 ARCHIVE_FILE_IOS=${ARCHIVE_DIR}/ios.xcarchive
 ARCHIVE_FILE_IOS_SIMULATOR=${ARCHIVE_DIR}/iossimulator.xcarchive
+ARCHIVE_FILE_MACOS=${ARCHIVE_DIR}/macos.xcarchive
 
 rm -rf ${OUTPUT_DIR}
 mkdir -p ${DERIVED_DIR}
 mkdir -p ${ARCHIVE_DIR}
 mkdir -p ${XCFRAMEWORK_DIR}
 
+archive() {
+	xcodebuild archive -scheme ${PROJECT_NAME} -destination="$1" -archivePath "$2" -derivedDataPath $DERIVED_DIR SKIP_INSTALL=NO BUILD_LIBRARY_FOR_DISTRIBUTION=YES $3
+}
+
 # Make an archive for the real iOS device
-xcodebuild archive -scheme ${PROJECT_NAME} -destination="generic/platform=iOS" -archivePath $ARCHIVE_FILE_IOS -derivedDataPath $DERIVED_DIR -sdk iphoneos SKIP_INSTALL=NO BUILD_LIBRARY_FOR_DISTRIBUTION=YES EXCLUDED_ARCHS=armv7
+archive "generic/platform=iOS" "$ARCHIVE_FILE_IOS" "EXCLUDED_ARCHS=armv7"
 
 # Make an archive for the iOS simulator
-xcodebuild archive -scheme ${PROJECT_NAME} -destination="generic/platform=iOS Simulator" -archivePath $ARCHIVE_FILE_IOS_SIMULATOR -derivedDataPath $DERIVED_DIR SKIP_INSTALL=NO BUILD_LIBRARY_FOR_DISTRIBUTION=YES
+archive "generic/platform=iOS Simulator" "$ARCHIVE_FILE_IOS_SIMULATOR" ""
 
-make_xcframework () {
+# Make an archive for the macOS
+# archive "generic/platform=macOS" "$ARCHIVE_FILE_MACOS" ""
+
+make_xcframework() {
 	xcodebuild -create-xcframework -framework $ARCHIVE_FILE_IOS/Products/Library/Frameworks/$1.framework -framework $ARCHIVE_FILE_IOS_SIMULATOR/Products/Library/Frameworks/$1.framework -output $XCFRAMEWORK_DIR/$1.xcframework
 }
 
