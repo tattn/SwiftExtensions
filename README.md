@@ -1,7 +1,7 @@
 SwiftExtensions
 ===
 
-[![Build Status](https://app.bitrise.io/app/e58694b1fa46a551/status.svg?token=E2FYmP02umcT9pjF4NKDSw)](https://app.bitrise.io/app/e58694b1fa46a551)
+[![Build Status](https://github.com/tattn/SwiftExtensions/actions/workflows/ci.yml/badge.svg)](https://github.com/tattn/SwiftExtensions/actions/workflows/ci.yml)
 [![Swift Package Manager compatible](https://img.shields.io/badge/SwiftPackageManager-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 [![Swift Version](https://img.shields.io/badge/Swift-5.5-F16D39.svg)](https://developer.apple.com/swift)
 
