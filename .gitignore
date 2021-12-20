@@ -136,4 +136,6 @@ DerivedData/
 *.perspectivev3
 !default.perspectivev3
 
+SwiftExtensions.xcodeproj
+output
 
