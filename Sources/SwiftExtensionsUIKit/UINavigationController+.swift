@@ -6,7 +6,7 @@
 //  Copyright © 2019 tattn. All rights reserved.
 //
 
-#if canImport(UIKit)
+#if canImport(UIKit) && !os(watchOS) && !os(tvOS)
 import UIKit
 
 extension UINavigationController {

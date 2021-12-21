@@ -6,7 +6,7 @@
 //  Copyright © 2017 tattn. All rights reserved.
 //
 
-#if canImport(UIKit)
+#if canImport(UIKit) && !os(watchOS) && !os(tvOS)
 import UIKit
 
 public extension UIImage {
