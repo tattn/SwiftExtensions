@@ -40,10 +40,22 @@ make_xcframework() {
 		-framework $ARCHIVE_FILE_TVOS/Products/Library/Frameworks/$1.framework \
 		-framework $ARCHIVE_FILE_TVOS_SIMULATOR/Products/Library/Frameworks/$1.framework \
 		-output $XCFRAMEWORK_DIR/$1.xcframework
-	}
+}
 
 make_xcframework SwiftExtensions
 make_xcframework SwiftExtensionsUI
 make_xcframework SwiftExtensionsUIKit
 cp scripts/template/Package.swift $XCFRAMEWORK_DIR/
+
+for framework in SwiftExtensions SwiftExtensionsUI SwiftExtensionsUIKit; do
+	echo "CHECK: $framework"
+	for arch in ios-arm64 ios-arm64_x86_64-simulator macos-arm64_x86_64 tvos-arm64 tvos-arm64_x86_64-simulator watchos-arm64_32_armv7k watchos-arm64_i386_x86_64-simulator; do
+		if [ -e $XCFRAMEWORK_DIR/$framework.xcframework/$arch/$framework.framework/$framework ]; then
+			echo "$arch: success"
+		else
+			echo "$arch: failed"
+			exit 1
+		fi
+	done
+done
 
