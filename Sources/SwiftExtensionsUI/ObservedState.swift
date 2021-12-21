@@ -6,8 +6,7 @@
 //  Copyright © 2019 tattn. All rights reserved.
 //
 
-#if canImport(SwiftUI)
-#if canImport(Combine)
+#if canImport(SwiftUI) && canImport(Combine) && (arch(arm64) || arch(x86_64))
 
 import SwiftUI
 import Combine
@@ -52,5 +51,4 @@ public struct ObservedState<Value>: DynamicProperty {
     }
 }
 
-#endif
 #endif

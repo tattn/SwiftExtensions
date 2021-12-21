@@ -6,7 +6,7 @@
 //  Copyright © 2019 tattn. All rights reserved.
 //
 
-#if canImport(SwiftUI)
+#if canImport(SwiftUI) && !os(watchOS) && !os(tvOS)
 
 import SwiftUI
 

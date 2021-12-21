@@ -6,7 +6,7 @@
 //  Copyright © 2019 tattn. All rights reserved.
 //
 
-#if canImport(SwiftUI)
+#if canImport(SwiftUI) && (arch(arm64) || arch(x86_64))
 
 import SwiftUI
 

@@ -6,7 +6,7 @@
 //  Copyright © 2018 tattn. All rights reserved.
 //
 
-#if canImport(UIKit)
+#if canImport(UIKit) && !os(watchOS) && !os(tvOS)
 import UIKit
 
 public extension UIViewController {
