@@ -42,15 +42,19 @@ make_xcframework() {
 		-output $XCFRAMEWORK_DIR/$1.xcframework
 }
 
-make_xcframework SwiftExtensions
-make_xcframework SwiftExtensionsUI
-make_xcframework SwiftExtensionsUIKit
-cp scripts/template/Package.swift $XCFRAMEWORK_DIR/
+FRAMEWORK_NAMES=(SwiftExtensions SwiftExtensionsUI SwiftExtensionsUIKit)
 
-for framework in SwiftExtensions SwiftExtensionsUI SwiftExtensionsUIKit; do
+for name in "${FRAMEWORK_NAMES[@]}"; do
+	make_xcframework $name
+done
+
+pushd $XCFRAMEWORK_DIR
+for framework in "${FRAMEWORK_NAMES[@]}"; do
 	echo "CHECK: $framework"
 	for arch in ios-arm64 ios-arm64_x86_64-simulator macos-arm64_x86_64 tvos-arm64 tvos-arm64_x86_64-simulator watchos-arm64_32_armv7k watchos-arm64_i386_x86_64-simulator; do
-		if [ -e $XCFRAMEWORK_DIR/$framework.xcframework/$arch/$framework.framework/$framework ]; then
+		XCFRAMEWORK=$framework.xcframework
+		if [ -e $XCFRAMEWORK/$arch/$framework.framework/$framework ]; then
+			zip -r $framework.xcframework.zip ./$XCFRAMEWORK -x "*.DS_Store" "*__MACOSX*"
 			echo "$arch: success"
 		else
 			echo "$arch: failed"
@@ -58,4 +62,29 @@ for framework in SwiftExtensions SwiftExtensionsUI SwiftExtensionsUIKit; do
 		fi
 	done
 done
+popd
 
+cp scripts/template/Package.swift $XCFRAMEWORK_DIR/
+cp scripts/template/ReleasePackage.swift Package.swift
+
+cat <<EOS  >> Package.swift
+package.targets = package.targets + [
+EOS
+
+for name in "${FRAMEWORK_NAMES[@]}"; do
+	cat <<EOS  >> Package.swift
+	.binaryTarget(
+		name: "${name}Binary",
+		url: "https://github.com/tattn/SwiftExtensions/releases/download/3.0.0-beta.0/$name.xcframework.zip",
+		checksum: "`swift package compute-checksum $XCFRAMEWORK_DIR/$name.xcframework.zip`"
+	),
+EOS
+done
+
+cat <<EOS  >> Package.swift
+]
+
+package.products = package.targets
+    .filter { !\$0.isTest }
+    .map { Product.library(name: \$0.name, targets: [\$0.name]) }
+EOS
