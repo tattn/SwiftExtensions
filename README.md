@@ -13,6 +13,28 @@ My favorite Swift extensions.
 
 You can install this package with Swift Package Manager.
 
+### Recommended
+```swift
+dependencies: [
+    .package(
+        name: "SwiftExtensions",
+        url: "https://github.com/tattn/SwiftExtensions.git",
+        from: "3.0.0-beta.1"
+    ),
+],
+```
+
+### Experimental (Prebuild packages)
+```swift
+dependencies: [
+    .package(
+        name: "SwiftExtensions",
+        url: "https://github.com/tattn/SwiftExtensionsXCFramework.git",
+        from: "3.0.0-beta.1"
+    ),
+],
+```
+
 # Usage
 
 ```swift
