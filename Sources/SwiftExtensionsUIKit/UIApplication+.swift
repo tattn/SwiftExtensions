@@ -9,6 +9,7 @@
 #if canImport(UIKit) && !os(watchOS) && !os(tvOS)
 import UIKit
 
+@available(iOSApplicationExtension, unavailable)
 public extension UIApplication {
     var topViewController: UIViewController? {
         let keyWindow = UIApplication.shared.windows.first { $0.isKeyWindow }
