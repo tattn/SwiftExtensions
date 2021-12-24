@@ -24,13 +24,17 @@ jobs:
   build-ios12:
     name: Test on iOS 12
     env:
-      DEVELOPER_DIR: /Applications/Xcode_10.3.app/Contents/Developer
+      DEVELOPER_DIR: /Applications/Xcode_12.4.app/Contents/Developer
     runs-on: macOS-10.15
     strategy:
       matrix:
         destination: ['OS=12.4,name=iPad Pro (9.7-inch)']
     steps:
     - uses: actions/checkout@v2
+    - name: Link to 12.4 Simulators
+      run: |
+        sudo mkdir -p /Library/Developer/CoreSimulator/Profiles/Runtimes
+        sudo ln -s /Applications/Xcode_10.3.app/Contents/Developer/Platforms/iPhoneOS.platform/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS.simruntime /Library/Developer/CoreSimulator/Profiles/Runtimes/iOS\ 12.4.simruntime
     - name: Build
       run: xcodebuild test -destination '${{ matrix.destination }}' -scheme 'SwiftExtensions-Package'
     - name: Run tests
