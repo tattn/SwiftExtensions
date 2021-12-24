@@ -21,4 +21,18 @@ jobs:
       run: xcodebuild test -destination '${{ matrix.destination }}' -scheme 'SwiftExtensions-Package'
     - name: Run tests
       run: xcodebuild test -destination '${{ matrix.destination }}' -scheme 'SwiftExtensions-Package'
+  build-ios12:
+    name: Test on iOS 12
+    env:
+      DEVELOPER_DIR: /Applications/Xcode_10.3.app/Contents/Developer
+    runs-on: macOS-10.15
+    strategy:
+      matrix:
+        destination: ['OS=12.4,name=iPad Pro (9.7-inch)']
+    steps:
+    - uses: actions/checkout@v2
+    - name: Build
+      run: xcodebuild test -destination '${{ matrix.destination }}' -scheme 'SwiftExtensions-Package'
+    - name: Run tests
+      run: xcodebuild test -destination '${{ matrix.destination }}' -scheme 'SwiftExtensions-Package'
 

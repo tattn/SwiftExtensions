@@ -6,6 +6,8 @@
 //  Copyright © 2019 tattn. All rights reserved.
 //
 
+#if swift(>=5.5.2) && canImport(_Concurrency) && canImport(Combine)
+
 import XCTest
 import SwiftExtensions
 import Combine
@@ -68,3 +70,5 @@ class PublisherTests: XCTestCase {
 }
 
 private struct TestError: Error {}
+
+#endif

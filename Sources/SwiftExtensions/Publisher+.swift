@@ -6,7 +6,7 @@
 //  Copyright © 2019 tattn. All rights reserved.
 //
 
-#if canImport(Combine)
+#if swift(>=5.5.2) && canImport(_Concurrency) && canImport(Combine)
 
 import Combine
 
