@@ -76,8 +76,8 @@ class UIImageTests: XCTestCase {
         XCTAssertEqual(TestImage.image.resized(to: .init(width: -1, height: -1)).size, .zero)
         let resizedSize = CGSize(width: 24, height: 24)
         let resizedImage = TestImage.image3x.resized(to: resizedSize)
-        XCTAssertEqual(resizedImage.canonicalized.pixelColor(at: .zero), UIColor(red: 237, green: 215, blue: 184, alpha: 1))
-        XCTAssertEqual(resizedImage.canonicalized.pixelColor(at: .init(x: resizedSize.width - 1, y: resizedSize.height - 1)), UIColor(red: 57, green: 48, blue: 60, alpha: 1))
+        XCTAssertEqualColor(resizedImage.canonicalized.pixelColor(at: .zero), UIColor(red: 237, green: 215, blue: 184, alpha: 1))
+        XCTAssertEqualColor(resizedImage.canonicalized.pixelColor(at: .init(x: resizedSize.width - 1, y: resizedSize.height - 1)), UIColor(red: 57, green: 48, blue: 60, alpha: 1))
         XCTAssertEqual(resizedImage.size.applying(scaleTransform), resizedSize)
     }
 
@@ -86,8 +86,8 @@ class UIImageTests: XCTestCase {
         XCTAssertEqual(TestImage.image.resized(to: .init(width: -1, height: -1), scalingMode: .aspectFill).size, .zero)
         let resizedSize = CGSize(width: 128, height: 24)
         let resizedFillImage = TestImage.image3x.resized(to: resizedSize, scalingMode: .aspectFill)
-        XCTAssertEqual(resizedFillImage.canonicalized.pixelColor(at: .zero), UIColor(red: 205, green: 184, blue: 170, alpha: 1))
-        XCTAssertEqual(resizedFillImage.canonicalized.pixelColor(at: .init(x: resizedSize.width - 1, y: resizedSize.height - 1)), UIColor(red: 143, green: 116, blue: 114, alpha: 1))
+        XCTAssertEqualColor(resizedFillImage.canonicalized.pixelColor(at: .zero), UIColor(red: 205, green: 184, blue: 170, alpha: 1))
+        XCTAssertEqualColor(resizedFillImage.canonicalized.pixelColor(at: .init(x: resizedSize.width - 1, y: resizedSize.height - 1)), UIColor(red: 143, green: 116, blue: 114, alpha: 1))
         XCTAssertEqual(resizedFillImage.size.applying(scaleTransform), resizedSize)
     }
 
@@ -96,8 +96,8 @@ class UIImageTests: XCTestCase {
         XCTAssertEqual(TestImage.image.resized(to: .init(width: -1, height: -1), scalingMode: .aspectFit).size, .zero)
         let resizedSize = CGSize(width: 128, height: 24)
         let resizedFitImage = TestImage.image3x.resized(to: resizedSize, scalingMode: .aspectFit)
-        XCTAssertEqual(resizedFitImage.canonicalized.pixelColor(at: .zero), UIColor(red: 0, green: 0, blue: 0, alpha: 0))
-        XCTAssertEqual(resizedFitImage.canonicalized.pixelColor(at: .init(x: resizedSize.width - 1, y: resizedSize.height - 1)), UIColor(red: 0, green: 0, blue: 0, alpha: 0))
+        XCTAssertEqualColor(resizedFitImage.canonicalized.pixelColor(at: .zero), UIColor(red: 0, green: 0, blue: 0, alpha: 0))
+        XCTAssertEqualColor(resizedFitImage.canonicalized.pixelColor(at: .init(x: resizedSize.width - 1, y: resizedSize.height - 1)), UIColor(red: 0, green: 0, blue: 0, alpha: 0))
         XCTAssertEqual(resizedFitImage.canonicalized.pixelColor(at: .init(x: 59, y: 10)), UIColor(red: 75, green: 56, blue: 46, alpha: 1))
         XCTAssertEqual(resizedFitImage.size.applying(scaleTransform), resizedSize)
     }
@@ -140,6 +140,15 @@ public func XCTAssertColorEqual(_ expression1: @autoclosure () throws -> UIColor
     XCTAssertEqual(expr1.1, expr2.1, accuracy: 0.003, message(), file: file, line: line)
     XCTAssertEqual(expr1.2, expr2.2, accuracy: 0.003, message(), file: file, line: line)
     XCTAssertEqual(expr1.3, expr2.3, accuracy: 0.003, message(), file: file, line: line)
+}
+
+private func XCTAssertEqualColor(_ color1: UIColor!, _ color2: UIColor!, line: UInt = #line) {
+    let (r1, g1, b1, a1) = color1.components.rgba
+    let (r2, g2, b2, a2) = color2.components.rgba
+    XCTAssertEqual(r1, r2, accuracy: 0.02, "Red", line: line)
+    XCTAssertEqual(g1, g2, accuracy: 0.02, "Green", line: line)
+    XCTAssertEqual(b1, b2, accuracy: 0.02, "Blue", line: line)
+    XCTAssertEqual(a1, a2, accuracy: 0.02, "Alpha", line: line)
 }
 
 #endif // canImport(UIKit)

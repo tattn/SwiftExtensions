@@ -1,4 +1,4 @@
-// swift-tools-version:5.5
+// swift-tools-version:5.3
 
 import PackageDescription
 
@@ -19,9 +19,6 @@ let package = Package(
             resources: [.process("Resources")]),
     
         .target(name: "SwiftExtensionsUI"),
-//        .testTarget(
-//            name: "SwiftExtensionsUITests",
-//            dependencies: ["SwiftExtensionsUI"]),
         
         .target(name: "SwiftExtensionsUIKit", dependencies: ["SwiftExtensions"]),
         .testTarget(

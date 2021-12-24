@@ -17,8 +17,10 @@ class UITraitCollectionTests: XCTestCase {
         environment.prepare()
     }
 
-    @available(iOS 13.0, *)
-    func testIsDarkMode() {
+    func testIsDarkMode() throws {
+        guard #available(iOS 13.0, *) else {
+            throw XCTSkip("Unsupported iOS version")
+        }
         environment.window.overrideUserInterfaceStyle = .dark
         XCTAssertEqual(environment.rootViewController.traitCollection.isDarkMode, true)
         environment.window.overrideUserInterfaceStyle = .light
